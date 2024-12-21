@@ -1,3 +1,4 @@
+/* General styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -15,11 +16,13 @@ body {
     transition: background 2s;
 }
 
+/* Countdown container */
 #countdown {
     text-align: center;
     margin-bottom: 20px;
 }
 
+/* Styling for days */
 #days, #time {
     font-size: 96px;
     font-weight: bold;
@@ -29,11 +32,13 @@ body {
     margin-bottom: 20px;
 }
 
+/* Styling for current time */
 #current-time {
     font-size: 20px;
     margin-top: 20px;
 }
 
+/* Quote styling */
 #quote {
     margin-top: 20px;
     font-size: 18px;
@@ -41,6 +46,79 @@ body {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
+/* Social sharing */
+#share-buttons {
+    margin-top: 20px;
+}
+
+#share-buttons a {
+    margin: 5px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: yellow;
+    color: black;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Game button */
+#game-section {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+#game-section button {
+    background: yellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Language buttons */
+#language-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#language-toggle button {
+    background: lightblue;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    background: lightgreen;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Copyright section */
+#copyright {
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+/* Keyframes */
 @keyframes gradient {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
