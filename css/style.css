@@ -62,11 +62,9 @@ main {
 #share-buttons a {
     margin: 5px;
     text-decoration: none;
-    padding: 10px 20px;
-    background: yellow;
-    color: black;
-    font-size: 14px;
-    border-radius: 5px;
+    padding: 0; /* Remove padding to match the icon size */
+    background: none; /* Remove the yellow background */
+    border: none; /* Ensure no border */
 }
 
 footer {
@@ -105,17 +103,6 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-#share-buttons a {
-    margin: 5px;
-    text-decoration: none;
-    padding: 8px 15px;
-    background: yellow;
-    color: black;
-    font-size: 0.8rem;
-    border-radius: 5px;
-    flex: 1 1 auto; /* Ensure buttons resize */
 }
 
 /* Game button */
@@ -194,14 +181,12 @@ footer {
     #copyright {
         font-size: 0.7rem;
     }
-}
 #share-buttons img {
-    width: 32px;
+    width: 32px; /* Set a uniform size for all icons */
     height: 32px;
-    margin: 0 10px;
     transition: transform 0.3s;
 }
 
 #share-buttons img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slight zoom on hover */
 }
