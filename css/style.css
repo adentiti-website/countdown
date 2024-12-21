@@ -12,6 +12,7 @@ body {
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     color: white;
+    transition: background 2s;
 }
 
 header {
@@ -44,18 +45,26 @@ main {
 }
 
 #days, #time {
-    font-size: 4rem; /* Scales well for different screen sizes */
+    font-size: 4rem;
     font-weight: bold;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
-                 0 0 25px rgba(255, 255, 255, 0.6),
-                 0 0 35px rgba(255, 255, 255, 0.4);
-    margin-bottom: 10px;}
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
+}
 
 #quote {
     margin-top: 20px;
     font-size: 18px;
     color: white;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+#share-buttons a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+#share-buttons a img:hover {
+    transform: scale(1.1);
 }
 
 footer {
@@ -73,120 +82,31 @@ footer {
     cursor: pointer;
     font-size: 14px;
 }
-/* Styling for current time */
-#current-time {
-    font-size: 1.2rem;
-    margin-top: 10px;
+
+/* Snow Effect */
+#snow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
-/* Quote styling */
-#quote {
-    margin-top: 15px;
-    font-size: 1rem;
+.snowflake {
+    position: absolute;
+    top: -10px;
     color: white;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    font-size: 1em;
+    pointer-events: none;
+    animation: fall 10s linear infinite;
 }
 
-/* Social sharing */
-#share-buttons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* Game button */
-#game-section {
-    position: static; /* Prevent overlap */
-    margin-top: 10px;
-}
-
-#game-section button {
-    background: yellow;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-
-/* Language buttons */
-#language-toggle {
-    position: static; /* Prevent overlapping */
-    margin-top: 10px;
-}
-
-#language-toggle button {
-    background: lightblue;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-
-/* Theme toggle button */
-#theme-toggle {
-    position: static; /* Prevent fixed position */
-    margin-top: 15px;
-    background: lightgreen;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-
-/* Copyright section */
-#copyright {
-    margin-top: 20px;
-    font-size: 0.8rem;
-    color: white;
-}
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-    #days, #time {
-        font-size: 3rem;
+@keyframes fall {
+    0% {
+        transform: translateY(0);
     }
-    #current-time {
-        font-size: 1rem;
+    100% {
+        transform: translateY(100vh);
     }
-    #quote {
-        font-size: 0.9rem;
-    }
-    #share-buttons a {
-        font-size: 0.7rem;
-        padding: 5px 10px;
-    }
-    #game-section button,
-    #theme-toggle {
-        font-size: 0.7rem;
-        padding: 8px 15px;
-    }
-    #copyright {
-        font-size: 0.7rem;
-    }
-#share-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    gap: 15px;
-}
-
-#share-buttons img {
-    width: 40px; /* Adjust size as needed */
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-#share-buttons img:hover {
-    transform: scale(1.1); /* Adds a hover effect */
-    filter: brightness(1.2); /* Slightly brighten the icon on hover */
 }
