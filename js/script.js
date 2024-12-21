@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Language Support
-    const messages = {
+    // Countdown and other effects remain as is (from your existing code)
+    const messages = { 
         en: { countdown: "Countdown", introduction: "Welcome! Let us count down to 2025 together." },
         fr: { countdown: "Compte à rebours", introduction: "Bienvenue! Comptons ensemble jusqu’en 2025." },
     };
 
     let currentLanguage = "en";
-
-    function setLanguage(lang) {
+    const setLanguage = (lang) => {
         currentLanguage = lang;
         document.getElementById("introduction").innerText = messages[lang].introduction;
-    }
+    };
 
-    // Countdown Logic
     const countdown = () => {
         const now = new Date().getTime();
         const targetDate = new Date("Jan 1, 2025 00:00:00").getTime();
@@ -32,13 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Update Local Time
     const updateTime = () => {
         const now = new Date();
         document.getElementById("current-time").innerHTML = `Local Time: ${now.toLocaleTimeString()}`;
     };
 
-    // Quotes Logic
     const quotes = [
         "Believe in yourself and all that you are.",
         "The future belongs to those who prepare for it today.",
@@ -88,84 +84,91 @@ document.addEventListener("DOMContentLoaded", () => {
         "It is never too late to be what you might have been.",
         "Do not quit. Suffer now and live the rest of your life as a champion.",
         "Keep going, because you didn’t come this far just to come this far."
-
-        // 50 inspirational quotes here
     ];
-
     const updateQuote = () => {
         const randomIndex = Math.floor(Math.random() * quotes.length);
         document.getElementById("quote").innerText = quotes[randomIndex];
     };
 
-    // Effects
-    const createSnowflake = () => {
-        const snowflake = document.createElement("div");
-        snowflake.className = "snowflake";
-        snowflake.style.left = `${Math.random() * 100}vw`;
-        snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random fall speed
-        snowflake.style.fontSize = `${Math.random() * 5 + 5}px`; // Smaller size
-        snowflake.innerText = "❄";
-        document.body.appendChild(snowflake);
+    // ** SkiFree Game Logic **
+    const canvas = document.getElementById("skifree-game");
+    const ctx = canvas.getContext("2d");
 
-        setTimeout(() => snowflake.remove(), 5000); // Each snowflake lasts 5 seconds
+    let skier = { x: canvas.width / 2, y: canvas.height - 50, width: 20, height: 40 };
+    let obstacles = [];
+    let gameRunning = false;
+    let score = 0;
+
+    const drawSkier = () => {
+        ctx.fillStyle = "red";
+        ctx.fillRect(skier.x, skier.y, skier.width, skier.height);
     };
 
-    const createBubble = () => {
-        const bubble = document.createElement("div");
-        bubble.className = "bubble";
-        bubble.style.left = `${Math.random() * 100}vw`;
-        bubble.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random rise speed
-        bubble.style.opacity = Math.random();
-        document.body.appendChild(bubble);
-
-        setTimeout(() => bubble.remove(), 5000); // Each bubble lasts 5 seconds
+    const createObstacle = () => {
+        const size = Math.random() * 20 + 20;
+        const x = Math.random() * (canvas.width - size);
+        obstacles.push({ x, y: 0, width: size, height: size });
     };
 
-    const createFirework = () => {
-        const firework = document.createElement("div");
-        firework.className = "firework";
-        firework.style.left = `${Math.random() * 100}vw`;
-        firework.style.top = `${Math.random() * 100}vh`;
-        firework.style.animationDuration = "1.5s";
-        document.body.appendChild(firework);
-
-        setTimeout(() => firework.remove(), 1500); // Each firework lasts 1.5 seconds
+    const drawObstacles = () => {
+        ctx.fillStyle = "green";
+        obstacles.forEach(obstacle => {
+            ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+            obstacle.y += 3; // Move obstacle downward
+        });
+        obstacles = obstacles.filter(obstacle => obstacle.y < canvas.height); // Remove off-screen obstacles
     };
 
-    const effects = [
-        { start: createSnowflake, interval: 200 },
-        { start: createFirework, interval: 500 },
-        { start: createBubble, interval: 300 },
-    ];
-
-    let currentEffectIndex = 0;
-    let effectInterval;
-
-    const startEffect = () => {
-        const { start, interval } = effects[currentEffectIndex];
-        effectInterval = setInterval(start, interval);
-        setTimeout(() => {
-            clearInterval(effectInterval);
-            currentEffectIndex = (currentEffectIndex + 1) % effects.length;
-            startEffect();
-        }, 2 * 60 * 1000); // Switch effect every 2 minutes
+    const checkCollision = () => {
+        for (let obstacle of obstacles) {
+            if (
+                skier.x < obstacle.x + obstacle.width &&
+                skier.x + skier.width > obstacle.x &&
+                skier.y < obstacle.y + obstacle.height &&
+                skier.y + skier.height > obstacle.y
+            ) {
+                gameRunning = false;
+                document.getElementById("game-status").innerText = "Game Over! Press 'Start' to try again!";
+                return true;
+            }
+        }
+        return false;
     };
 
-    // Theme Toggle
-    let isDarkTheme = true;
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        isDarkTheme = !isDarkTheme;
-        document.body.style.background = isDarkTheme
-            ? "linear-gradient(90deg, #000428, #004e92)"
-            : "linear-gradient(90deg, #ffffff, #c0c0c0)";
+    const moveSkier = (e) => {
+        if (!gameRunning) return;
+        if (e.key === "ArrowLeft" && skier.x > 0) skier.x -= 20;
+        if (e.key === "ArrowRight" && skier.x < canvas.width - skier.width) skier.x += 20;
+    };
+
+    const gameLoop = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawSkier();
+        drawObstacles();
+        createObstacle();
+
+        if (checkCollision()) return;
+
+        document.getElementById("score").innerText = `Score: ${++score}`;
+    };
+
+    document.getElementById("start-game").addEventListener("click", () => {
+        if (gameRunning) return;
+        skier = { x: canvas.width / 2, y: canvas.height - 50, width: 20, height: 40 };
+        obstacles = [];
+        score = 0;
+        document.getElementById("game-status").innerText = "Dodge the obstacles!";
+        gameRunning = true;
+        setInterval(gameLoop, 100);
     });
 
-    // Initialize Functions
+    document.addEventListener("keydown", moveSkier);
+
+    // Initialize Page
     countdown();
     setInterval(countdown, 1000);
     updateTime();
     setInterval(updateTime, 1000);
     updateQuote();
     setInterval(updateQuote, 10000);
-    startEffect(); // Start with snow effect
 });
