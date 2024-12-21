@@ -226,3 +226,6 @@ body {
     color: white;
     font-size: 16px;
 }
+#game-section {
+    margin-top: 30px; /* Add more space above the game section */
+}

@@ -152,15 +152,15 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("score").innerText = `Score: ${++score}`;
     };
 
-    document.getElementById("start-game").addEventListener("click", () => {
-        if (gameRunning) return;
-        skier = { x: canvas.width / 2, y: canvas.height - 50, width: 20, height: 40 };
-        obstacles = [];
-        score = 0;
-        document.getElementById("game-status").innerText = "Dodge the obstacles!";
-        gameRunning = true;
-        setInterval(gameLoop, 100);
-    });
+   document.getElementById("start-game").addEventListener("click", () => {
+    if (gameRunning) return;
+    skier = { x: canvas.width / 2, y: canvas.height - 50, width: 20, height: 40 };
+    obstacles = [];
+    score = 0;
+    document.getElementById("game-status").innerText = "Dodge the obstacles!";
+    gameRunning = true;
+    setInterval(gameLoop, 100);
+});
 
     document.addEventListener("keydown", moveSkier);
 
