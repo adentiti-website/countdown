@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div id="language-toggle">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('fr')">French</button>
+    </div>
+
+    <!-- Introduction -->
+    <div id="introduction">Welcome! Let us count down to 2025 together.</div>
+
+    <!-- Countdown -->
+    <div id="countdown" aria-live="polite">
+        <div id="days">Loading days...</div>
+        <div id="time">Loading time...</div>
+        <div id="current-time">Loading current time...</div>
+    </div>
+
+    <!-- Quote -->
+    <div id="quote">Loading inspirational quote...</div>
+
+    <!-- Social Sharing -->
+    <div id="share-buttons">
+        <a href="#" id="share-twitter" target="_blank">Share on Twitter</a>
+        <a href="#" id="share-linkedin" target="_blank">Share on LinkedIn</a>
+        <a href="#" id="share-instagram" target="_blank">Share on Instagram</a>
+    </div>
+
+    <!-- Game -->
+    <div id="game-section">
+        <button id="toggle-game">Play Mini-Game</button>
+        <div id="score">Score: 0</div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle">Toggle Theme</button>
+
+    <!-- Copyright -->
+    <div id="copyright">
+        2024 Adentiti Limited. All rights reserved.
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

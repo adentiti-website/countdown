@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, #000428, #004e92);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    color: white;
+    transition: background 2s;
+}
+
+#countdown {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#days, #time {
+    font-size: 96px;
+    font-weight: bold;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+                 0 0 25px rgba(255, 255, 255, 0.6),
+                 0 0 35px rgba(255, 255, 255, 0.4);
+    margin-bottom: 20px;
+}
+
+#current-time {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#quote {
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
