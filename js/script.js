@@ -88,6 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "It is never too late to be what you might have been.",
         "Do not quit. Suffer now and live the rest of your life as a champion.",
         "Keep going, because you didn’t come this far just to come this far."
+
+        // 50 inspirational quotes here
     ];
 
     const updateQuote = () => {
@@ -95,19 +97,59 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("quote").innerText = quotes[randomIndex];
     };
 
-    // Snow Effect
+    // Effects
     const createSnowflake = () => {
         const snowflake = document.createElement("div");
         snowflake.className = "snowflake";
         snowflake.style.left = `${Math.random() * 100}vw`;
-        snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
+        snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random fall speed
+        snowflake.style.fontSize = `${Math.random() * 5 + 5}px`; // Smaller size
         snowflake.innerText = "❄";
-        document.getElementById("snow-container").appendChild(snowflake);
+        document.body.appendChild(snowflake);
 
-        setTimeout(() => snowflake.remove(), 10000);
+        setTimeout(() => snowflake.remove(), 5000); // Each snowflake lasts 5 seconds
     };
 
-    setInterval(createSnowflake, 200);
+    const createBubble = () => {
+        const bubble = document.createElement("div");
+        bubble.className = "bubble";
+        bubble.style.left = `${Math.random() * 100}vw`;
+        bubble.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random rise speed
+        bubble.style.opacity = Math.random();
+        document.body.appendChild(bubble);
+
+        setTimeout(() => bubble.remove(), 5000); // Each bubble lasts 5 seconds
+    };
+
+    const createFirework = () => {
+        const firework = document.createElement("div");
+        firework.className = "firework";
+        firework.style.left = `${Math.random() * 100}vw`;
+        firework.style.top = `${Math.random() * 100}vh`;
+        firework.style.animationDuration = "1.5s";
+        document.body.appendChild(firework);
+
+        setTimeout(() => firework.remove(), 1500); // Each firework lasts 1.5 seconds
+    };
+
+    const effects = [
+        { start: createSnowflake, interval: 200 },
+        { start: createFirework, interval: 500 },
+        { start: createBubble, interval: 300 },
+    ];
+
+    let currentEffectIndex = 0;
+    let effectInterval;
+
+    const startEffect = () => {
+        const { start, interval } = effects[currentEffectIndex];
+        effectInterval = setInterval(start, interval);
+        setTimeout(() => {
+            clearInterval(effectInterval);
+            currentEffectIndex = (currentEffectIndex + 1) % effects.length;
+            startEffect();
+        }, 2 * 60 * 1000); // Switch effect every 2 minutes
+    };
 
     // Theme Toggle
     let isDarkTheme = true;
@@ -125,4 +167,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(updateTime, 1000);
     updateQuote();
     setInterval(updateQuote, 10000);
+    startEffect(); // Start with snow effect
 });
