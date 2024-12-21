@@ -12,7 +12,6 @@ body {
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     color: white;
-    transition: background 2s;
 }
 
 header {
@@ -57,14 +56,6 @@ main {
     font-size: 18px;
     color: white;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-}
-
-#share-buttons a {
-    margin: 5px;
-    text-decoration: none;
-    padding: 0; /* Remove padding to match the icon size */
-    background: none; /* Remove the yellow background */
-    border: none; /* Ensure no border */
 }
 
 footer {
@@ -181,12 +172,21 @@ footer {
     #copyright {
         font-size: 0.7rem;
     }
+#share-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 15px;
+}
+
 #share-buttons img {
-    width: 32px; /* Set a uniform size for all icons */
-    height: 32px;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    cursor: pointer;
     transition: transform 0.3s;
 }
 
 #share-buttons img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1); /* Adds a hover effect */
+    filter: brightness(1.2); /* Slightly brighten the icon on hover */
 }
