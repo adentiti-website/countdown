@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Effects logic (same as before)
+    // Effects logic
     const effectsContainer = document.getElementById("effects-container");
     let currentEffect = "snow";
     let effectInterval;
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     effectInterval = setInterval(createSnowflake, 200);
     setInterval(switchEffects, 3 * 60 * 1000);
 
-    // Catch Falling Objects Game
+    // Game logic
     const gameSection = document.getElementById("game-section");
     const canvas = document.getElementById("catch-game");
     const ctx = canvas.getContext("2d");
@@ -60,79 +60,20 @@ document.addEventListener("DOMContentLoaded", () => {
     let gameRunning = false;
     let score = 0;
 
-    const drawPaddle = () => {
-        ctx.fillStyle = "yellow";
-        ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
-    };
-
-    const createObject = () => {
-        const size = Math.random() * 20 + 20;
-        const x = Math.random() * (canvas.width - size);
-        objects.push({ x, y: 0, size });
-    };
-
-    const drawObjects = () => {
-        ctx.fillStyle = "red";
-        objects.forEach(obj => {
-            ctx.beginPath();
-            ctx.arc(obj.x, obj.y, obj.size / 2, 0, Math.PI * 2);
-            ctx.fill();
-            obj.y += 4;
-        });
-        objects = objects.filter(obj => obj.y < canvas.height);
-    };
-
-    const checkCollision = () => {
-        objects = objects.filter(obj => {
-            if (
-                obj.y + obj.size / 2 >= paddle.y &&
-                obj.x >= paddle.x &&
-                obj.x <= paddle.x + paddle.width
-            ) {
-                score++;
-                document.getElementById("score").innerText = `Score: ${score}`;
-                return false;
-            }
-            return true;
-        });
-    };
-
-    const movePaddle = (e) => {
-        if (!gameRunning) return;
-        if (e.key === "ArrowLeft" && paddle.x > 0) paddle.x -= 20;
-        if (e.key === "ArrowRight" && paddle.x < canvas.width - paddle.width) paddle.x += 20;
-    };
-
-    const gameLoop = () => {
-        if (!gameRunning) return;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        drawPaddle();
-        drawObjects();
-        checkCollision();
-    };
-
     const toggleGame = () => {
         if (gameRunning) {
-            // Stop game
             gameRunning = false;
             objects = [];
             score = 0;
             document.getElementById("score").innerText = "Score: 0";
             gameSection.style.transform = "translateY(100%)";
         } else {
-            // Start game
-            paddle = { x: canvas.width / 2 - 50, y: canvas.height - 30, width: 100, height: 10 };
-            objects = [];
             gameRunning = true;
-            document.getElementById("game-status").innerText = "Catch the falling objects!";
-            setInterval(createObject, 1000);
-            setInterval(gameLoop, 20);
             gameSection.style.transform = "translateY(0)";
         }
     };
 
     document.getElementById("start-game").addEventListener("click", toggleGame);
-    document.addEventListener("keydown", movePaddle);
 
     // Countdown and Quote Logic
     const countdown = () => {
@@ -160,11 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const quotes = [
-const quotes = [
         "Believe in yourself and all that you are.",
         "The future belongs to those who prepare for it today.",
         "Every moment is a fresh beginning.",
-        "Your limitation, it is only your imagination.",
+        "Your limitation—it’s only your imagination.",
         "Dream big and dare to fail.",
         "Success doesn’t just find you. You have to go out and get it.",
         "Do not wait for opportunity. Create it.",
