@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Get the current page URL
+    const pageUrl = encodeURIComponent(window.location.href);
+    const pageTitle = encodeURIComponent("Check out this amazing countdown!");
+
+    // Twitter share link
+    const twitterLink = `https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`;
+    document.getElementById("share-twitter").href = twitterLink;
+
+    // LinkedIn share link
+    const linkedInLink = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+    document.getElementById("share-linkedin").href = linkedInLink;
+
+    // Facebook share link
+    const facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+    document.getElementById("share-facebook").href = facebookLink;
+
+    // Instagram placeholder (Instagram does not provide direct sharing links)
+    const instagramLink = `https://www.instagram.com/`;
+    document.getElementById("share-instagram").href = instagramLink;
+});
     // Effects logic
     const effectsContainer = document.getElementById("effects-container");
     let currentEffect = "snow";
