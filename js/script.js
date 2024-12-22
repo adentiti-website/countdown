@@ -1,24 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Get the current page URL
+    // Social Media Share Links
     const pageUrl = encodeURIComponent(window.location.href);
     const pageTitle = encodeURIComponent("Check out this amazing countdown!");
 
-    // Twitter share link
-    const twitterLink = `https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`;
-    document.getElementById("share-twitter").href = twitterLink;
+    const socialLinks = {
+        twitter: `https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}`,
+        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`,
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`,
+        instagram: `https://www.instagram.com/`
+    };
 
-    // LinkedIn share link
-    const linkedInLink = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
-    document.getElementById("share-linkedin").href = linkedInLink;
+    document.getElementById("share-twitter").href = socialLinks.twitter;
+    document.getElementById("share-linkedin").href = socialLinks.linkedin;
+    document.getElementById("share-facebook").href = socialLinks.facebook;
+    document.getElementById("share-instagram").href = socialLinks.instagram;
 
-    // Facebook share link
-    const facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-    document.getElementById("share-facebook").href = facebookLink;
-
-    // Instagram placeholder (Instagram does not provide direct sharing links)
-    const instagramLink = `https://www.instagram.com/`;
-    document.getElementById("share-instagram").href = instagramLink;
-});
     // Effects logic
     const effectsContainer = document.getElementById("effects-container");
     let currentEffect = "snow";
@@ -80,6 +76,57 @@ document.addEventListener("DOMContentLoaded", () => {
     let gameRunning = false;
     let score = 0;
 
+    const drawPaddle = () => {
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+    };
+
+    const createObject = () => {
+        const size = Math.random() * 20 + 20;
+        const x = Math.random() * (canvas.width - size);
+        objects.push({ x, y: 0, size });
+    };
+
+    const drawObjects = () => {
+        ctx.fillStyle = "red";
+        objects.forEach(obj => {
+            ctx.beginPath();
+            ctx.arc(obj.x, obj.y, obj.size / 2, 0, Math.PI * 2);
+            ctx.fill();
+            obj.y += 4;
+        });
+        objects = objects.filter(obj => obj.y < canvas.height);
+    };
+
+    const checkCollision = () => {
+        objects = objects.filter(obj => {
+            if (
+                obj.y + obj.size / 2 >= paddle.y &&
+                obj.x >= paddle.x &&
+                obj.x <= paddle.x + paddle.width
+            ) {
+                score++;
+                document.getElementById("score").innerText = `Score: ${score}`;
+                return false;
+            }
+            return true;
+        });
+    };
+
+    const movePaddle = (e) => {
+        if (!gameRunning) return;
+        if (e.key === "ArrowLeft" && paddle.x > 0) paddle.x -= 20;
+        if (e.key === "ArrowRight" && paddle.x < canvas.width - paddle.width) paddle.x += 20;
+    };
+
+    const gameLoop = () => {
+        if (!gameRunning) return;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawPaddle();
+        drawObjects();
+        checkCollision();
+    };
+
     const toggleGame = () => {
         if (gameRunning) {
             gameRunning = false;
@@ -89,11 +136,18 @@ document.addEventListener("DOMContentLoaded", () => {
             gameSection.style.transform = "translateY(100%)";
         } else {
             gameRunning = true;
+            paddle = { x: canvas.width / 2 - 50, y: canvas.height - 30, width: 100, height: 10 };
+            objects = [];
+            score = 0;
+            document.getElementById("game-status").innerText = "Catch the falling objects!";
+            setInterval(createObject, 1000);
+            setInterval(gameLoop, 20);
             gameSection.style.transform = "translateY(0)";
         }
     };
 
     document.getElementById("start-game").addEventListener("click", toggleGame);
+    document.addEventListener("keydown", movePaddle);
 
     // Countdown and Quote Logic
     const countdown = () => {
@@ -169,6 +223,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "It is never too late to be what you might have been.",
         "Do not quit. Suffer now and live the rest of your life as a champion.",
         "Keep going, because you didn’t come this far just to come this far."
+        
+// Add more quotes as needed
     ];
 
     const updateQuote = () => {
