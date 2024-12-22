@@ -65,12 +65,23 @@ body {
     opacity: 0.8;
 }
 
-/* Game canvas */
+/* Game section */
+#game-section {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    transition: transform 0.5s ease;
+    z-index: 10;
+}
+
 #catch-game {
     border: 2px solid white;
     background: #000428;
     display: block;
     margin-top: 20px;
+    width: 100%;
+    height: 300px;
 }
 
 #start-game {
@@ -80,6 +91,12 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+}
+
+#game-status {
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
 }
 
 /* Effects */
@@ -118,4 +135,33 @@ body {
 @keyframes explode {
     0% { transform: scale(0); opacity: 1; }
     100% { transform: scale(20); opacity: 0; }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    #days, #time {
+        font-size: 60px;
+    }
+
+    #current-time {
+        font-size: 16px;
+    }
+
+    #quote {
+        font-size: 14px;
+    }
+
+    #share-buttons img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #catch-game {
+        height: 200px;
+    }
+
+    #start-game {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
 }

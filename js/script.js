@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Effects logic
+    // Effects logic (same as before)
     const effectsContainer = document.getElementById("effects-container");
     let currentEffect = "snow";
     let effectInterval;
@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(switchEffects, 3 * 60 * 1000);
 
     // Catch Falling Objects Game
+    const gameSection = document.getElementById("game-section");
     const canvas = document.getElementById("catch-game");
     const ctx = canvas.getContext("2d");
     let paddle = { x: canvas.width / 2 - 50, y: canvas.height - 30, width: 100, height: 10 };
@@ -110,17 +111,27 @@ document.addEventListener("DOMContentLoaded", () => {
         checkCollision();
     };
 
-    document.getElementById("start-game").addEventListener("click", () => {
-        if (gameRunning) return;
-        paddle = { x: canvas.width / 2 - 50, y: canvas.height - 30, width: 100, height: 10 };
-        objects = [];
-        score = 0;
-        gameRunning = true;
-        document.getElementById("game-status").innerText = "Catch the falling objects!";
-        setInterval(createObject, 1000);
-        setInterval(gameLoop, 20);
-    });
+    const toggleGame = () => {
+        if (gameRunning) {
+            // Stop game
+            gameRunning = false;
+            objects = [];
+            score = 0;
+            document.getElementById("score").innerText = "Score: 0";
+            gameSection.style.transform = "translateY(100%)";
+        } else {
+            // Start game
+            paddle = { x: canvas.width / 2 - 50, y: canvas.height - 30, width: 100, height: 10 };
+            objects = [];
+            gameRunning = true;
+            document.getElementById("game-status").innerText = "Catch the falling objects!";
+            setInterval(createObject, 1000);
+            setInterval(gameLoop, 20);
+            gameSection.style.transform = "translateY(0)";
+        }
+    };
 
+    document.getElementById("start-game").addEventListener("click", toggleGame);
     document.addEventListener("keydown", movePaddle);
 
     // Countdown and Quote Logic
@@ -149,6 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const quotes = [
+const quotes = [
         "Believe in yourself and all that you are.",
         "The future belongs to those who prepare for it today.",
         "Every moment is a fresh beginning.",
