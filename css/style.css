@@ -2,17 +2,11 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: #1a1a2e;
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
     color: #eaeaea;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Header Styles */
 header {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,14 +15,13 @@ header {
 }
 
 .logo h1 {
-    font-size: 1.8rem;
     color: #00d4ff;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     gap: 20px;
+    list-style: none;
 }
 
 nav ul li a {
@@ -41,14 +34,13 @@ nav ul li a:hover {
     color: #00d4ff;
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
     padding: 100px 20px;
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
     color: #00d4ff;
 }
 
@@ -60,48 +52,26 @@ nav ul li a:hover {
     color: #16213e;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-/* Section Styles */
+.hero button:hover {
+    background: #00a3cc;
+}
+
 section {
     padding: 50px 20px;
     text-align: center;
 }
 
 section h3 {
-    font-size: 2rem;
     color: #00d4ff;
-    margin-bottom: 20px;
 }
 
-section p, ul {
-    font-size: 1.2rem;
-}
-
-/* Testimonials */
-blockquote {
-    font-style: italic;
-    margin: 20px 0;
-    color: #eaeaea;
-    border-left: 5px solid #00d4ff;
-    padding-left: 15px;
-}
-
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-form label {
-    font-size: 1rem;
-}
-
-form input, textarea, button {
+form input, form textarea, form button {
+    width: 100%;
     padding: 10px;
-    font-size: 1rem;
+    margin-bottom: 15px;
     border: none;
     border-radius: 5px;
 }
@@ -112,10 +82,13 @@ form button {
     cursor: pointer;
 }
 
-/* Footer */
+form button:hover {
+    background: #00a3cc;
+}
+
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     background: #16213e;
 }
 
