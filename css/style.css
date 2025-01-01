@@ -1,79 +1,81 @@
-/* General Styles */
+/* General Styling */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    font-family: Arial, sans-serif;
+    background: #1a1a2e;
     color: #eaeaea;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 15px 30px;
     background: #16213e;
 }
 
-.logo h1 {
-    color: #00d4ff;
+header .logo img {
+    width: 60px;
+    height: auto;
 }
 
-nav ul {
+header nav ul {
+    list-style: none;
     display: flex;
     gap: 20px;
-    list-style: none;
 }
 
-nav ul li a {
+header nav ul li a {
     text-decoration: none;
     color: #eaeaea;
-    transition: color 0.3s;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #00d4ff;
-}
-
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 50px 20px;
     background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: #ffffff;
 }
 
 .hero h2 {
-    color: #00d4ff;
+    font-size: 2rem;
 }
 
 .hero button {
+    background: #00d4ff;
+    color: #16213e;
+    border: none;
     padding: 10px 20px;
     font-size: 1rem;
-    background: #00d4ff;
-    border: none;
-    color: #16213e;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    border-radius: 5px;
 }
 
-.hero button:hover {
-    background: #00a3cc;
-}
-
+/* Sections */
 section {
-    padding: 50px 20px;
-    text-align: center;
+    padding: 30px 20px;
 }
 
 section h3 {
-    color: #00d4ff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 form input, form textarea, form button {
-    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: none;
+    font-size: 1rem;
     border-radius: 5px;
+    border: none;
 }
 
 form button {
@@ -82,17 +84,21 @@ form button {
     cursor: pointer;
 }
 
-form button:hover {
-    background: #00a3cc;
-}
-
+/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background: #16213e;
 }
 
-footer p a {
-    color: #00d4ff;
-    text-decoration: none;
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
 }
