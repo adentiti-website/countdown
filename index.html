@@ -3,64 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer with Game</title>
+    <title>Adentiti Limited - Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <div id="language-toggle">
-            <button onclick="setLanguage('en')">English</button>
-            <button onclick="setLanguage('fr')">French</button>
-        </div>
+        <h1>Welcome to Adentiti Limited</h1>
+        <p>Your cybersecurity solutions partner.</p>
     </header>
-
-    <!-- Main Content Section -->
     <main>
-        <div id="introduction">Welcome! Let us count down to 2025 together.</div>
-
-        <div id="countdown" aria-live="polite">
-            <div id="days">Loading days...</div>
-            <div id="time">Loading time...</div>
+        <section id="countdown">
+            <div id="days">0</div>
+            <div id="time">00:00:00</div>
             <div id="current-time">Loading current time...</div>
+        </section>
+        <section id="quote">
+            <p>"Empowering businesses with cutting-edge cybersecurity."</p>
+        </section>
+        <div id="game-section">
+            <button id="start-game">Play the Cyber Catch Game!</button>
+            <canvas id="catch-game"></canvas>
+            <div id="game-status"></div>
         </div>
-
-        <div id="quote">Loading inspirational quote...</div>
     </main>
-
-    <!-- Social Sharing Section -->
-    <section id="share-buttons">
-        <a id="share-twitter" target="_blank">
-            <img src="images/twitter-icon.png" alt="Share on Twitter">
-        </a>
-        <a id="share-linkedin" target="_blank">
-            <img src="images/linkedin-icon.png" alt="Share on LinkedIn">
-        </a>
-        <a id="share-facebook" target="_blank">
-            <img src="images/facebook-icon.png" alt="Share on Facebook">
-        </a>
-        <a id="share-instagram" target="_blank">
-            <img src="images/instagram-icon.png" alt="Share on Instagram">
-        </a>
-    </section>
-
-    <!-- Catch Falling Objects Game -->
-    <section id="game-section">
-        <canvas id="catch-game" width="600" height="400"></canvas>
-        <button id="start-game">Play Mini-Game</button>
-        <div id="game-status">Press "Play Mini-Game" to play!</div>
-        <div id="score">Score: 0</div>
-    </section>
-
-    <!-- Footer Section -->
     <footer>
-        <button id="theme-toggle">Toggle Theme</button>
-        <div id="copyright">2024 Adentiti Limited. All rights reserved.</div>
+        <nav>
+            <a href="about.html">Learn More About Us</a>
+            <a href="https://www.linkedin.com">LinkedIn</a>
+            <a href="https://www.twitter.com">Twitter</a>
+        </nav>
     </footer>
-
-    <!-- Effects Container -->
-    <div id="effects-container"></div>
-
-    <script src="js/script.js"></script>
 </body>
 </html>

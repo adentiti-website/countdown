@@ -8,160 +8,88 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(90deg, #000428, #004e92);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     color: white;
-    overflow: hidden;
-    position: relative;
+}
+
+/* Header */
+header h1 {
+    font-size: 36px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+header p {
+    font-size: 18px;
 }
 
 /* Countdown */
-#countdown {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#days, #time {
+#countdown div {
     font-size: 96px;
     font-weight: bold;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
-                 0 0 25px rgba(255, 255, 255, 0.6),
-                 0 0 35px rgba(255, 255, 255, 0.4);
-    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
-#current-time {
-    font-size: 20px;
-    margin-top: 20px;
-}
-
-/* Quote styling */
-#quote {
-    margin-top: 20px;
-    font-size: 18px;
-    color: white;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-}
-
-/* Social sharing */
-#share-buttons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-#share-buttons img {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-#share-buttons img:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
-}
-
-/* Game section */
+/* Game Section */
 #game-section {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(100%);
-    transition: transform 0.5s ease;
-    z-index: 10;
+    margin-top: 30px;
+    text-align: center;
 }
 
 #catch-game {
-    border: 2px solid white;
-    background: #000428;
-    display: block;
-    margin-top: 20px;
-    width: 100%;
+    width: 400px;
     height: 300px;
+    border: 2px solid #fff;
+    background: #2c3e50;
+    margin: 20px auto;
 }
 
 #start-game {
     padding: 10px 20px;
-    background: yellow;
+    font-size: 18px;
+    background: #3498db;
     border: none;
-    border-radius: 5px;
+    color: #fff;
     cursor: pointer;
-    font-size: 14px;
+    transition: background 0.3s;
 }
 
-#game-status {
-    margin-top: 10px;
-    color: white;
-    font-size: 16px;
+#start-game:hover {
+    background: #2980b9;
 }
 
-/* Effects */
-.effect {
-    position: absolute;
-    pointer-events: none;
+/* Footer */
+footer {
+    margin-top: 20px;
 }
 
-.snowflake {
-    color: white;
-    font-size: 10px;
-    animation: fall linear infinite;
+footer nav a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s;
 }
 
-.bubble {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    animation: rise linear infinite;
+footer nav a:hover {
+    color: orange;
 }
 
-.firework {
-    background: radial-gradient(circle, white, transparent);
-    animation: explode 1.5s ease-out forwards;
+/* Animations */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-@keyframes fall {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(100vh); }
-}
-
-@keyframes rise {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-100vh); opacity: 0; }
-}
-
-@keyframes explode {
-    0% { transform: scale(0); opacity: 1; }
-    100% { transform: scale(20); opacity: 0; }
-}
-
-/* Responsive Design for Mobile */
+/* Responsive Design */
 @media (max-width: 768px) {
-    #days, #time {
+    #countdown div {
         font-size: 60px;
     }
-
-    #current-time {
+    footer nav a {
         font-size: 16px;
-    }
-
-    #quote {
-        font-size: 14px;
-    }
-
-    #share-buttons img {
-        width: 30px;
-        height: 30px;
-    }
-
-    #catch-game {
-        height: 200px;
-    }
-
-    #start-game {
-        font-size: 12px;
-        padding: 8px 15px;
     }
 }
