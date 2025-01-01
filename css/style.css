@@ -1,95 +1,125 @@
-/* General styling */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #1a1a2e;
+    color: #eaeaea;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(90deg, #000428, #004e92);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
-    color: white;
+    justify-content: center;
 }
 
-/* Header */
-header h1 {
-    font-size: 36px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+/* Header Styles */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #16213e;
 }
 
-header p {
-    font-size: 18px;
+.logo h1 {
+    font-size: 1.8rem;
+    color: #00d4ff;
 }
 
-/* Countdown */
-#countdown div {
-    font-size: 96px;
-    font-weight: bold;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-/* Game Section */
-#game-section {
-    margin-top: 30px;
+nav ul li a {
+    text-decoration: none;
+    color: #eaeaea;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: #00d4ff;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #00d4ff;
+    border: none;
+    color: #16213e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
     text-align: center;
 }
 
-#catch-game {
-    width: 400px;
-    height: 300px;
-    border: 2px solid #fff;
-    background: #2c3e50;
-    margin: 20px auto;
+section h3 {
+    font-size: 2rem;
+    color: #00d4ff;
+    margin-bottom: 20px;
 }
 
-#start-game {
-    padding: 10px 20px;
-    font-size: 18px;
-    background: #3498db;
+section p, ul {
+    font-size: 1.2rem;
+}
+
+/* Testimonials */
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    color: #eaeaea;
+    border-left: 5px solid #00d4ff;
+    padding-left: 15px;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+form label {
+    font-size: 1rem;
+}
+
+form input, textarea, button {
+    padding: 10px;
+    font-size: 1rem;
     border: none;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s;
+    border-radius: 5px;
 }
 
-#start-game:hover {
-    background: #2980b9;
+form button {
+    background: #00d4ff;
+    color: #16213e;
+    cursor: pointer;
 }
 
 /* Footer */
 footer {
-    margin-top: 20px;
+    text-align: center;
+    padding: 20px 0;
+    background: #16213e;
 }
 
-footer nav a {
-    color: yellow;
+footer p a {
+    color: #00d4ff;
     text-decoration: none;
-    font-size: 18px;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-footer nav a:hover {
-    color: orange;
-}
-
-/* Animations */
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #countdown div {
-        font-size: 60px;
-    }
-    footer nav a {
-        font-size: 16px;
-    }
 }
