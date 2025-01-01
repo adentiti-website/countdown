@@ -3,75 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADENTITI Limited - Official Website</title>
+    <meta name="description" content="ADENTITI Limited - Proactive cybersecurity solutions for your business.">
+    <meta name="keywords" content="Cybersecurity, IT Solutions, Threat Detection, Network Monitoring">
+    <meta name="author" content="ADENTITI Limited">
+    <meta property="og:title" content="ADENTITI Limited - Your Cybersecurity Partner">
+    <meta property="og:description" content="Secure your business with cutting-edge cybersecurity solutions.">
+    <meta property="og:image" content="images/og-image.png">
+    <meta property="og:url" content="https://adentiti.ca">
+    <meta property="og:type" content="website">
+    <title>ADENTITI Limited</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="ADENTITI Logo">
-            <h1>ADENTITI Limited</h1>
-        </div>
+        <h1>ADENTITI Limited</h1>
         <nav>
             <ul>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Your Cybersecurity Partner</h2>
-            <p>Securing your digital world, one solution at a time.</p>
-            <button onclick="location.href='#services'">Explore Services</button>
+        <!-- Hero Section -->
+        <section id="hero">
+            <video autoplay loop muted>
+                <source src="images/background-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-text">
+                <h2>Your Partner in Cybersecurity</h2>
+                <button onclick="location.href='#services'">Explore Services</button>
+            </div>
         </section>
 
+        <!-- About Section -->
         <section id="about">
-            <h3>About Us</h3>
-            <p>ADENTITI Limited specializes in cutting-edge cybersecurity solutions designed to protect businesses in the digital age.</p>
+            <h2>About Us</h2>
+            <p>At ADENTITI Limited, we offer cutting-edge cybersecurity solutions to safeguard your digital assets.</p>
         </section>
 
+        <!-- Services Section -->
         <section id="services">
-            <h3>Our Services</h3>
+            <h2>Our Services</h2>
             <ul>
-                <li>Threat Detection & Mitigation</li>
-                <li>24/7 Monitoring</li>
+                <li>Threat Detection</li>
+                <li>Network Monitoring</li>
                 <li>Employee Training</li>
                 <li>Custom Security Solutions</li>
             </ul>
         </section>
 
-        <section id="testimonials">
-            <h3>What Our Clients Say</h3>
-            <blockquote>
-                "ADENTITI's proactive solutions saved us countless times!" - Sarah J.
-            </blockquote>
-            <blockquote>
-                "The best training programs we've ever had." - Michael B.
-            </blockquote>
+        <!-- Blog Section -->
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>Stay updated with tips, trends, and best practices in cybersecurity.</p>
         </section>
 
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2>FAQ</h2>
+            <div>
+                <h3>How can I secure my business?</h3>
+                <p>We offer comprehensive assessments to identify and address vulnerabilities.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
         <section id="contact">
-            <h3>Contact Us</h3>
-            <form action="mailto:info@adentiti.ca" method="post" enctype="text/plain">
+            <h2>Contact Us</h2>
+            <form action="mailto:info@adentiti.ca" method="post">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="text" id="name" name="name" required>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="email" id="email" name="email" required>
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <textarea id="message" name="message" required></textarea>
                 <button type="submit">Send</button>
             </form>
         </section>
+
+        <!-- Chatbot -->
+        <div id="chatbot"></div>
     </main>
 
     <footer>
         <p>&copy; 2024 ADENTITI Limited. All Rights Reserved.</p>
-        <p>Email: <a href="mailto:info@adentiti.ca">info@adentiti.ca</a></p>
     </footer>
 </body>
 </html>
