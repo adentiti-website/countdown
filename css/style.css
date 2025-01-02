@@ -135,3 +135,51 @@ footer {
 footer p {
     margin: 0;
 }
+/* Quiz Section Enhancements */
+#quiz-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: #16213e;
+    border-radius: 10px;
+    color: #eaeaea;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#quiz-feedback {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#quiz-explanation {
+    margin-top: 20px;
+}
+
+.explanation-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: left;
+    background: #1a1a2e;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #eaeaea;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.explanation-table th,
+.explanation-table td {
+    padding: 15px;
+    border: 1px solid #00d4ff;
+}
+
+.explanation-table th {
+    background: #00d4ff;
+    color: #16213e;
+    font-weight: bold;
+}
+
+.explanation-table td {
+    background: #16213e;
+}
+

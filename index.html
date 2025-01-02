@@ -80,14 +80,20 @@
                 <h3>Scenario: Small Business</h3>
                 <p>Learn how we helped a small retail business safeguard against ransomware.</p>
             </div>
-        </section>
-
-        <!-- Quiz Section -->
-        <section id="quiz">
-            <h2>Test Your Cybersecurity Knowledge</h2>
-            <button onclick="startQuiz()">Take the Quiz</button>
-            <div id="quiz-container"></div>
-        </section>
+<section id="quiz">
+    <h2>Test Your Cybersecurity Knowledge</h2>
+    <div id="quiz-container">
+        <div id="question">What is the best way to protect your business from ransomware?</div>
+        <form>
+            <label><input type="radio" name="answer" value="A"> Ignore updates</label><br>
+            <label><input type="radio" name="answer" value="B"> Install regular patches</label><br>
+            <label><input type="radio" name="answer" value="C"> Use outdated software</label><br>
+            <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+        <div id="quiz-feedback"></div>
+        <div id="quiz-explanation"></div>
+    </div>
+</section>
 
         <!-- Contact Section -->
         <section id="contact">
