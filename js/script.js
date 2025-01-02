@@ -32,3 +32,7 @@ toggle.addEventListener('click', () => {
     toggle.textContent =
         document.body.classList.contains('dark-mode') ? "☀️" : "🌙";
 });
+function toggleMenu() {
+    const navMenu = document.querySelector('nav ul');
+    navMenu.classList.toggle('active');
+}
