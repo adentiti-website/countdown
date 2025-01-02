@@ -297,3 +297,94 @@ header.dark-mode, footer.dark-mode {
 .cookie-btn:hover {
     background: #009edb;
 }
+.custom-bullets {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-bullets li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.custom-bullets li::before {
+    content: "✔";
+    color: #00d4ff;
+    position: absolute;
+    left: 0;
+}
+
+#quiz-container, .contact-form {
+    margin: 20px auto;
+    padding: 20px;
+    background: #16213e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #16213e;
+    color: #eaeaea;
+}
+
+.certificates img {
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #16213e;
+    color: #eaeaea;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+/* General */
+body {
+ 
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+/* Animated Background */
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1a1a2e, #16213e, #00d4ff);
+    z-index: -1;
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #1a1a2e;
+    }
+    50% {
+        background-color: #16213e;
+    }
+    100% {
+        background-color: #1a1a2e;
+    }
+}
+
+/* Other Styles Omitted for Brevity */
