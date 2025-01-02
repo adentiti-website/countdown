@@ -15,86 +15,83 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <script src="js/quiz.js" defer></script>
+    <script src="js/language.js" defer></script>
+    <script src="js/dark-mode.js" defer></script>
 </head>
 <body>
-    <header class="sticky-nav">
+    <header>
         <div class="logo">
             <img src="images/logo-192.png" alt="ADENTITI Logo">
-            <h1>ADENTITI Limited</h1>
+            <h1 data-translate="heading-title">ADENTITI Limited</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-translate="nav-home">Home</a></li>
+                <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
                 <li><button id="dark-mode-toggle">🌙</button></li>
+                <li>
+                    <select id="language-select">
+                        <option value="en" selected>English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="hero">
+        <!-- Home Section -->
+        <section id="home">
             <video autoplay loop muted>
                 <source src="images/background-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="hero-text">
-                <h2>Your Partner in Cybersecurity</h2>
-                <button onclick="location.href='#quiz'">Take the Quiz</button>
+                <h2 data-translate="hero-title">Your Partner in Cybersecurity</h2>
+                <p data-translate="hero-description">Protect your business with tailored cybersecurity solutions.</p>
+                <button onclick="location.href='#quiz'" data-translate="hero-quiz-btn">Take the Quiz</button>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Us</h2>
-            <p>
-                At <strong>ADENTITI Limited</strong>, we specialize in proactive cybersecurity solutions tailored to meet the needs of Canadian businesses.
-            </p>
-            <ul class="custom-bullets">
-                <li>Proactive Threat Detection</li>
-                <li>24/7 Network Monitoring</li>
-                <li>Employee Training</li>
-                <li>Custom Security Solutions</li>
-            </ul>
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <h2 data-translate="quiz-title">Test Your Cybersecurity Knowledge</h2>
+            <div id="quiz-container">
+                <div id="question" data-translate="quiz-question-1">What is the best way to protect your business from ransomware?</div>
+                <form>
+                    <label><input type="radio" name="answer" value="A"> Ignore updates</label><br>
+                    <label><input type="radio" name="answer" value="B" data-translate="quiz-option-1">Install regular patches</label><br>
+                    <label><input type="radio" name="answer" value="C"> Use outdated software</label><br>
+                    <button type="button" onclick="submitQuiz(1)" data-translate="quiz-submit">Submit</button>
+                </form>
+                <div id="quiz-feedback"></div>
+                <div id="quiz-explanation"></div>
+                <div id="next-quiz-container" style="display: none;">
+                    <button onclick="loadNextQuiz()" data-translate="quiz-next-btn">Try Another Quiz</button>
+                </div>
+                <div id="book-appointment-container" style="display: none;">
+                    <button onclick="location.href='#contact'" data-translate="quiz-appointment-btn">Book an Appointment</button>
+                </div>
+            </div>
         </section>
 
-        <!-- Quiz Section -->
-<section id="quiz">
-    <h2>Test Your Cybersecurity Knowledge</h2>
-    <div id="quiz-container">
-        <div id="question">What is the best way to protect your business from ransomware?</div>
-        <form>
-            <label><input type="radio" name="answer" value="A"> Ignore updates</label><br>
-            <label><input type="radio" name="answer" value="B"> Install regular patches</label><br>
-            <label><input type="radio" name="answer" value="C"> Use outdated software</label><br>
-            <button type="button" onclick="submitQuiz()">Submit</button>
-        </form>
-        <div id="quiz-feedback"></div>
-        <div id="quiz-explanation"></div>
-    </div>
-</section>
         <!-- Contact Section -->
         <section id="contact">
-            <h2>Contact Us</h2>
-            <p>
-                We’re here to help! Reach out to us with any questions or to schedule a consultation. Our team is ready to work with you to create a secure and resilient cybersecurity strategy.
-            </p>
-            <p>
-                <strong>Office Address:</strong><br>
-                740 Dupont Street, Toronto, Ontario, Canada
-            </p>
-            <p>
-                <strong>Phone:</strong> <a href="tel:+16479225776">+1 647-922-5776</a><br>
-                <strong>Email:</strong> <a href="mailto:info@adentiti.ca">info@adentiti.ca</a>
-            </p>
+            <h2 data-translate="contact-title">Contact Us</h2>
+            <p data-translate="contact-description">Reach out with any questions or schedule a consultation. Our team is ready to help secure your business.</p>
+            <address>
+                <p><strong data-translate="contact-address-label">Office:</strong> 740 Dupont Street, Toronto, Ontario, Canada</p>
+                <p><strong data-translate="contact-phone-label">Phone:</strong> <a href="tel:+16479225776">+1 647-922-5776</a></p>
+                <p><strong data-translate="contact-email-label">Email:</strong> <a href="mailto:info@adentiti.ca">info@adentiti.ca</a></p>
+            </address>
             <form action="mailto:info@adentiti.ca" method="post">
-                <label for="name">Name:</label>
+                <label for="name" data-translate="contact-name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <label for="email">Email:</label>
+                <label for="email" data-translate="contact-email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <label for="message">Message:</label>
+                <label for="message" data-translate="contact-message">Message:</label>
                 <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit" data-translate="contact-send">Send Message</button>
             </form>
         </section>
     </main>
