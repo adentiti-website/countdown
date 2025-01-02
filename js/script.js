@@ -1,6 +1,6 @@
 document.querySelector('form').addEventListener('submit',e=>{const t=document.getElementById('name').value.trim(),n=document.getElementById('email').value.trim();t&&n||alert('Please fill in all required fields.')});
 
-// Form Validation
+/// Form Validation
 document.querySelector('form').addEventListener('submit', function (e) {
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -11,7 +11,6 @@ document.querySelector('form').addEventListener('submit', function (e) {
     }
 });
 
-
 // Dynamic Animations
 document.addEventListener('scroll', () => {
     const elements = document.querySelectorAll('section');
@@ -21,9 +20,12 @@ document.addEventListener('scroll', () => {
         }
     });
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Welcome to ADENTITI Limited!");
 });
+
+// Dark Mode Toggle
 const toggle = document.getElementById('dark-mode-toggle');
 toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');

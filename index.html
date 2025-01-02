@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ADENTITI Limited - Your trusted partner in cybersecurity solutions.">
-    <meta name="keywords" content="Cybersecurity, IT Solutions, Data Protection, Network Monitoring, Compliance">
+    <meta name="description" content="ADENTITI Limited - Proactive cybersecurity solutions for businesses.">
+    <meta name="keywords" content="Cybersecurity, IT Solutions, Threat Detection, Compliance">
     <meta name="author" content="ADENTITI Limited">
-    <meta property="og:title" content="ADENTITI Limited - Your Cybersecurity Partner">
-    <meta property="og:description" content="Secure your business with cutting-edge cybersecurity solutions.">
+    <meta property="og:title" content="ADENTITI Limited - Your Trusted Cybersecurity Partner">
+    <meta property="og:description" content="Empower your business with advanced cybersecurity solutions.">
     <meta property="og:image" content="images/logo-512.png">
     <meta property="og:url" content="https://adentiti.ca">
     <meta property="og:type" content="website">
-    <title>ADENTITI Limited</title>
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/analytics.js" defer></script>
     <script src="js/cookie-consent.js" defer></script>
     <script src="js/language.js" defer></script>
     <script src="js/quiz.js" defer></script>
     <script src="js/script.js" defer></script>
+    <title>ADENTITI Limited</title>
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="images/logo-192.png" alt="ADENTITI Logo">
-            <h1 data-translate="heading-title">ADENTITI Limited</h1>
+            <h1>ADENTITI Limited</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="#home" data-translate="nav-home">Home</a></li>
-                <li><a href="#services" data-translate="nav-services">Services</a></li>
-                <li><a href="#case-study" data-translate="nav-case-study">Case Study</a></li>
-                <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#case-study">Case Study</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><button id="dark-mode-toggle">🌙</button></li>
                 <li>
                     <select id="language-select">
@@ -41,108 +42,74 @@
             </ul>
         </nav>
     </header>
-
     <main>
-        <!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="animated-background"></div>
-    <video autoplay loop muted>
-        <source src="images/background-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="hero-text">
-        <h2>Your Partner in Cybersecurity</h2>
-        <p>Protecting Your Future with Next-Gen Cybersecurity Solutions.</p>
-        <button class="cta-button" onclick="location.href='#services'">Get Started Now</button>
-    </div>
-</section>
-
-
-        <!-- Services Section -->
-        <section id="services">
-            <h2 data-translate="services-title">Our Services</h2>
-            <ul class="custom-bullets">
-                <li data-translate="services-1"><strong>Threat Detection and Prevention:</strong> Stay ahead of cyber threats with our advanced detection tools and proactive prevention strategies.</li>
-                <li data-translate="services-2"><strong>24/7 Network Monitoring:</strong> Round-the-clock monitoring ensures real-time alerts and immediate response to any threats.</li>
-                <li data-translate="services-3"><strong>Employee Cybersecurity Training:</strong> Empower your team with engaging, gamified training sessions tailored to reduce human error.</li>
-                <li data-translate="services-4"><strong>Custom Security Solutions:</strong> Our experts design solutions that align perfectly with your unique business needs and goals.</li>
-                <li data-translate="services-5"><strong>Compliance and Risk Management:</strong> Meet industry standards like HIPAA, GDPR, and CCPA with our compliance services.</li>
-            </ul>
-            <p data-translate="services-custom">Have specific needs? <a href="#contact" data-translate="contact-link">Contact us</a> for a custom solution.</p>
-        </section>
-
-        <!-- Case Study Section -->
-<section id="case-study">
-    <h2>Case Study: Securing a Healthcare Provider</h2>
-    <div class="case-study-timeline">
-        <div class="timeline-item">
-            <h3>Challenge</h3>
-            <p>Frequent phishing attacks and data breaches threatened sensitive patient data.</p>
-        </div>
-        <div class="timeline-item">
-            <h3>Solution</h3>
-            <p>Comprehensive security audit, cutting-edge firewalls, and employee training.</p>
-        </div>
-        <div class="timeline-item">
-            <h3>Outcome</h3>
-            <p>A 70% reduction in phishing incidents and zero data breaches in six months.</p>
-        </div>
-    </div>
-    <button class="cta-button" onclick="location.href='#contact'">Let Us Help Your Business</button>
-</section>
-
-
-        <!-- Quiz Section -->
-        <section id="quiz">
-            <h2 data-translate="quiz-title">Test Your Cybersecurity Knowledge</h2>
-            <div id="quiz-container">
-                <div id="question" data-translate="quiz-question-1">What is the best way to protect your business from ransomware?</div>
-                <form>
-                    <label><input type="radio" name="answer" value="A"> Ignore updates</label><br>
-                    <label><input type="radio" name="answer" value="B" data-translate="quiz-option-1">Install regular patches</label><br>
-                    <label><input type="radio" name="answer" value="C"> Use outdated software</label><br>
-                    <button type="button" onclick="submitQuiz(1)" data-translate="quiz-submit">Submit</button>
-                </form>
-                <div id="quiz-feedback"></div>
-                <div id="quiz-explanation"></div>
-                <div id="next-quiz-container" style="display: none;">
-                    <button onclick="loadNextQuiz()" data-translate="quiz-next-btn">Try Another Quiz</button>
-                </div>
-                <div id="book-appointment-container" style="display: none;">
-                    <button onclick="location.href='#contact'" data-translate="quiz-appointment-btn">Book an Appointment</button>
-                </div>
+        <section id="home" class="hero">
+            <div class="animated-background"></div>
+            <video autoplay loop muted>
+                <source src="images/background-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-text">
+                <h2>Your Partner in Cybersecurity</h2>
+                <p>Protecting Your Future with Next-Gen Cybersecurity Solutions.</p>
+                <button class="cta-button" onclick="location.href='#services'">Get Started Now</button>
             </div>
         </section>
-
-        <!-- Contact Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li><strong>Threat Detection:</strong> Advanced tools to identify threats before they impact your business.</li>
+                <li><strong>Network Monitoring:</strong> 24/7 proactive monitoring to secure your systems.</li>
+                <li><strong>Employee Training:</strong> Engage your team with gamified training programs.</li>
+                <li><strong>Custom Solutions:</strong> Tailored strategies to fit your unique needs.</li>
+                <li><strong>Compliance:</strong> Expertise in HIPAA, GDPR, and industry regulations.</li>
+            </ul>
+            <p><a href="#contact">Contact us</a> for a custom solution tailored to your business.</p>
+        </section>
+        <section id="case-study">
+            <h2>Case Study: Securing Healthcare Data</h2>
+            <div class="case-study-timeline">
+                <div class="timeline-item">
+                    <h3>Challenge</h3>
+                    <p>Frequent phishing and data breaches jeopardized sensitive patient data.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Solution</h3>
+                    <p>Advanced firewall, employee training, and secure backup solutions.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Outcome</h3>
+                    <p>Zero breaches and a 70% reduction in phishing incidents in six months.</p>
+                </div>
+            </div>
+            <button class="cta-button" onclick="location.href='#contact'">See How We Can Help</button>
+        </section>
         <section id="contact">
-            <h2 data-translate="contact-title">Contact Us</h2>
-            <p data-translate="contact-description">Reach out for inquiries or to schedule a consultation.</p>
+            <h2>Contact Us</h2>
+            <p>Have questions or need more information? Reach out to us!</p>
             <address>
-                <p><strong data-translate="contact-address-label">Office:</strong> 740 Dupont Street, Toronto, Ontario, Canada</p>
-                <p><strong data-translate="contact-phone-label">Phone:</strong> <a href="tel:+16479225776">+1 647-922-5776</a></p>
-                <p><strong data-translate="contact-email-label">Email:</strong> <a href="mailto:info@adentiti.ca">info@adentiti.ca</a></p>
+                <p><strong>Office:</strong> 740 Dupont Street, Toronto, Ontario</p>
+                <p><strong>Phone:</strong> <a href="tel:+16479225776">+1 647-922-5776</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@adentiti.ca">info@adentiti.ca</a></p>
             </address>
             <form action="mailto:info@adentiti.ca" method="post">
-                <label for="name" data-translate="contact-name">Name:</label>
+                <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <label for="email" data-translate="contact-email">Email:</label>
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <label for="message" data-translate="contact-message">Message:</label>
+                <label for="message">Message:</label>
                 <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" data-translate="contact-send">Send Message</button>
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
-
     <footer>
         <div class="certificates">
             <img src="images/ssl-badge.png" alt="SSL Secured" height="50">
             <img src="images/compliance-badge.png" alt="Compliance Certified" height="50">
         </div>
-        <p>&copy; 2024 ADENTITI Limited. All Rights Reserved.</p>
+        <p>&copy; 2025 ADENTITI Limited. All Rights Reserved.</p>
     </footer>
-
     <div id="cookie-banner">
         <p>This site uses cookies to improve user experience. <a href="#">Learn more</a></p>
         <button id="accept-cookies">Accept</button>

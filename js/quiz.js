@@ -1,3 +1,4 @@
+// Quiz Functionality
 let currentQuiz = 1;
 
 function submitQuiz(quizNumber) {
@@ -17,7 +18,7 @@ function submitQuiz(quizNumber) {
                     { column: "Explanation", value: "Patches fix vulnerabilities, reducing risk." }
                 ];
             } else {
-                message = "Incorrect. 😔";
+                message = "Incorrect. 😢";
                 explanationData = [
                     { column: "Your Choice", value: selected.value },
                     { column: "Correct Answer", value: "Install regular patches" },
@@ -32,7 +33,7 @@ function submitQuiz(quizNumber) {
                     { column: "Explanation", value: "Educated employees reduce human error." }
                 ];
             } else {
-                message = "Incorrect. 😔";
+                message = "Incorrect. 😢";
                 explanationData = [
                     { column: "Your Choice", value: selected.value },
                     { column: "Correct Answer", value: "Educate your employees" },
