@@ -1,4 +1,6 @@
 /* General */
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);color:#eaeaea;overflow-x:hidden;}header{display:flex;justify-content:space-between;align-items:center;padding:20px 10%;background:#16213e;position:sticky;top:0;z-index:1000;}header .logo img{height:50px;}header ul{display:flex;list-style:none;gap:20px;}header ul li a{text-decoration:none;color:#eaeaea;font-size:1.1rem;transition:color .3s;}header ul li a:hover{color:#00d4ff;}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;

@@ -1,3 +1,5 @@
+document.querySelector('form').addEventListener('submit',e=>{const t=document.getElementById('name').value.trim(),n=document.getElementById('email').value.trim();t&&n||alert('Please fill in all required fields.')});
+
 // Form Validation
 document.querySelector('form').addEventListener('submit', function (e) {
     const name = document.getElementById('name').value.trim();
