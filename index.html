@@ -44,17 +44,19 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home">
-            <video autoplay loop muted>
-                <source src="images/background-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="hero-text">
-                <h2 data-translate="hero-title">Your Partner in Cybersecurity</h2>
-                <p data-translate="hero-description">Protect your business with tailored cybersecurity solutions.</p>
-                <button onclick="location.href='#services'" data-translate="hero-quiz-btn">Explore Our Services</button>
-            </div>
-        </section>
+<section id="home" class="hero">
+    <div class="animated-background"></div>
+    <video autoplay loop muted>
+        <source src="images/background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-text">
+        <h2>Your Partner in Cybersecurity</h2>
+        <p>Protecting Your Future with Next-Gen Cybersecurity Solutions.</p>
+        <button class="cta-button" onclick="location.href='#services'">Get Started Now</button>
+    </div>
+</section>
+
 
         <!-- Services Section -->
         <section id="services">
@@ -70,24 +72,25 @@
         </section>
 
         <!-- Case Study Section -->
-        <section id="case-study">
-            <h2 data-translate="case-study-title">Case Study: Securing a Healthcare Provider</h2>
-            <p data-translate="case-study-desc">
-                A leading healthcare provider in Toronto with over 500 employees was grappling with frequent phishing attacks and data breaches. The organization needed a robust solution to protect sensitive patient information and maintain compliance with healthcare regulations.
-            </p>
-            <h3 data-translate="case-study-solution-title">What ADENTITI Did:</h3>
-            <ul class="custom-bullets">
-                <li data-translate="case-study-solution-1">Conducted a comprehensive security audit to identify vulnerabilities in their network infrastructure.</li>
-                <li data-translate="case-study-solution-2">Deployed cutting-edge firewalls, endpoint protection, and an intrusion detection system.</li>
-                <li data-translate="case-study-solution-3">Provided gamified cybersecurity training to educate employees on identifying phishing emails and other common threats.</li>
-                <li data-translate="case-study-solution-4">Implemented a secure backup system to ensure data recovery in the event of an attack.</li>
-                <li data-translate="case-study-solution-5">Set up 24/7 monitoring and real-time threat response protocols.</li>
-            </ul>
-            <p data-translate="case-study-outcome">
-                <strong>Outcome:</strong> Within six months, the healthcare provider experienced a 70% reduction in phishing incidents, zero data breaches, and improved employee confidence in handling cyber threats.
-            </p>
-            <button onclick="location.href='#contact'" data-translate="case-study-contact">Let Us Help Your Business</button>
-        </section>
+<section id="case-study">
+    <h2>Case Study: Securing a Healthcare Provider</h2>
+    <div class="case-study-timeline">
+        <div class="timeline-item">
+            <h3>Challenge</h3>
+            <p>Frequent phishing attacks and data breaches threatened sensitive patient data.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Solution</h3>
+            <p>Comprehensive security audit, cutting-edge firewalls, and employee training.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Outcome</h3>
+            <p>A 70% reduction in phishing incidents and zero data breaches in six months.</p>
+        </div>
+    </div>
+    <button class="cta-button" onclick="location.href='#contact'">Let Us Help Your Business</button>
+</section>
+
 
         <!-- Quiz Section -->
         <section id="quiz">
