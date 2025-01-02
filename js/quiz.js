@@ -16,31 +16,21 @@ function submitQuiz() {
                 {
                     column: "Explanation",
                     value:
-                        "Installing regular patches ensures vulnerabilities in software are fixed, minimizing the risk of cyberattacks.",
+                        "Regular patches ensure that vulnerabilities are fixed, minimizing the risk of cyberattacks.",
                 },
             ];
-        } else if (selected.value === "A") {
+        } else {
+            const wrongAnswer =
+                selected.value === "A" ? "Ignore updates" : "Use outdated software";
             message = "Incorrect. 😔";
             color = "red";
             explanationData = [
-                { column: "Your Choice", value: "Ignore updates" },
+                { column: "Your Choice", value: wrongAnswer },
                 { column: "Correct Answer", value: "Install regular patches" },
                 {
                     column: "Explanation",
                     value:
-                        "Ignoring updates leaves your system exposed to known vulnerabilities that hackers can exploit.",
-                },
-            ];
-        } else if (selected.value === "C") {
-            message = "Incorrect. 😔";
-            color = "red";
-            explanationData = [
-                { column: "Your Choice", value: "Use outdated software" },
-                { column: "Correct Answer", value: "Install regular patches" },
-                {
-                    column: "Explanation",
-                    value:
-                        "Using outdated software lacks critical security updates, making it easier for attackers to compromise your system.",
+                        "Ignoring updates or using outdated software exposes your system to known vulnerabilities.",
                 },
             ];
         }

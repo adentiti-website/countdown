@@ -229,3 +229,12 @@ ul.custom-bullets li::before {
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+body.dark-mode {
+    background: #000;
+    color: #fff;
+}
+
+header.dark-mode, footer.dark-mode {
+    background: #333;
+    color: #fff;
+}
