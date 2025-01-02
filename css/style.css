@@ -825,3 +825,19 @@ header .social-proof {
     color: #fff; /* Ensure text contrasts with the image */
     padding: 100px 10%;
 }
+.services-image {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.services-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.services-image img:hover {
+    transform: scale(1.05);
+}
