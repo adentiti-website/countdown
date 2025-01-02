@@ -4,18 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ADENTITI Limited - Proactive cybersecurity solutions for your business.">
-    <meta name="keywords" content="Cybersecurity, IT Solutions, Threat Detection, Network Monitoring">
-    <meta name="author" content="ADENTITI Limited">
-    <meta property="og:title" content="ADENTITI Limited - Your Cybersecurity Partner">
-    <meta property="og:description" content="Secure your business with cutting-edge cybersecurity solutions.">
-    <meta property="og:image" content="images/logo-512.png">
-    <meta property="og:url" content="https://adentiti.ca">
-    <meta property="og:type" content="website">
     <title>ADENTITI Limited</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
-    <script src="js/chatbot.js" defer></script>
-    <script src="js/animations.js" defer></script>
+    <script src="js/darkmode.js" defer></script>
+    <script src="js/quiz.js" defer></script>
 </head>
 <body>
     <header>
@@ -27,10 +20,12 @@
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#portal">Client Portal</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button id="dark-mode-toggle">🌙</button>
     </header>
 
     <main>
@@ -38,7 +33,6 @@
         <section id="hero">
             <video autoplay loop muted>
                 <source src="images/background-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
             <div class="hero-text">
                 <h2>Your Partner in Cybersecurity</h2>
@@ -49,31 +43,30 @@
         <!-- About Section -->
         <section id="about">
             <h2>About Us</h2>
-            <p>At ADENTITI Limited, we specialize in proactive cybersecurity solutions tailored to Canadian businesses.</p>
+            <p>At ADENTITI Limited, we specialize in providing proactive cybersecurity solutions to safeguard businesses.</p>
         </section>
 
         <!-- Services Section -->
         <section id="services">
             <h2>Our Services</h2>
             <ul>
-                <li>Threat Detection and Prevention</li>
-                <li>24/7 Network Monitoring</li>
-                <li>Employee Cybersecurity Training</li>
-                <li>Custom IT Security Solutions</li>
+                <li>Threat Detection</li>
+                <li>Network Monitoring</li>
+                <li>Employee Training</li>
+                <li>Custom Security Solutions</li>
             </ul>
         </section>
 
-        <!-- Case Studies Section -->
-        <section id="case-studies">
-            <h2>Case Studies</h2>
-            <div class="case">
-                <h3>Scenario 1: Protecting a Healthcare Organization</h3>
-                <p>Implemented multi-layered email security and reduced phishing incidents by 85%.</p>
-            </div>
-            <div class="case">
-                <h3>Scenario 2: Securing Remote Workforces</h3>
-                <p>Deployed VPNs and real-time monitoring for a seamless transition to remote operations.</p>
-            </div>
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <h2>Test Your Cybersecurity Knowledge</h2>
+            <div id="quiz-container"></div>
+        </section>
+
+        <!-- Client Portal -->
+        <section id="portal">
+            <h2>Client Portal</h2>
+            <p>Coming soon: A secure area for clients to access their personalized reports and resources.</p>
         </section>
 
         <!-- Contact Section -->
@@ -86,7 +79,7 @@
                 <input type="email" id="email" name="email" required>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit">Send</button>
             </form>
         </section>
     </main>
