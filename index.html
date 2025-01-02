@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ADENTITI Limited - Proactive cybersecurity solutions for your business.">
+    <meta name="keywords" content="Cybersecurity, IT Solutions, Threat Detection, Network Monitoring">
+    <meta name="author" content="ADENTITI Limited">
+    <meta property="og:title" content="ADENTITI Limited - Your Cybersecurity Partner">
+    <meta property="og:description" content="Secure your business with cutting-edge cybersecurity solutions.">
+    <meta property="og:image" content="images/logo-512.png">
+    <meta property="og:url" content="https://adentiti.ca">
+    <meta property="og:type" content="website">
     <title>ADENTITI Limited</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
-    <script src="js/darkmode.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
     <script src="js/quiz.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="sticky-nav">
         <div class="logo">
+            <img src="images/logo-192.png" alt="ADENTITI Logo">
             <h1>ADENTITI Limited</h1>
         </div>
         <nav>
@@ -20,12 +28,12 @@
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#case-study">Case Studies</a></li>
                 <li><a href="#quiz">Quiz</a></li>
-                <li><a href="#portal">Client Portal</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button id="dark-mode-toggle">🌙</button></li>
             </ul>
         </nav>
-        <button id="dark-mode-toggle">🌙</button>
     </header>
 
     <main>
@@ -33,6 +41,7 @@
         <section id="hero">
             <video autoplay loop muted>
                 <source src="images/background-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
             <div class="hero-text">
                 <h2>Your Partner in Cybersecurity</h2>
@@ -43,30 +52,41 @@
         <!-- About Section -->
         <section id="about">
             <h2>About Us</h2>
-            <p>At ADENTITI Limited, we specialize in providing proactive cybersecurity solutions to safeguard businesses.</p>
+            <p>
+                At <strong>ADENTITI Limited</strong>, we specialize in proactive cybersecurity solutions tailored to meet the needs of Canadian businesses.
+            </p>
+            <ul>
+                <li>Proactive Threat Detection</li>
+                <li>24/7 Network Monitoring</li>
+                <li>Employee Training</li>
+                <li>Custom Security Solutions</li>
+            </ul>
         </section>
 
         <!-- Services Section -->
         <section id="services">
             <h2>Our Services</h2>
             <ul>
-                <li>Threat Detection</li>
-                <li>Network Monitoring</li>
-                <li>Employee Training</li>
-                <li>Custom Security Solutions</li>
+                <li>Threat Detection and Prevention</li>
+                <li>Compliance and Risk Management</li>
+                <li>Network Security Assessments</li>
             </ul>
+        </section>
+
+        <!-- Case Study Section -->
+        <section id="case-study">
+            <h2>Case Studies</h2>
+            <div>
+                <h3>Scenario: Small Business</h3>
+                <p>Learn how we helped a small retail business safeguard against ransomware.</p>
+            </div>
         </section>
 
         <!-- Quiz Section -->
         <section id="quiz">
             <h2>Test Your Cybersecurity Knowledge</h2>
+            <button onclick="startQuiz()">Take the Quiz</button>
             <div id="quiz-container"></div>
-        </section>
-
-        <!-- Client Portal -->
-        <section id="portal">
-            <h2>Client Portal</h2>
-            <p>Coming soon: A secure area for clients to access their personalized reports and resources.</p>
         </section>
 
         <!-- Contact Section -->
