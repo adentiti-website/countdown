@@ -19,3 +19,6 @@ document.addEventListener('scroll', () => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Welcome to ADENTITI Limited!");
+});

@@ -1,14 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ADENTITI Limited - Proactive cybersecurity solutions for your business.">
+    <meta name="keywords" content="Cybersecurity, IT Solutions, Threat Detection, Network Monitoring">
+    <meta name="author" content="ADENTITI Limited">
+    <meta property="og:title" content="ADENTITI Limited - Your Cybersecurity Partner">
+    <meta property="og:description" content="Secure your business with cutting-edge cybersecurity solutions.">
+    <meta property="og:image" content="images/logo-512.png">
+    <meta property="og:url" content="https://adentiti.ca">
+    <meta property="og:type" content="website">
+    <title>ADENTITI Limited</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
+    <script src="js/animations.js" defer></script>
+</head>
 <body>
-    <header class="container">
+    <header>
         <div class="logo">
-            <img src="images/logo.png" alt="ADENTITI Limited Logo">
+            <h1>ADENTITI Limited</h1>
         </div>
         <nav>
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -17,9 +36,8 @@
     <main>
         <!-- Hero Section -->
         <section id="hero">
-            <div class="video-overlay"></div>
             <video autoplay loop muted>
-                <source src="images/hero-bg.mp4" type="video/mp4">
+                <source src="images/background-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="hero-text">
@@ -28,56 +46,53 @@
             </div>
         </section>
 
-        <div class="container">
-            <!-- About Section -->
-            <section id="about">
-                <h2>About Us</h2>
-                <p>At ADENTITI Limited, we specialize in proactive cybersecurity solutions tailored to meet the needs of Canadian businesses.</p>
-            </section>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At ADENTITI Limited, we specialize in proactive cybersecurity solutions tailored to Canadian businesses.</p>
+        </section>
 
-            <!-- Services Section -->
-            <section id="services">
-                <h2>Our Services</h2>
-                <ul>
-                    <li>Threat Detection and Prevention</li>
-                    <li>24/7 Network Monitoring</li>
-                    <li>Employee Cybersecurity Training</li>
-                    <li>Customizable IT Security Solutions</li>
-                </ul>
-            </section>
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Threat Detection and Prevention</li>
+                <li>24/7 Network Monitoring</li>
+                <li>Employee Cybersecurity Training</li>
+                <li>Custom IT Security Solutions</li>
+            </ul>
+        </section>
 
-            <!-- Blog Section -->
-            <section id="blog">
-                <h2>Blog</h2>
-                <p>Stay updated with tips, trends, and best practices in cybersecurity.</p>
-            </section>
+        <!-- Case Studies Section -->
+        <section id="case-studies">
+            <h2>Case Studies</h2>
+            <div class="case">
+                <h3>Scenario 1: Protecting a Healthcare Organization</h3>
+                <p>Implemented multi-layered email security and reduced phishing incidents by 85%.</p>
+            </div>
+            <div class="case">
+                <h3>Scenario 2: Securing Remote Workforces</h3>
+                <p>Deployed VPNs and real-time monitoring for a seamless transition to remote operations.</p>
+            </div>
+        </section>
 
-            <!-- FAQ Section -->
-            <section id="faq">
-                <h2>FAQ</h2>
-                <div>
-                    <h3>How can I secure my business?</h3>
-                    <p>We offer comprehensive assessments to identify and address vulnerabilities.</p>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact">
-                <h2>Contact Us</h2>
-                <form action="mailto:info@adentiti.ca" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </section>
-        </div>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="mailto:info@adentiti.ca" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2024 ADENTITI Limited. All Rights Reserved.</p>
     </footer>
 </body>
+</html>
