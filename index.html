@@ -14,7 +14,6 @@
     <title>ADENTITI Limited</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
-    <script src="js/chatbot.js" defer></script>
     <script src="js/quiz.js" defer></script>
 </head>
 <body>
@@ -26,10 +25,6 @@
         <nav>
             <ul>
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#case-study">Case Studies</a></li>
-                <li><a href="#quiz">Quiz</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><button id="dark-mode-toggle">🌙</button></li>
             </ul>
@@ -45,7 +40,7 @@
             </video>
             <div class="hero-text">
                 <h2>Your Partner in Cybersecurity</h2>
-                <button onclick="location.href='#services'">Explore Services</button>
+                <button onclick="location.href='#quiz'">Take the Quiz</button>
             </div>
         </section>
 
@@ -55,7 +50,7 @@
             <p>
                 At <strong>ADENTITI Limited</strong>, we specialize in proactive cybersecurity solutions tailored to meet the needs of Canadian businesses.
             </p>
-            <ul>
+            <ul class="custom-bullets">
                 <li>Proactive Threat Detection</li>
                 <li>24/7 Network Monitoring</li>
                 <li>Employee Training</li>
@@ -63,23 +58,7 @@
             </ul>
         </section>
 
-        <!-- Services Section -->
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Threat Detection and Prevention</li>
-                <li>Compliance and Risk Management</li>
-                <li>Network Security Assessments</li>
-            </ul>
-        </section>
-
-        <!-- Case Study Section -->
-        <section id="case-study">
-            <h2>Case Studies</h2>
-            <div>
-                <h3>Scenario: Small Business</h3>
-                <p>Learn how we helped a small retail business safeguard against ransomware.</p>
-            </div>
+        <!-- Quiz Section -->
 <section id="quiz">
     <h2>Test Your Cybersecurity Knowledge</h2>
     <div id="quiz-container">
@@ -94,18 +73,28 @@
         <div id="quiz-explanation"></div>
     </div>
 </section>
-
         <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Us</h2>
+            <p>
+                We’re here to help! Reach out to us with any questions or to schedule a consultation. Our team is ready to work with you to create a secure and resilient cybersecurity strategy.
+            </p>
+            <p>
+                <strong>Office Address:</strong><br>
+                740 Dupont Street, Toronto, Ontario, Canada
+            </p>
+            <p>
+                <strong>Phone:</strong> <a href="tel:+16479225776">+1 647-922-5776</a><br>
+                <strong>Email:</strong> <a href="mailto:info@adentiti.ca">info@adentiti.ca</a>
+            </p>
             <form action="mailto:info@adentiti.ca" method="post">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
