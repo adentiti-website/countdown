@@ -263,3 +263,37 @@ header.dark-mode, footer.dark-mode {
 #next-quiz-container button:hover, #book-appointment-container button:hover {
     background: #009edb;
 }
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #16213e;
+    color: #eaeaea;
+    text-align: center;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cookie-link {
+    color: #00d4ff;
+    text-decoration: underline;
+}
+
+.cookie-btn {
+    background: #00d4ff;
+    color: #16213e;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cookie-btn:hover {
+    background: #009edb;
+}
