@@ -807,3 +807,21 @@ header .social-proof {
         display: flex;
     }
 }
+.contact-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+#contact {
+    background: url('images/contact-bg.jpg') no-repeat center center/cover;
+    color: #fff; /* Ensure text contrasts with the image */
+    padding: 100px 10%;
+}
