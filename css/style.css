@@ -1,3 +1,68 @@
+/* Meet Our Experts Section */
+.meet-our-experts {
+    padding: 50px 10%;
+    background-color: #1a1a2e;
+    color: #eaeaea;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #00d4ff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.expert-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #16213e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.expert-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00d4ff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.expert-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.expert-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.expert-title {
+    font-size: 1.2rem;
+    color: #00d4ff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.expert-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #eaeaea;
+}
+
+/* Hover Effect for Expert Card */
+.expert-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
 @media (max-width: 768px) {
     .social-icons {
         flex-wrap: wrap;
