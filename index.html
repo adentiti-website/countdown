@@ -193,22 +193,18 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
         <!-- Blog Post 1 -->
         <article class="blog-post">
             <h3>"5G and Cybersecurity in Canada: Challenges and Opportunities"</h3>
-            <p>As Canada embraces 5G, businesses face new security challenges. Discover how to stay ahead with Adentiti’s innovative solutions.</p>
-            <button class="read-more-btn" onclick="toggleDetails('details-1')">Read More</button>
-            <div id="details-1" class="blog-details hidden">
-                <p>
-                    The transition to 5G brings immense benefits like faster speeds and lower latency, but it also introduces vulnerabilities to cyber threats. 
-                    Businesses must adopt proactive measures, including advanced network security tools and employee training. 
-                    Understanding how attackers exploit 5G infrastructure can help mitigate risks. 
-                    Adentiti’s innovative solutions ensure businesses can thrive securely in this new era of connectivity.
-                </p>
-            </div>
+            <p>
+                The transition to 5G brings immense benefits like faster speeds and lower latency, but it also introduces vulnerabilities to cyber threats. 
+                Businesses must adopt proactive measures, including advanced network security tools and employee training. 
+                Understanding how attackers exploit 5G infrastructure can help mitigate risks. 
+                Adentiti’s innovative solutions ensure businesses can thrive securely in this new era of connectivity.
+            </p>
             <div class="comment-section">
                 <h4>Comments</h4>
-                <textarea placeholder="Add your comment..." class="comment-box"></textarea>
-                <button class="comment-btn">Submit</button>
-                <ul class="comments-list">
-                    <li>John Doe: Great insights! I’m curious about how 5G will impact small businesses.</li>
+                <textarea id="comment-1" placeholder="Add your comment..." class="comment-box"></textarea>
+                <button class="comment-btn" onclick="addComment('comment-list-1', 'comment-1')">Submit</button>
+                <ul id="comment-list-1" class="comments-list">
+                    <!-- Comments will appear here -->
                 </ul>
             </div>
         </article>
@@ -216,22 +212,18 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
         <!-- Blog Post 2 -->
         <article class="blog-post">
             <h3>"Protecting SMBs: Affordable Cybersecurity Solutions"</h3>
-            <p>Learn how small and medium-sized businesses can implement effective cybersecurity strategies without breaking the bank.</p>
-            <button class="read-more-btn" onclick="toggleDetails('details-2')">Read More</button>
-            <div id="details-2" class="blog-details hidden">
-                <p>
-                    Small businesses are often seen as easy targets by cybercriminals due to limited resources for cybersecurity. 
-                    Affordable solutions like multi-factor authentication and robust password management can reduce risks significantly. 
-                    Adentiti offers budget-friendly services tailored to SMBs, including employee training and cloud security. 
-                    These strategies empower businesses to protect their assets without overspending.
-                </p>
-            </div>
+            <p>
+                Small businesses are often seen as easy targets by cybercriminals due to limited resources for cybersecurity. 
+                Affordable solutions like multi-factor authentication and robust password management can reduce risks significantly. 
+                Adentiti offers budget-friendly services tailored to SMBs, including employee training and cloud security. 
+                These strategies empower businesses to protect their assets without overspending.
+            </p>
             <div class="comment-section">
                 <h4>Comments</h4>
-                <textarea placeholder="Add your comment..." class="comment-box"></textarea>
-                <button class="comment-btn">Submit</button>
-                <ul class="comments-list">
-                    <li>Jane Smith: This is really helpful for startups like mine. Thanks for sharing!</li>
+                <textarea id="comment-2" placeholder="Add your comment..." class="comment-box"></textarea>
+                <button class="comment-btn" onclick="addComment('comment-list-2', 'comment-2')">Submit</button>
+                <ul id="comment-list-2" class="comments-list">
+                    <!-- Comments will appear here -->
                 </ul>
             </div>
         </article>

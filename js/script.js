@@ -1,3 +1,53 @@
+// Add a new comment to the comment list
+function addComment(listId, inputId) {
+    const commentList = document.getElementById(listId);
+    const commentInput = document.getElementById(inputId);
+    const commentText = commentInput.value.trim();
+
+    if (commentText) {
+        // Create a new list item for the comment
+        const newComment = document.createElement('li');
+        newComment.textContent = commentText;
+
+        // Append the new comment to the list
+        commentList.appendChild(newComment);
+
+        // Save comments to local storage
+        saveComments(listId);
+
+        // Clear the input field
+        commentInput.value = '';
+    } else {
+        alert('Please enter a comment before submitting.');
+    }
+}
+
+// Save comments to local storage
+function saveComments(listId) {
+    const commentList = document.getElementById(listId);
+    const comments = Array.from(commentList.children).map(comment => comment.textContent);
+
+    localStorage.setItem(listId, JSON.stringify(comments));
+}
+
+// Load comments from local storage
+function loadComments(listId) {
+    const commentList = document.getElementById(listId);
+    const storedComments = JSON.parse(localStorage.getItem(listId)) || [];
+
+    storedComments.forEach(comment => {
+        const newComment = document.createElement('li');
+        newComment.textContent = comment;
+        commentList.appendChild(newComment);
+    });
+}
+
+// Load comments for all blog posts when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    loadComments('comment-list-1');
+    loadComments('comment-list-2');
+});
+
 function toggleDetails(detailsId) {
     const detailsElement = document.getElementById(detailsId);
     if (detailsElement.classList.contains('hidden')) {
