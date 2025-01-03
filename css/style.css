@@ -1,3 +1,72 @@
+/* Problem Solving Section */
+.problem-solving-section {
+    padding: 50px 10%;
+    background-color: #16213e;
+    color: #eaeaea;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #00d4ff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.problem-solving-card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: #1a1a2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.problem-solving-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.problem-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.problem-details {
+    flex: 1;
+}
+
+.problem-details h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.problem-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #eaeaea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .problem-solving-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .problem-solving-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .problem-image img {
+        max-width: 100%;
+    }
+}
+
 /* Logo Container Styling */
 .logo {
     display: flex;
@@ -9,16 +78,7 @@
 
 /* Logo Image Styling */
 .logo img {
-    height: 80px;
-    width: 80px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.logo img:hover {
-    transform: scale(1.05); /* Slight scale effect */
-    box-shadow: 0 6px 15px rgba(0, 212, 255, 0.3); /* Soft glow */
+    border-radius: 1px;
 }
 
 /* Tagline Styling */
@@ -34,14 +94,6 @@
     color: #00d4ff;
     margin: 0;
     font-weight: 400;
-}
-
-/* Glow Effect (Subtle) */
-.logo img::before {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2); /* Static, soft glow */
 }
 
 /* Responsive Design */
