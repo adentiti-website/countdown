@@ -1,3 +1,14 @@
+function toggleDetails(detailsId) {
+    const detailsElement = document.getElementById(detailsId);
+    if (detailsElement.classList.contains('hidden')) {
+        detailsElement.classList.remove('hidden');
+        detailsElement.classList.add('visible');
+    } else {
+        detailsElement.classList.add('hidden');
+        detailsElement.classList.remove('visible');
+    }
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

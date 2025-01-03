@@ -190,10 +190,19 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
 <section id="blog" class="blog-section">
     <h2 class="section-title">Latest Insights</h2>
     <div class="blog-container">
+        <!-- Blog Post 1 -->
         <article class="blog-post">
             <h3>"5G and Cybersecurity in Canada: Challenges and Opportunities"</h3>
             <p>As Canada embraces 5G, businesses face new security challenges. Discover how to stay ahead with Adentiti’s innovative solutions.</p>
-            <button class="read-more-btn">Read More</button>
+            <button class="read-more-btn" onclick="toggleDetails('details-1')">Read More</button>
+            <div id="details-1" class="blog-details hidden">
+                <p>
+                    The transition to 5G brings immense benefits like faster speeds and lower latency, but it also introduces vulnerabilities to cyber threats. 
+                    Businesses must adopt proactive measures, including advanced network security tools and employee training. 
+                    Understanding how attackers exploit 5G infrastructure can help mitigate risks. 
+                    Adentiti’s innovative solutions ensure businesses can thrive securely in this new era of connectivity.
+                </p>
+            </div>
             <div class="comment-section">
                 <h4>Comments</h4>
                 <textarea placeholder="Add your comment..." class="comment-box"></textarea>
@@ -203,10 +212,20 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
                 </ul>
             </div>
         </article>
+
+        <!-- Blog Post 2 -->
         <article class="blog-post">
             <h3>"Protecting SMBs: Affordable Cybersecurity Solutions"</h3>
             <p>Learn how small and medium-sized businesses can implement effective cybersecurity strategies without breaking the bank.</p>
-            <button class="read-more-btn">Read More</button>
+            <button class="read-more-btn" onclick="toggleDetails('details-2')">Read More</button>
+            <div id="details-2" class="blog-details hidden">
+                <p>
+                    Small businesses are often seen as easy targets by cybercriminals due to limited resources for cybersecurity. 
+                    Affordable solutions like multi-factor authentication and robust password management can reduce risks significantly. 
+                    Adentiti offers budget-friendly services tailored to SMBs, including employee training and cloud security. 
+                    These strategies empower businesses to protect their assets without overspending.
+                </p>
+            </div>
             <div class="comment-section">
                 <h4>Comments</h4>
                 <textarea placeholder="Add your comment..." class="comment-box"></textarea>
@@ -218,23 +237,23 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
         </article>
     </div>
 </section>
-        <!-- Contact Section -->
-<section id="contact">
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
     <div class="contact-container">
-        <h2>Contact Us</h2>
-        <p>Let’s Secure Your Business Today! Reach out for inquiries or support, and let us help protect your digital future.</p>
+        <h2 class="section-title">Contact Us</h2>
+        <p>Let’s Secure Your Business Today! Reach out to request a quote or describe the type of support you need, and let us help protect your digital future.</p>
+        
         <div class="contact-content">
             <!-- Contact Details -->
-            <div class="contact-text">
-                <div class="contact-details">
-                    <p><strong><img src="images/icons/address-icon.png" alt="Office" class="icon"> Office:</strong> 740 Dupont Street, Toronto, Ontario, Canada</p>
-                    <p><strong><img src="images/icons/phone-icon.png" alt="Phone" class="icon"> Phone:</strong> <a href="tel:+16479225776">+1 647-922-5776</a></p>
-                    <p><strong><img src="images/icons/email-icon.png" alt="Email" class="icon"> Email:</strong> <a href="mailto:info@adentiti.ca">info@adentiti.ca</a></p>
-                </div>
+            <div class="contact-details">
+                <p><strong><img src="images/icons/address-icon.png" alt="Office Icon" class="icon"> Office:</strong> 740 Dupont Street, Toronto, Ontario, Canada</p>
+                <p><strong><img src="images/icons/phone-icon.png" alt="Phone Icon" class="icon"> Phone:</strong> <a href="tel:+16479225776">+1 647-922-5776</a></p>
+                <p><strong><img src="images/icons/email-icon.png" alt="Email Icon" class="icon"> Email:</strong> <a href="mailto:info@adentiti.ca">info@adentiti.ca</a></p>
             </div>
 
-            <!-- Contact Form -->
-            <div class="contact-form">
+            <!-- Request a Quote Form -->
+            <div class="quote-form">
                 <form action="#" method="POST">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Your Full Name" required>
@@ -242,13 +261,24 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Your Email Address" required>
                     
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <label for="support-type">Type of Support:</label>
+                    <select id="support-type" name="support-type" required>
+                        <option value="" disabled selected>Select Support Type</option>
+                        <option value="Cybersecurity Assessment">Cybersecurity Assessment</option>
+                        <option value="Threat Monitoring">Threat Monitoring</option>
+                        <option value="Employee Training">Employee Training</option>
+                        <option value="Custom IT Solutions">Custom IT Solutions</option>
+                    </select>
                     
-                    <button type="submit">Send Message</button>
+                    <label for="details">Describe Your Needs:</label>
+                    <textarea id="details" name="details" rows="4" placeholder="Provide details about your support requirements" required></textarea>
+                    
+                    <button type="submit" class="cta-button">Request a Quote</button>
                 </form>
             </div>
         </div>
+    </div>
+</section>
 
         <!-- Google Map -->
         <div class="google-map">

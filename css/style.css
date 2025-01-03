@@ -1,3 +1,111 @@
+/* Contact Section Styling */
+.contact-section {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #eaeaea;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #00d4ff;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-details {
+    flex: 1;
+    min-width: 300px;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.8;
+    color: #eaeaea;
+}
+
+.contact-details .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.quote-form {
+    flex: 1;
+    min-width: 300px;
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.quote-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quote-form label {
+    font-size: 1rem;
+    color: #00d4ff;
+    text-align: left;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #16213e;
+    background: #eaeaea;
+}
+
+.quote-form textarea {
+    resize: none;
+}
+
+.quote-form button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #00d4ff, #009edb);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.quote-form button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #009edb, #00d4ff);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quote-form, .contact-details {
+        min-width: 100%;
+    }
+}
+
 /* Blog Section Styling */
 .blog-section {
     background: linear-gradient(135deg, #16213e, #1a1a2e);
