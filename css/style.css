@@ -860,11 +860,7 @@ header.scrolled {
     background-color: rgba(22, 33, 62, 0.9); /* Slightly transparent background */
 }
 
-/* Logo Adjustments */
-header .logo img {
-    height: 50px;
-    transition: height 0.3s ease-in-out;
-}
+
 
 header.scrolled .logo img {
     height: 40px; /* Smaller logo when scrolled */
@@ -917,9 +913,6 @@ header nav ul li a:hover {
         padding: 10px;
     }
 
-    header .logo img {
-        height: 50px;
-    }
 
     header ul {
         flex-direction: column;
@@ -1006,11 +999,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Logo and Menu Adjustments */
-header .logo img {
-    max-width: 100%;
-    height: auto;
-}
 /* General Body Styling */
 body {
     font-family: Arial, sans-serif;
@@ -1018,19 +1006,6 @@ body {
     color: #eaeaea;
     margin: 0;
     padding: 0;
-}
-
-header .logo {
-    margin-bottom: 10px;
-}
-
-header .logo img {
-    height: 60px;
-    transition: transform 0.3s ease-in-out;
-}
-
-header .logo img:hover {
-    transform: scale(1.1);
 }
 
 header ul {
@@ -1142,7 +1117,7 @@ footer img {
 }
 
 /* General */
-body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);color:#eaeaea;overflow-x:hidden;}header{display:flex;justify-content:space-between;align-items:center;padding:20px 10%;background:#16213e;position:sticky;top:0;z-index:1000;}header .logo img{height:50px;}header ul{display:flex;list-style:none;gap:20px;}header ul li a{text-decoration:none;color:#eaeaea;font-size:1.1rem;transition:color .3s;}header ul li a:hover{color:#00d4ff;}
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);color:#eaeaea;overflow-x:hidden;}header{display:flex;justify-content:space-between;align-items:center;padding:20px 10%;background:#16213e;position:sticky;top:0;z-index:1000;}header ul{display:flex;list-style:none;gap:20px;}header ul li a{text-decoration:none;color:#eaeaea;font-size:1.1rem;transition:color .3s;}header ul li a:hover{color:#00d4ff;}
 
 body {
     margin: 0;
@@ -1162,16 +1137,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-header .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-header .logo img {
-    height: 50px;
 }
 
 header ul {
@@ -1605,15 +1570,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-header .logo {
-    text-align: center;
-}
-
-header .logo img {
-    height: 60px;
-    animation: pulse 2s infinite;
 }
 
 header .logo h1 {
