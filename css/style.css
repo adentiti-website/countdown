@@ -1,3 +1,55 @@
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Space the icons evenly */
+    align-items: center; /* Center the icons vertically */
+    background-color: #16213e; /* Background color of the menu */
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for the menu */
+    z-index: 1000;
+}
+
+.bottom-nav img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: transform 0.3s ease-in-out; /* Adds hover animation */
+}
+
+.bottom-nav img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+#compliance {
+    display: flex;
+    justify-content: center; /* Centers the badges horizontally */
+    align-items: center; /* Aligns badges vertically */
+    gap: 15px; /* Adds space between badges */
+    margin-top: 10px;
+}
+
+#compliance img {
+    height: 50px; /* Adjust the height of the badges */
+    width: auto; /* Maintains the aspect ratio */
+}
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    align-items: center; /* Aligns icons vertically */
+    gap: 15px; /* Adds space between icons */
+    margin: 10px 0;
+}
+
+.social-icons img {
+    width: 40px; /* Adjust the size of the icons */
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
 img {
     max-width: 100%;
     height: auto;
@@ -65,7 +117,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 15px;
+    justify-content: center;
+    padding: 20px;
     z-index: 1000;
     transition: padding 0.3s ease-in-out, background-color 0.3s;
 }
@@ -239,14 +292,8 @@ body {
     padding: 0;
 }
 
-/* Header Styling */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10%;
-    background-color: #16213e;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+header .logo {
+    margin-bottom: 10px;
 }
 
 header .logo img {
