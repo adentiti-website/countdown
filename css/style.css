@@ -1,3 +1,92 @@
+#contact {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #eaeaea;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-text, .contact-form {
+    flex: 1;
+    max-width: 48%;
+}
+
+.contact-text {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-details a:hover {
+    color: #009edb;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background: #00d4ff;
+    color: #16213e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: #009edb;
+}
+
+.google-map {
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
 .bottom-nav {
     position: fixed;
     bottom: 0;
