@@ -1,3 +1,65 @@
+/* Logo Container Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    justify-content: center;
+}
+
+/* Logo Image Styling */
+.logo img {
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0 6px 15px rgba(0, 212, 255, 0.3); /* Soft glow */
+}
+
+/* Tagline Styling */
+.logo-tagline h1 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 0;
+    font-weight: bold;
+}
+
+.logo-tagline h2 {
+    font-size: 1rem;
+    color: #00d4ff;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Glow Effect (Subtle) */
+.logo img::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2); /* Static, soft glow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .logo-tagline h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo-tagline h2 {
+        font-size: 0.9rem;
+    }
+}
+
 /* Meet Our Experts Section */
 .meet-our-experts {
     padding: 50px 10%;
