@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.carousel-image');
+    let currentIndex = 0;
+
+    setInterval(() => {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+    }, 4000); // Change image every 4 seconds
+});
+
 // Add a new comment to the comment list
 function addComment(listId, inputId) {
     const commentList = document.getElementById(listId);
