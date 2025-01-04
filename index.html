@@ -235,7 +235,6 @@
     </div>
 </section>
 
-<!-- Blog Post 1 -->
 <article class="blog-post" id="post-1">
     <h3>"5G and Cybersecurity in Canada: Challenges and Opportunities"</h3>
     <p>
@@ -248,7 +247,21 @@
     <!-- Like and Share -->
     <div class="engagement">
         <button class="like-btn" onclick="likePost('post-1')">Like (<span id="likes-post-1">0</span>)</button>
-        <button class="share-btn" onclick="alert('Sharing is coming soon!')">Share</button>
+        <div class="share-menu">
+            <p>Share:</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://adentiti.ca" target="_blank" aria-label="Share on Facebook">
+                <img src="images/icons/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://adentiti.ca" target="_blank" aria-label="Share on LinkedIn">
+                <img src="images/icons/linkedin-icon.png" alt="LinkedIn">
+            </a>
+            <a href="https://wa.me/?text=Check%20out%20this%20article:%20https://adentiti.ca" target="_blank" aria-label="Share on WhatsApp">
+                <img src="images/icons/whatsapp-icon.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Share on Instagram">
+                <img src="images/icons/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
     </div>
 
     <!-- Liked By -->
@@ -290,13 +303,9 @@
         <label for="duration">Service Duration (in Months):</label>
         <input type="number" id="duration" name="duration" placeholder="Enter duration in months" min="1" required>
 
-        <div class="estimate-box">
-            <p>Estimated Price: <span id="estimated-price">$0</span></p>
-        </div>
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Add any additional details or comments here (optional)"></textarea>
 
-        <input type="hidden" name="calculated_price" id="calculated-price-field">
-
-        <button type="button" class="calculate-btn" onclick="calculatePrice()">Calculate</button>
         <button type="submit" class="cta-button">Request Detailed Quote</button>
     </form>
 

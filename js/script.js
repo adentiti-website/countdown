@@ -67,28 +67,51 @@ function getDataFromLocalStorage(key) {
 
 // Handle Likes
 function likePost(postId) {
-    const likes = getDataFromLocalStorage('likes');
-    const username = prompt('Enter your name to like this post:'); // Basic user identification
+    // Get the like span and current like count
+    const likeSpan = document.getElementById(`likes-${postId}`);
+    let currentLikes = parseInt(likeSpan.textContent);
+    likeSpan.textContent = currentLikes + 1;
 
-    if (!username) {
-        alert('You need to provide a name to like the post.');
-        return;
-    }
-
-    if (!likes.some((like) => like.postId === postId && like.username === username)) {
-        likes.push({ postId, username });
-        saveDataToLocalStorage('likes', likes);
-    }
-
-    displayLikes(postId);
-}
-
-function displayLikes(postId) {
-    const likes = getDataFromLocalStorage('likes').filter((like) => like.postId === postId);
-    document.getElementById(`likes-${postId}`).textContent = likes.length;
+    // Add a "You liked this" entry to the liked-by list
     const likedByList = document.getElementById(`liked-by-${postId}`);
-    likedByList.innerHTML = likes.map((like) => `<li>${like.username}</li>`).join('');
+    const newLike = document.createElement("li");
+    newLike.textContent = "You liked this";
+    likedByList.appendChild(newLike);
+
+    // Save the like to local storage
+    const likes = getDataFromLocalStorage('likes') || [];
+    likes.push({ postId, username: "You" });
+    saveDataToLocalStorage('likes', likes);
 }
+
+// Display Likes
+function displayLikes(postId) {
+    const likes = getDataFromLocalStorage('likes') || [];
+    const filteredLikes = likes.filter((like) => like.postId === postId);
+
+    // Update the like count
+    document.getElementById(`likes-${postId}`).textContent = filteredLikes.length;
+
+    // Update the liked-by list
+    const likedByList = document.getElementById(`liked-by-${postId}`);
+    likedByList.innerHTML = filteredLikes.map((like) => `<li>${like.username}</li>`).join('');
+}
+
+// Local Storage Utility Functions
+function getDataFromLocalStorage(key) {
+    return JSON.parse(localStorage.getItem(key)) || [];
+}
+
+function saveDataToLocalStorage(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
+}
+
+// Call displayLikes for each post on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const postIds = ["post-1"]; // Add all post IDs here
+    postIds.forEach((postId) => displayLikes(postId));
+});
+
 
 // Handle Comments
 function addComment(postId, commentInputId) {

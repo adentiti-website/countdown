@@ -1,3 +1,194 @@
+.calculator-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.calculator-section label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+.calculator-section input,
+.calculator-section select,
+.calculator-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Blog Post Styling */
+.blog-post {
+    background: var(--secondary-bg);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed);
+    margin-bottom: 30px;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.blog-post p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Engagement Section */
+.engagement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.like-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.like-btn:hover {
+    transform: scale(1.1);
+    background: #009edb;
+}
+
+/* Share Menu */
+.share-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.share-menu p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.share-menu a {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.share-menu img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.share-menu a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* Comments Section */
+.comment-section {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.comment-section h4 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.comment-box {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.comment-btn {
+    padding: 10px 15px;
+    background: var(--accent-color);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.comment-btn:hover {
+    background: #009edb;
+    transform: scale(1.05);
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comments-list li {
+    background: var(--secondary-bg);
+    padding: 10px;
+    border-left: 4px solid var(--accent-color);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: var(--text-color);
+}
 /* Footer Section */
 .footer {
     padding: 30px 20px;
