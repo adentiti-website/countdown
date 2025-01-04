@@ -1,3 +1,70 @@
+.calculator-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.calculator-section label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.calculator-section input,
+.calculator-section select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.estimate-box {
+    background-color: #eef6ff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.estimate-box p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.calculate-btn,
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.calculate-btn:hover,
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /* Blog Section Styling */
 .blog-section {
     background: linear-gradient(135deg, #1a1a2e, #16213e);

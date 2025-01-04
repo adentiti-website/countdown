@@ -1,3 +1,42 @@
+// Service pricing map
+const servicePricing = {
+    "Cybersecurity Assessment": 200,
+    "Threat Monitoring": 150,
+    "Employee Training": 100,
+    "Custom IT Solutions": null, // Null means no predefined price
+};
+
+// Function to calculate price
+function calculatePrice() {
+    const employees = document.getElementById("employees").value;
+    const service = document.getElementById("services").value;
+    const duration = document.getElementById("duration").value;
+
+    const estimatedPriceField = document.getElementById("estimated-price");
+    const calculatedPriceField = document.getElementById("calculated-price-field");
+
+    // Validate inputs
+    if (!employees || !service || !duration) {
+        alert("Please fill out all the required fields.");
+        return;
+    }
+
+    // Check if the service has a predefined price
+    const basePrice = servicePricing[service];
+
+    if (basePrice === null) {
+        // No price available, prompt to request a quote
+        estimatedPriceField.textContent = "Request a Quote";
+        calculatedPriceField.value = "Request a Quote";
+        alert("This service requires a detailed quote. Please submit your request.");
+    } else {
+        // Calculate the total price
+        const totalPrice = basePrice * employees * duration;
+        estimatedPriceField.textContent = `$${totalPrice.toFixed(2)}`;
+        calculatedPriceField.value = totalPrice.toFixed(2);
+    }
+}
+
 // Store likes and comments in localStorage
 function saveDataToLocalStorage(key, data) {
     localStorage.setItem(key, JSON.stringify(data));
