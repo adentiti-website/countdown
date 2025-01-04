@@ -1,3 +1,169 @@
+/* Services Section Styling */
+.services-section {
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.services-section .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--accent-color);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Services Overview Image */
+.services-image {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.services-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.services-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Services Cards */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover .service-icon img {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-bg);
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Problem Solving Section */
+.problem-solving-section {
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Problem Solving Card */
+.problem-solving-card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-solving-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.problem-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.problem-solving-card:hover .problem-image img {
+    transform: scale(1.05);
+}
+
+.problem-details {
+    flex: 1;
+    text-align: left;
+}
+
+.problem-title {
+    font-size: 1.8rem;
+    color: var(--secondary-bg);
+    margin-bottom: 15px;
+}
+
+.problem-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .problem-solving-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .problem-image img {
+        max-width: 100%;
+    }
+
+    .problem-details {
+        text-align: center;
+    }
+}
+
 /* Hero Section */
 .hero {
     position: relative;
