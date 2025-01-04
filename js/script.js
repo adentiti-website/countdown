@@ -1,13 +1,16 @@
 function toggleDetails(detailId) {
     const detailElement = document.getElementById(detailId);
-    if (detailElement.classList.contains('hidden')) {
-        detailElement.classList.remove('hidden');
-        detailElement.classList.add('visible');
-    } else {
-        detailElement.classList.remove('visible');
-        detailElement.classList.add('hidden');
+    if (detailElement) {
+        if (detailElement.classList.contains('hidden')) {
+            detailElement.classList.remove('hidden');
+            detailElement.classList.add('visible');
+        } else {
+            detailElement.classList.remove('visible');
+            detailElement.classList.add('hidden');
+        }
     }
 }
+
 
 // Add scroll-triggered animations
 document.addEventListener('DOMContentLoaded', () => {
