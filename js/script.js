@@ -1,3 +1,66 @@
+// Store likes and comments in localStorage
+function saveDataToLocalStorage(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
+}
+
+function getDataFromLocalStorage(key) {
+    return JSON.parse(localStorage.getItem(key)) || [];
+}
+
+// Handle Likes
+function likePost(postId) {
+    const likes = getDataFromLocalStorage('likes');
+    const username = prompt('Enter your name to like this post:'); // Basic user identification
+
+    if (!username) {
+        alert('You need to provide a name to like the post.');
+        return;
+    }
+
+    if (!likes.some((like) => like.postId === postId && like.username === username)) {
+        likes.push({ postId, username });
+        saveDataToLocalStorage('likes', likes);
+    }
+
+    displayLikes(postId);
+}
+
+function displayLikes(postId) {
+    const likes = getDataFromLocalStorage('likes').filter((like) => like.postId === postId);
+    document.getElementById(`likes-${postId}`).textContent = likes.length;
+    const likedByList = document.getElementById(`liked-by-${postId}`);
+    likedByList.innerHTML = likes.map((like) => `<li>${like.username}</li>`).join('');
+}
+
+// Handle Comments
+function addComment(postId, commentInputId) {
+    const comments = getDataFromLocalStorage('comments');
+    const commentText = document.getElementById(commentInputId).value.trim();
+
+    if (commentText) {
+        comments.push({ postId, text: commentText });
+        saveDataToLocalStorage('comments', comments);
+        displayComments(postId);
+        document.getElementById(commentInputId).value = '';
+    } else {
+        alert('Please enter a comment before submitting.');
+    }
+}
+
+function displayComments(postId) {
+    const comments = getDataFromLocalStorage('comments').filter((comment) => comment.postId === postId);
+    const commentList = document.getElementById(`comment-list-${postId}`);
+    commentList.innerHTML = comments.map((comment) => `<li>${comment.text}</li>`).join('');
+}
+
+// Initialize Engagement Data
+document.addEventListener('DOMContentLoaded', () => {
+    displayLikes('post-1');
+    displayComments('post-1');
+    displayLikes('post-2');
+    displayComments('post-2');
+});
+
 function toggleDetails(detailId) {
     const detailElement = document.getElementById(detailId);
     if (detailElement) {

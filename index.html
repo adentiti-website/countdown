@@ -207,66 +207,37 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
             </div>
         </section>
 
-<!-- Blog Section -->
-<section id="blog" class="blog-section">
-    <h2 class="section-title">Latest Insights</h2>
-    <div class="blog-container">
-        <!-- Blog Post 1 -->
-        <article class="blog-post" id="post-1">
-            <h3>"5G and Cybersecurity in Canada: Challenges and Opportunities"</h3>
-            <p>
-                The transition to 5G brings immense benefits like faster speeds and lower latency, but it also introduces vulnerabilities to cyber threats. 
-                Businesses must adopt proactive measures, including advanced network security tools and employee training. 
-                Understanding how attackers exploit 5G infrastructure can help mitigate risks. 
-                Adentiti’s innovative solutions ensure businesses can thrive securely in this new era of connectivity.
-            </p>
+<!-- Blog Post 1 -->
+<article class="blog-post" id="post-1">
+    <h3>"5G and Cybersecurity in Canada: Challenges and Opportunities"</h3>
+    <p>
+        The transition to 5G brings immense benefits like faster speeds and lower latency, but it also introduces vulnerabilities to cyber threats.
+        Businesses must adopt proactive measures, including advanced network security tools and employee training.
+        Understanding how attackers exploit 5G infrastructure can help mitigate risks.
+        Adentiti’s innovative solutions ensure businesses can thrive securely in this new era of connectivity.
+    </p>
 
-            <!-- Like and Share -->
-            <div class="engagement">
-                <button class="like-btn" onclick="likePost('post-1')">Like (<span id="likes-post-1">0</span>)</button>
-                <button class="share-btn" onclick="sharePost('5G and Cybersecurity in Canada')">Share</button>
-            </div>
-
-            <!-- Comments Section -->
-            <div class="comment-section">
-                <h4>Comments</h4>
-                <textarea id="comment-1" placeholder="Add your comment..." class="comment-box"></textarea>
-                <button class="comment-btn" onclick="addComment('comment-list-1', 'comment-1')">Submit</button>
-                <ul id="comment-list-1" class="comments-list">
-                    <!-- Comments will appear here -->
-                </ul>
-            </div>
-        </article>
-
-        <!-- Blog Post 2 -->
-        <article class="blog-post" id="post-2">
-            <h3>"Protecting SMBs: Affordable Cybersecurity Solutions"</h3>
-            <p>
-                Small businesses are often seen as easy targets by cybercriminals due to limited resources for cybersecurity. 
-                Affordable solutions like multi-factor authentication and robust password management can reduce risks significantly. 
-                Adentiti offers budget-friendly services tailored to SMBs, including employee training and cloud security. 
-                These strategies empower businesses to protect their assets without overspending.
-            </p>
-
-            <!-- Like and Share -->
-            <div class="engagement">
-                <button class="like-btn" onclick="likePost('post-2')">Like (<span id="likes-post-2">0</span>)</button>
-                <button class="share-btn" onclick="sharePost('Protecting SMBs')">Share</button>
-            </div>
-
-            <!-- Comments Section -->
-            <div class="comment-section">
-                <h4>Comments</h4>
-                <textarea id="comment-2" placeholder="Add your comment..." class="comment-box"></textarea>
-                <button class="comment-btn" onclick="addComment('comment-list-2', 'comment-2')">Submit</button>
-                <ul id="comment-list-2" class="comments-list">
-                    <!-- Comments will appear here -->
-                </ul>
-            </div>
-        </article>
+    <!-- Like and Share -->
+    <div class="engagement">
+        <button class="like-btn" onclick="likePost('post-1')">Like (<span id="likes-post-1">0</span>)</button>
+        <button class="share-btn" onclick="alert('Sharing is coming soon!')">Share</button>
     </div>
-</section>
 
+    <!-- Liked By -->
+    <ul id="liked-by-post-1" class="liked-by-list">
+        <!-- List of usernames who liked the post -->
+    </ul>
+
+    <!-- Comments Section -->
+    <div class="comment-section">
+        <h4>Comments</h4>
+        <textarea id="comment-input-1" placeholder="Add your comment..." class="comment-box"></textarea>
+        <button class="comment-btn" onclick="addComment('post-1', 'comment-input-1')">Submit</button>
+        <ul id="comment-list-post-1" class="comments-list">
+            <!-- Comments will appear here -->
+        </ul>
+    </div>
+</article>
 <section id="price-calculator" class="calculator-section">
     <h2 class="section-title">Service Price Calculator</h2>
     <form id="calculator-form" action="https://formspree.io/f/xqaagqpy" method="POST">
