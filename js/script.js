@@ -1,3 +1,31 @@
+function toggleDetails(detailId) {
+    const detailElement = document.getElementById(detailId);
+    if (detailElement.classList.contains('hidden')) {
+        detailElement.classList.remove('hidden');
+        detailElement.classList.add('visible');
+    } else {
+        detailElement.classList.remove('visible');
+        detailElement.classList.add('hidden');
+    }
+}
+
+// Add scroll-triggered animations
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.case-study-card');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-card');
+            }
+        });
+    }, {
+        threshold: 0.1,
+    });
+
+    cards.forEach(card => observer.observe(card));
+});
+
 function calculatePrice() {
     const employees = document.getElementById('employees').value;
     const services = document.getElementById('services').value;
