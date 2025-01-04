@@ -1,3 +1,112 @@
+/* Footer Section */
+.footer {
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #16213e, #1a1a2e);
+    color: var(--text-color);
+    text-align: center;
+    border-top: 3px solid var(--accent-color);
+}
+
+.footer .compliance {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer .badge {
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer .badge:hover {
+    transform: scale(1.1);
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.footer .social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.footer .social-icons a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--secondary-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-top: 2px solid var(--accent-color);
+}
+
+.bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.bottom-nav img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    transition: transform 0.3s;
+}
+
+.bottom-nav a:hover img {
+    transform: scale(1.2);
+}
+
+.bottom-nav a:hover span {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer .compliance {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bottom-nav a span {
+        display: none;
+    }
+}
+
 /* Meet Our Experts Section */
 .meet-our-experts {
     padding: 60px 20px;
