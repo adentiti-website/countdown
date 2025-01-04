@@ -189,7 +189,7 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
     <h2 class="section-title">Latest Insights</h2>
     <div class="blog-container">
         <!-- Blog Post 1 -->
-        <article class="blog-post">
+        <article class="blog-post" id="post-1">
             <h3>"5G and Cybersecurity in Canada: Challenges and Opportunities"</h3>
             <p>
                 The transition to 5G brings immense benefits like faster speeds and lower latency, but it also introduces vulnerabilities to cyber threats. 
@@ -197,6 +197,14 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
                 Understanding how attackers exploit 5G infrastructure can help mitigate risks. 
                 Adentiti’s innovative solutions ensure businesses can thrive securely in this new era of connectivity.
             </p>
+
+            <!-- Like and Share -->
+            <div class="engagement">
+                <button class="like-btn" onclick="likePost('post-1')">Like (<span id="likes-post-1">0</span>)</button>
+                <button class="share-btn" onclick="sharePost('5G and Cybersecurity in Canada')">Share</button>
+            </div>
+
+            <!-- Comments Section -->
             <div class="comment-section">
                 <h4>Comments</h4>
                 <textarea id="comment-1" placeholder="Add your comment..." class="comment-box"></textarea>
@@ -208,7 +216,7 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
         </article>
 
         <!-- Blog Post 2 -->
-        <article class="blog-post">
+        <article class="blog-post" id="post-2">
             <h3>"Protecting SMBs: Affordable Cybersecurity Solutions"</h3>
             <p>
                 Small businesses are often seen as easy targets by cybercriminals due to limited resources for cybersecurity. 
@@ -216,6 +224,14 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
                 Adentiti offers budget-friendly services tailored to SMBs, including employee training and cloud security. 
                 These strategies empower businesses to protect their assets without overspending.
             </p>
+
+            <!-- Like and Share -->
+            <div class="engagement">
+                <button class="like-btn" onclick="likePost('post-2')">Like (<span id="likes-post-2">0</span>)</button>
+                <button class="share-btn" onclick="sharePost('Protecting SMBs')">Share</button>
+            </div>
+
+            <!-- Comments Section -->
             <div class="comment-section">
                 <h4>Comments</h4>
                 <textarea id="comment-2" placeholder="Add your comment..." class="comment-box"></textarea>
@@ -228,27 +244,45 @@ Makafui is a seasoned expert with over a decade of experience in web design, int
     </div>
 </section>
 
-<form action="https://formspree.io/f/xqaagqpy" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+<section id="price-calculator" class="calculator-section">
+    <h2 class="section-title">Service Price Calculator</h2>
+    <form id="calculator-form" action="https://formspree.io/f/xqaagqpy" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
 
-    <label for="support-type">Type of Support:</label>
-    <select id="support-type" name="support-type" required>
-        <option value="" disabled selected>Select Support Type</option>
-        <option value="Cybersecurity Assessment">Cybersecurity Assessment</option>
-        <option value="Threat Monitoring">Threat Monitoring</option>
-        <option value="Employee Training">Employee Training</option>
-        <option value="Custom IT Solutions">Custom IT Solutions</option>
-    </select>
+        <label for="employees">Number of Employees:</label>
+        <input type="number" id="employees" name="employees" placeholder="Enter the number of employees" min="1" required>
 
-    <label for="details">Describe Your Needs:</label>
-    <textarea id="details" name="details" rows="4" placeholder="Provide details about your support requirements" required></textarea>
+        <label for="services">Services Needed:</label>
+        <select id="services" name="services" required>
+            <option value="" disabled selected>Select a Service</option>
+            <option value="Cybersecurity Assessment">Cybersecurity Assessment</option>
+            <option value="Threat Monitoring">Threat Monitoring</option>
+            <option value="Employee Training">Employee Training</option>
+            <option value="Custom IT Solutions">Custom IT Solutions</option>
+        </select>
 
-    <button type="submit" class="cta-button">Request a Quote</button>
-</form>
+        <label for="duration">Service Duration (in Months):</label>
+        <input type="number" id="duration" name="duration" placeholder="Enter duration in months" min="1" required>
+
+        <div class="estimate-box">
+            <p>Estimated Price: <span id="estimated-price">$0</span></p>
+        </div>
+
+        <input type="hidden" name="calculated_price" id="calculated-price-field">
+
+        <button type="button" class="calculate-btn" onclick="calculatePrice()">Calculate</button>
+        <button type="submit" class="cta-button">Request Detailed Quote</button>
+    </form>
+
+    <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:info@adentiti.ca">info@adentiti.ca</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+16479225776">+1 647-922-5776</a></p>
+    </div>
+</section>
 
         <!-- Google Map -->
         <div class="google-map">

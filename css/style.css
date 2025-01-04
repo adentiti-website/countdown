@@ -1,3 +1,123 @@
+.calculator-section {
+    padding: 20px;
+    background: #16213e;
+    color: #eaeaea;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.calculator-section label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.calculator-section input,
+.calculator-section select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.estimate-box {
+    background: #1a1a2e;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+.calculate-btn,
+.cta-button {
+    display: inline-block;
+    background: #00d4ff;
+    color: #16213e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease;
+}
+
+.calculate-btn:hover,
+.cta-button:hover {
+    background: #009edb;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+.blog-section .engagement {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.blog-section .like-btn,
+.blog-section .share-btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.blog-section .like-btn {
+    background-color: #00d4ff;
+    color: #fff;
+}
+
+.blog-section .share-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.blog-section .like-btn:hover {
+    background-color: #009edb;
+}
+
+.blog-section .share-btn:hover {
+    background-color: #218838;
+}
+
+.blog-section .comments-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.blog-section .comment-box {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
 /* Footer Styling */
 .footer {
     background: linear-gradient(135deg, #1a1a2e, #16213e);

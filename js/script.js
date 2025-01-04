@@ -1,3 +1,67 @@
+function calculatePrice() {
+    const employees = document.getElementById('employees').value;
+    const services = document.getElementById('services').value;
+    const duration = document.getElementById('duration').value;
+
+    if (employees && services && duration) {
+        let basePrice = 0;
+
+        switch (services) {
+            case 'Cybersecurity Assessment':
+                basePrice = 500;
+                break;
+            case 'Threat Monitoring':
+                basePrice = 700;
+                break;
+            case 'Employee Training':
+                basePrice = 300;
+                break;
+            case 'Custom IT Solutions':
+                basePrice = 1000;
+                break;
+        }
+
+        const estimatedPrice = basePrice * employees * duration;
+        document.getElementById('estimated-price').textContent = `$${estimatedPrice}`;
+        document.getElementById('calculated-price-field').value = `$${estimatedPrice}`;
+    } else {
+        alert('Please fill out all fields to calculate the price.');
+    }
+}
+// Like functionality
+function likePost(postId) {
+    const likesSpan = document.getElementById(`likes-${postId}`);
+    let currentLikes = parseInt(likesSpan.textContent, 10);
+    likesSpan.textContent = currentLikes + 1;
+}
+
+// Share functionality
+function sharePost(title) {
+    const shareUrl = window.location.href;
+    alert(`Share this post: ${title}\n${shareUrl}`);
+}
+
+// Add a new comment to the comment list
+function addComment(listId, inputId) {
+    const commentList = document.getElementById(listId);
+    const commentInput = document.getElementById(inputId);
+    const commentText = commentInput.value.trim();
+
+    if (commentText) {
+        // Create a new list item for the comment
+        const newComment = document.createElement('li');
+        newComment.textContent = commentText;
+
+        // Append the new comment to the list
+        commentList.appendChild(newComment);
+
+        // Clear the input field
+        commentInput.value = '';
+    } else {
+        alert('Please enter a comment before submitting.');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('.carousel-image');
     let currentIndex = 0;
