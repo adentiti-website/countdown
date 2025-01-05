@@ -1,3 +1,40 @@
+const backToTopButton = document.getElementById("back-to-top");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add("visible");
+        backToTopButton.classList.remove("hidden");
+    } else {
+        backToTopButton.classList.add("hidden");
+        backToTopButton.classList.remove("visible");
+    }
+});
+
+backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section.hidden");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    entry.target.classList.remove("hidden");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.2 } // Adjust this to determine how much of the section must be visible
+    );
+
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const images = document.querySelectorAll(".carousel-image");
     let currentIndex = 0;

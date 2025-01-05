@@ -33,7 +33,7 @@
     </header>
    <main>
 <!-- Hero Section -->
-<section id="home" class="hero">
+<section id="home" class="hero hidden">
     <div class="image-carousel">
         <img src="images/hero-image-1.jpg" alt="Cybersecurity Image 1" class="carousel-image active">
         <img src="images/hero-image-2.jpg" alt="Cybersecurity Image 2" class="carousel-image">
@@ -102,7 +102,7 @@
     </div>
 </section>
 <!-- Services Section -->
-<section id="services" class="services-section">
+<section id="services" class="services-section hidden">
     <h2 class="section-title">Our Services</h2>
 
     <!-- Services Overview Image -->
@@ -159,7 +159,7 @@
     </div>
 </section>
 
-<section id="case-study" class="case-study-section">
+<section id="case-study" class="case-study-section hidden">
     <h2 class="section-title">Case Study: Securing a Healthcare Provider</h2>
     <div class="case-study-container">
         <!-- Challenge Section -->
@@ -210,10 +210,10 @@
             </div>
         </div>
     </div>
-    <button class="cta-button" onclick="location.href='#contact'">Let Us Help Your Business</button>
+<button class="cta-button" onclick="location.href='#contact'">Let Us Help Your Business</button>
 </section>
 <!-- Meet Our Experts -->
-<section id="experts" class="meet-our-experts">
+<section id="experts" class="meet-our-experts hidden">
     <h2 class="section-title">Meet Our Experts</h2>
     <div class="experts-container">
         <div class="expert-card">
@@ -308,10 +308,14 @@
 
         <button type="submit" class="cta-button">Request Detailed Quote</button>
     </form>
-
-    <div class="contact-info">
+</section>
+<section id="contact" class="contact-section hidden">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you. Get in touch with us for any inquiries or support.</p>
+    <div class="contact-details">
         <p><strong>Email:</strong> <a href="mailto:info@adentiti.ca">info@adentiti.ca</a></p>
         <p><strong>Phone:</strong> <a href="tel:+16479225776">+1 647-922-5776</a></p>
+        <p><strong>Address:</strong> 740 Dupont Street, Toronto, Ontario, Canada</p>
     </div>
 </section>
 
@@ -365,6 +369,7 @@
         <img src="images/icons/contact-icon.png" alt="Contact">
         <span>Contact</span>
     </a>
+<button id="back-to-top" class="back-to-top hidden">↑</button>
 </div>
 
 </body>
