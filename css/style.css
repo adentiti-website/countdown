@@ -1,3 +1,62 @@
+/* Font Variables for Consistency */
+:root {
+    --font-primary: "Helvetica", "Arial", sans-serif;
+    --font-secondary: "Georgia", serif;
+    --font-size-header: 2rem; /* Headers */
+    --font-size-body: 1rem;   /* Body text */
+    --font-size-small: 0.875rem; /* Captions/Labels */
+}
+
+/* General Typography */
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    line-height: 1.6;
+    color: var(--text-color); /* Keep your current text color */
+}
+
+/* Headers */
+h1, h2, h3 {
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: var(--font-size-header);
+    margin: 1rem 0;
+}
+
+h1 {
+    font-size: calc(var(--font-size-header) * 1.25); /* Larger H1 */
+}
+
+h2, h3 {
+    font-size: var(--font-size-header);
+}
+
+/* Paragraphs and Body Text */
+p {
+    font-family: var(--font-primary);
+    font-weight: 300; /* Light for body copy */
+    font-size: var(--font-size-body);
+    margin-bottom: 1rem;
+}
+
+/* Captions and Small Text */
+small, .caption, .label {
+    font-family: var(--font-primary);
+    font-weight: 400; /* Regular weight */
+    font-size: var(--font-size-small);
+}
+
+/* Call-to-Actions (Optional Decorative Font) */
+.cta-button {
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    font-size: var(--font-size-body); /* Same as body */
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--accent-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
 header .social-proof p {
     font-size: 1.2rem;
     color: #eaeaea; /* Adjust to match your theme */
