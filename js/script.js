@@ -1,20 +1,3 @@
-function toggleChat() {
-    const chatWindow = document.getElementById("chatgpt-window");
-    chatWindow.style.display = (chatWindow.style.display === "none") ? "block" : "none";
-
-window.onload = function() {
-    setTimeout(() => {
-        if (document.getElementById("chatgpt-window").style.display === "none") {
-            toggleChat(); // Auto-open after 10 seconds
-        }
-    }, 10000);
-}
-
-function toggleChat() {
-    const chatWindow = document.getElementById("chatgpt-window");
-    chatWindow.style.display = (chatWindow.style.display === "none") ? "block" : "none";
-}
-
 const backToTopButton = document.getElementById("back-to-top");
 
 window.addEventListener("scroll", () => {
