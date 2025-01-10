@@ -1,3 +1,7 @@
+function toggleChat() {
+    const chatWindow = document.getElementById("chatgpt-window");
+    chatWindow.style.display = (chatWindow.style.display === "none") ? "block" : "none";
+
 window.onload = function() {
     setTimeout(() => {
         if (document.getElementById("chatgpt-window").style.display === "none") {
