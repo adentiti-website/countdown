@@ -1,3 +1,46 @@
+#chatgpt-window {
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#chatgpt-chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00d4ff;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+#chatgpt-chatbox:hover {
+    transform: scale(1.1);
+}
+
+#chatgpt-window {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 999;
+}
 /* Customer Reviews Section */
 .customer-reviews-section {
     background-color: #fff8f0; /* Softer background for warmth */
