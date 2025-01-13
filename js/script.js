@@ -372,84 +372,83 @@ function toggleMenu() {
     const navMenu = document.querySelector('nav ul');
     navMenu.classList.toggle('active');
 }
+let userName = "";
+let userEmail = "";
 let score = 0;
 let timer;
 let timeLeft = 60;
-let difficultyLevel = 'beginner';
+let currentQuestionIndex = 0;
+const totalQuestions = 5;
 
-const questions = {
-    beginner: [
-        { q: "What is phishing?", options: ['A scam email', 'A type of malware', 'A firewall'], correct: 'A scam email', explanation: 'Phishing emails trick users into sharing sensitive information. Always check the sender and avoid clicking suspicious links.' },
-        { q: "How to create a strong password?", options: ['Birthdate', '123456', 'Letters, numbers, symbols'], correct: 'Letters, numbers, symbols', explanation: 'Use long, unique passwords with letters, numbers, and symbols. Avoid using personal information.' }
-    ],
-    intermediate: [
-        { q: "What is a VPN used for?", options: ['Encrypts internet traffic', 'Increases internet speed', 'Blocks ads'], correct: 'Encrypts internet traffic', explanation: 'VPN encrypts your internet traffic, protecting your data when using public networks.' }
-    ],
-    advanced: [
-        { q: "How does a Zero Trust Model work?", options: ['Trusts all devices', 'No trust, continuous verification', 'Blocks all access'], correct: 'No trust, continuous verification', explanation: 'Zero Trust requires verification for every access request, minimizing risk from internal and external threats.' }
-    ]
-};
+const questions = [
+    { q: "What is phishing?", options: ['A scam email', 'A type of malware', 'A firewall'], correct: 'A scam email', explanation: 'Phishing emails trick users into sharing sensitive information.' },
+    { q: "How to create a strong password?", options: ['Birthdate', '123456', 'Letters, numbers, symbols'], correct: 'Letters, numbers, symbols', explanation: 'Use long, unique passwords with letters, numbers, and symbols.' }
+];
 
-function startQuiz(level) {
-    difficultyLevel = level;
+function validateUserInfo() {
+    userName = document.getElementById('user-name').value;
+    userEmail = document.getElementById('user-email').value;
+    if (userName && userEmail) {
+        document.getElementById('user-info-form').classList.add('hidden');
+        document.getElementById('difficulty-selection').classList.remove('hidden');
+    } else {
+        alert('Please enter your name and email to continue.');
+    }
+}
+
+function startQuiz() {
     document.getElementById('quiz-container').classList.remove('hidden');
-    loadQuestions();
+    loadQuestion();
     startTimer();
 }
 
-function loadQuestions() {
-    const table = document.querySelector('.quiz-table');
-    questions[difficultyLevel].forEach((item, index) => {
-        const row = document.createElement('tr');
-        row.innerHTML = `<td>${item.q}</td>
-                         <td id="user-answer-${index + 1}"></td>
-                         <td>${item.correct}</td>
-                         <td id="feedback-${index + 1}"></td>`;
-        table.appendChild(row);
-        item.options.forEach(option => {
-            const button = document.createElement('button');
-            button.innerText = option;
-            button.onclick = () => checkAnswer(index + 1, option, item.correct, item.explanation);
-            row.appendChild(button);
-        });
+function loadQuestion() {
+    const container = document.getElementById('question-container');
+    const question = questions[currentQuestionIndex];
+    container.innerHTML = `<h3>${question.q}</h3>`;
+    question.options.forEach(option => {
+        const button = document.createElement('button');
+        button.innerText = option;
+        button.className = 'cta-button';
+        button.onclick = () => selectAnswer(option);
+        container.appendChild(button);
     });
+    updateProgressBar();
 }
 
-function checkAnswer(qNumber, selectedOption, correctAnswer, explanation) {
-    const userAnswer = document.getElementById(`user-answer-${qNumber}`);
-    const feedback = document.getElementById(`feedback-${qNumber}`);
-    userAnswer.textContent = selectedOption;
-    if (selectedOption === correctAnswer) {
-        feedback.innerHTML = `<span style='color:green;'>Correct! ${explanation}</span>`;
+function selectAnswer(selectedOption) {
+    if (selectedOption === questions[currentQuestionIndex].correct) {
         score++;
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion();
     } else {
-        feedback.innerHTML = `<span style='color:red;'>Incorrect. ${explanation}</span>`;
+        document.getElementById('submit-button').classList.remove('hidden');
     }
-    if (score === questions[difficultyLevel].length) {
-        document.getElementById('resources').classList.remove('hidden');
-    }
-    updateProgressBar(qNumber);
 }
 
-function updateProgressBar(qNumber) {
-    const progress = document.getElementById('progress');
-    progress.style.width = `${(qNumber / questions[difficultyLevel].length) * 100}%`;
+function startTimer() {
+    timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById('time-left').textContent = timeLeft;
+        if (timeLeft === 0) {
+            clearInterval(timer);
+            submitQuiz();
+        }
+    }, 1000);
+}
+
+function submitQuiz() {
+    clearInterval(timer);
+    document.getElementById('score-display').classList.remove('hidden');
+    document.getElementById('score-display').innerHTML = `✅ ${userName}, you scored ${score}/${questions.length}`;
+    document.getElementById('result-buttons').classList.remove('hidden');
 }
 
 function downloadBadge() {
     const link = document.createElement('a');
     link.href = 'images/completion-badge.png';
-    link.download = 'Adentiti_Cybersecurity_Badge.png';
+    link.download = `${userName}_Cybersecurity_Badge.png`;
     link.click();
-}
-function downloadBadge() {
-    const link = document.createElement('a');
-    link.href = 'images/completion-badge.png';
-    link.download = 'Adentiti_Cybersecurity_Badge.png';
-    link.click();
-}
-
-function updateProgressBar(qNumber) {
-    const progress = document.getElementById('progress');
-    progress.style.width = `${(qNumber / 5) * 100}%`;
 }
