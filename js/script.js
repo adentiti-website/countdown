@@ -372,6 +372,7 @@ function toggleMenu() {
     const navMenu = document.querySelector('nav ul');
     navMenu.classList.toggle('active');
 }
+/* script.js */
 let userName = "";
 let userEmail = "";
 let score = 0;
@@ -386,13 +387,17 @@ const questions = [
 ];
 
 function validateUserInfo() {
-    userName = document.getElementById('user-name').value;
-    userEmail = document.getElementById('user-email').value;
-    if (userName && userEmail) {
+    userName = document.getElementById('user-name').value.trim();
+    userEmail = document.getElementById('user-email').value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!userName) {
+        alert('Please enter your name.');
+    } else if (!emailPattern.test(userEmail)) {
+        alert('Please enter a valid email address.');
+    } else {
         document.getElementById('user-info-form').classList.add('hidden');
         document.getElementById('difficulty-selection').classList.remove('hidden');
-    } else {
-        alert('Please enter your name and email to continue.');
     }
 }
 
