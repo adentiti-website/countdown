@@ -1,3 +1,27 @@
+/* Center Logo and Social Proof */
+.logo, .social-proof {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Center Entire Content */
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Image Carousel Transitions */
+.carousel-image {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
 /*----------------------------------
   Global Styles
 ----------------------------------*/

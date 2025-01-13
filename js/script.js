@@ -3,17 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0;
 
     function switchImage() {
-        // Remove the 'active' class from the current image
         images[currentIndex].classList.remove("active");
-
-        // Increment the index and loop back to 0 if it exceeds the image count
         currentIndex = (currentIndex + 1) % images.length;
-
-        // Add the 'active' class to the new current image
         images[currentIndex].classList.add("active");
     }
 
-    // Change image every 3 seconds
     setInterval(switchImage, 3000);
 });
 
