@@ -53,7 +53,7 @@
     </div>
 </section>
 <!-- Cybersecurity Training Section -->
-    <section id="cyber-training" class="training-section">
+     <section id="cyber-training" class="training-section">
         <h2 class="section-title">Comprehensive Cybersecurity Awareness Training</h2>
         <p>
             Cybersecurity is a shared responsibility across all departments. This training provides real-world scenarios
@@ -61,18 +61,18 @@
             From phishing detection to secure file handling, these modules are designed for all employees to build a
             culture of security.
         </p>
-        <div id="difficulty-selection">
+        <div id="difficulty-selection" class="dapper-buttons">
             <button onclick="startQuiz('beginner')">Beginner</button>
             <button onclick="startQuiz('intermediate')">Intermediate</button>
             <button onclick="startQuiz('advanced')">Advanced</button>
         </div>
 
-        <div id="quiz-container" class="hidden">
-            <div id="timer">Time Remaining: <span id="time-left">60</span> seconds</div>
-            <div id="progress-bar">
+        <div id="quiz-container" class="hidden dapper-card">
+            <div id="timer" class="dapper-timer">⏳ Time Remaining: <span id="time-left">60</span> seconds</div>
+            <div id="progress-bar" class="dapper-progress-bar">
                 <div id="progress"></div>
             </div>
-            <table class="quiz-table">
+            <table class="quiz-table dapper-table">
                 <tr>
                     <th>Question</th>
                     <th>Your Answer</th>
@@ -80,20 +80,20 @@
                     <th>Explanation</th>
                 </tr>
             </table>
-            <div id="score-display"></div>
+            <div id="score-display" class="dapper-score"></div>
             <div class="quiz-cta">
-                <button class="cta-button" onclick="window.location.href='#contact'">Book a Free Consultation</button>
-                <button class="cta-button" onclick="window.location.href='https://forms.gle/feedback'">Give Feedback</button>
-                <button class="cta-button hidden" id="badge-button" onclick="downloadBadge()">Download Your Completion Badge</button>
+                <button class="cta-button" onclick="window.location.href='#contact'">📞 Book a Free Consultation</button>
+                <button class="cta-button" onclick="window.location.href='https://forms.gle/feedback'">📝 Give Feedback</button>
+                <button class="cta-button hidden" id="badge-button" onclick="downloadBadge()">🏅 Download Your Completion Badge</button>
             </div>
         </div>
 
-        <div id="resources" class="hidden">
-            <h3>Additional Resources for Cybersecurity Awareness</h3>
+        <div id="resources" class="hidden dapper-card">
+            <h3>📚 Additional Resources for Cybersecurity Awareness</h3>
             <ul>
-                <li><a href="https://www.cyber.gc.ca/en/guidance" target="_blank">Government of Canada Cybersecurity Guidelines</a></li>
-                <li><a href="https://www.cisa.gov/" target="_blank">Cybersecurity & Infrastructure Security Agency (CISA)</a></li>
-                <li><a href="https://www.staysafeonline.org/" target="_blank">Stay Safe Online (National Cybersecurity Alliance)</a></li>
+                <li>🔐 <a href="https://www.cyber.gc.ca/en/guidance" target="_blank">Government of Canada Cybersecurity Guidelines</a></li>
+                <li>🛡️ <a href="https://www.cisa.gov/" target="_blank">Cybersecurity & Infrastructure Security Agency (CISA)</a></li>
+                <li>💻 <a href="https://www.staysafeonline.org/" target="_blank">Stay Safe Online (National Cybersecurity Alliance)</a></li>
             </ul>
         </div>
     </section>
