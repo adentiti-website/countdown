@@ -1,25 +1,16 @@
-// Image Carousel
+// Hero Image Slideshow
 document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll(".carousel-image");
-    let currentIndex = 0;
+    const slides = document.querySelectorAll(".hero-slide");
+    let currentSlide = 0;
 
-    function switchImage() {
-        images[currentIndex].classList.remove("active");
-        currentIndex = (currentIndex + 1) % images.length;
-        images[currentIndex].classList.add("active");
+    function changeSlide() {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
     }
 
-    setInterval(switchImage, 3000);
+    setInterval(changeSlide, 3000); // Change every 3 seconds
 });
-
-// Fade-in Sections on Scroll
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
-    });
-}, { threshold: 0.1 });
 
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
