@@ -1,3 +1,129 @@
+/* Footer Styles */
+.footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Compliance Badge Styling */
+.footer .compliance {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer .badge {
+    width: 80px;
+    height: auto;
+    transition: transform var(--transition-speed);
+}
+
+.footer .badge:hover {
+    transform: scale(1.1);
+}
+
+/* Social Media Icons */
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer .social-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform var(--transition-speed), filter var(--transition-speed);
+    filter: grayscale(100%);
+}
+
+.footer .social-icons a:hover img {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Bottom Navigation Styling */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.bottom-nav a {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.8rem;
+    transition: color var(--transition-speed);
+}
+
+.bottom-nav a img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 5px;
+    transition: transform var(--transition-speed);
+}
+
+.bottom-nav a:hover img {
+    transform: scale(1.2);
+}
+
+/* Scroll-to-Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+    opacity: 0;
+    transition: opacity var(--transition-speed), transform var(--transition-speed);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .footer .badge {
+        width: 60px;
+    }
+
+    .footer .social-icons a img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .bottom-nav a img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
 /* Global Styles */
 :root {
     --primary-color: #007BFF;
