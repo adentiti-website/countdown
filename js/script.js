@@ -1,3 +1,33 @@
+<!-- JavaScript for Quiz Functionality -->
+function checkAnswer(questionNumber, selectedOption) {
+    const userAnswer = document.getElementById(`user-answer-${questionNumber}`);
+    const feedback = document.getElementById(`feedback-${questionNumber}`);
+    const correctAnswers = {
+        1: 'a',
+        2: 'b',
+        3: 'b',
+        4: 'b',
+        5: 'c'
+    };
+    const explanations = {
+        1: "Phishing emails trick users into sharing sensitive information.",
+        2: "Reporting and deleting suspicious emails helps prevent phishing attacks.",
+        3: "Strong passwords include letters, numbers, and special characters.",
+        4: "Encrypted cloud storage is the safest option for sensitive files.",
+        5: "2FA adds an extra layer of security beyond your password."
+    };
+    const optionsText = {
+        'a': 'Option A',
+        'b': 'Option B',
+        'c': 'Option C'
+    };
+    userAnswer.textContent = optionsText[selectedOption];
+    if (selectedOption === correctAnswers[questionNumber]) {
+        feedback.innerHTML = `<span style='color:green;'>Correct! ${explanations[questionNumber]}</span>`;
+    } else {
+        feedback.innerHTML = `<span style='color:red;'>Incorrect. ${explanations[questionNumber]}</span>`;
+    }
+}
 const backToTopButton = document.getElementById("back-to-top");
 
 window.addEventListener("scroll", () => {
