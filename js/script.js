@@ -300,19 +300,18 @@ function loadComments(listId) {
 
 // Load comments for all blog posts when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-    loadComments('comment-list-1');
-    loadComments('comment-list-2');
+    ['post-1', 'post-2'].forEach(loadComments);
 });
 
-function toggleDetails(detailsId) {
-    const detailsElement = document.getElementById(detailsId);
-    if (detailsElement.classList.contains('hidden')) {
-        detailsElement.classList.remove('hidden');
-        detailsElement.classList.add('visible');
-    } else {
-        detailsElement.classList.add('hidden');
-        detailsElement.classList.remove('visible');
-    }
+function loadComments(postId) {
+    const commentList = document.getElementById(`comment-list-${postId}`);
+    const storedComments = getDataFromLocalStorage(`comments-${postId}`);
+
+    storedComments.forEach(comment => {
+        const newComment = document.createElement('li');
+        newComment.textContent = comment.text;
+        commentList.appendChild(newComment);
+    });
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -398,11 +397,25 @@ window.onload = function () {
 };
 
 function handleGoogleResponse(response) {
-    const userObject = jwt_decode(response.credential);
-    userName = userObject.name;
-    userEmail = userObject.email;
-    document.getElementById('difficulty-selection').classList.remove('hidden');
+    try {
+        const userObject = jwt_decode(response.credential);
+        userName = userObject.name;
+        userEmail = userObject.email;
+        document.getElementById('difficulty-selection').classList.remove('hidden');
+    } catch (error) {
+        console.error("Google Sign-In failed:", error);
+        alert("Failed to sign in with Google. Please try again.");
+    }
 }
+
+msalInstance.loginPopup({ scopes: ["User.Read"] }).then(response => {
+    userName = response.account.name;
+    userEmail = response.account.username;
+    document.getElementById('difficulty-selection').classList.remove('hidden');
+}).catch(error => {
+    console.error("Microsoft Sign-In failed:", error);
+    alert("Failed to sign in with Microsoft. Please try again.");
+});
 
 // Microsoft Sign-In
 const msalConfig = {
@@ -423,6 +436,10 @@ function signInWithMicrosoft() {
 }
 
 function startQuiz() {
+    clearInterval(timer);  // Reset timer
+    timeLeft = 60;         // Reset countdown
+    currentQuestionIndex = 0;
+    score = 0;
     document.getElementById('quiz-container').classList.remove('hidden');
     loadQuestion();
     startTimer();
