@@ -5,14 +5,14 @@ let difficultyLevel = 'beginner';
 
 const questions = {
     beginner: [
-        { q: "What is phishing?", options: ['A scam email', 'A type of malware', 'A firewall'], correct: 'A scam email', explanation: 'Phishing emails trick users into sharing sensitive information.' },
-        { q: "How to create a strong password?", options: ['Birthdate', '123456', 'Letters, numbers, symbols'], correct: 'Letters, numbers, symbols', explanation: 'Strong passwords include letters, numbers, and special characters.' }
+        { q: "What is phishing?", options: ['A scam email', 'A type of malware', 'A firewall'], correct: 'A scam email', explanation: 'Phishing emails trick users into sharing sensitive information. Always check the sender and avoid clicking suspicious links.' },
+        { q: "How to create a strong password?", options: ['Birthdate', '123456', 'Letters, numbers, symbols'], correct: 'Letters, numbers, symbols', explanation: 'Use long, unique passwords with letters, numbers, and symbols. Avoid using personal information.' }
     ],
     intermediate: [
-        { q: "What is a VPN used for?", options: ['Encrypts internet traffic', 'Increases internet speed', 'Blocks ads'], correct: 'Encrypts internet traffic', explanation: 'VPN encrypts your internet traffic for privacy and security.' }
+        { q: "What is a VPN used for?", options: ['Encrypts internet traffic', 'Increases internet speed', 'Blocks ads'], correct: 'Encrypts internet traffic', explanation: 'VPN encrypts your internet traffic, protecting your data when using public networks.' }
     ],
     advanced: [
-        { q: "How does a Zero Trust Model work?", options: ['Trusts all devices', 'No trust, continuous verification', 'Blocks all access'], correct: 'No trust, continuous verification', explanation: 'Zero Trust requires verification for every access request.' }
+        { q: "How does a Zero Trust Model work?", options: ['Trusts all devices', 'No trust, continuous verification', 'Blocks all access'], correct: 'No trust, continuous verification', explanation: 'Zero Trust requires verification for every access request, minimizing risk from internal and external threats.' }
     ]
 };
 
@@ -51,18 +51,10 @@ function checkAnswer(qNumber, selectedOption, correctAnswer, explanation) {
     } else {
         feedback.innerHTML = `<span style='color:red;'>Incorrect. ${explanation}</span>`;
     }
+    if (score === questions[difficultyLevel].length) {
+        document.getElementById('resources').classList.remove('hidden');
+    }
     updateProgressBar(qNumber);
-}
-
-function startTimer() {
-    timer = setInterval(() => {
-        timeLeft--;
-        document.getElementById('time-left').textContent = timeLeft;
-        if (timeLeft === 0) {
-            clearInterval(timer);
-            alert('Time's up!');
-        }
-    }, 1000);
 }
 
 function updateProgressBar(qNumber) {
@@ -76,6 +68,8 @@ function downloadBadge() {
     link.download = 'Adentiti_Cybersecurity_Badge.png';
     link.click();
 }
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const images = document.querySelectorAll(".carousel-image");
     let currentIndex = 0;
