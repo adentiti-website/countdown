@@ -1,6 +1,6 @@
 // Hero Image Slideshow
 document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".hero-slide");
+    const slides = document.querySelectorAll(".hero-slide");  // Ensure correct class
     let currentSlide = 0;
 
     function changeSlide() {
