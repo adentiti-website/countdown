@@ -379,26 +379,47 @@ let score = 0;
 let timer;
 let timeLeft = 60;
 let currentQuestionIndex = 0;
-const totalQuestions = 5;
 
 const questions = [
     { q: "What is phishing?", options: ['A scam email', 'A type of malware', 'A firewall'], correct: 'A scam email', explanation: 'Phishing emails trick users into sharing sensitive information.' },
     { q: "How to create a strong password?", options: ['Birthdate', '123456', 'Letters, numbers, symbols'], correct: 'Letters, numbers, symbols', explanation: 'Use long, unique passwords with letters, numbers, and symbols.' }
 ];
 
-function validateUserInfo() {
-    userName = document.getElementById('user-name').value.trim();
-    userEmail = document.getElementById('user-email').value.trim();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// Google Sign-In
+window.onload = function () {
+    google.accounts.id.initialize({
+        client_id: '713425889829-vleir426jron70isb31n5357v361ejpk.apps.googleusercontent.com',
+        callback: handleGoogleResponse
+    });
+    google.accounts.id.renderButton(
+        document.getElementById("googleSignInDiv"),
+        { theme: "outline", size: "large" }
+    );
+};
 
-    if (!userName) {
-        alert('Please enter your name.');
-    } else if (!emailPattern.test(userEmail)) {
-        alert('Please enter a valid email address.');
-    } else {
-        document.getElementById('user-info-form').classList.add('hidden');
-        document.getElementById('difficulty-selection').classList.remove('hidden');
+function handleGoogleResponse(response) {
+    const userObject = jwt_decode(response.credential);
+    userName = userObject.name;
+    userEmail = userObject.email;
+    document.getElementById('difficulty-selection').classList.remove('hidden');
+}
+
+// Microsoft Sign-In
+const msalConfig = {
+    auth: {
+        clientId: 'f5bf1df8-6edd-41e6-b670-e5204fd3f7cd',
+        authority: 'https://login.microsoftonline.com/common',
+        redirectUri: window.location.href
     }
+};
+const msalInstance = new msal.PublicClientApplication(msalConfig);
+
+function signInWithMicrosoft() {
+    msalInstance.loginPopup({ scopes: ["User.Read"] }).then(response => {
+        userName = response.account.name;
+        userEmail = response.account.username;
+        document.getElementById('difficulty-selection').classList.remove('hidden');
+    }).catch(error => console.error(error));
 }
 
 function startQuiz() {
@@ -418,7 +439,6 @@ function loadQuestion() {
         button.onclick = () => selectAnswer(option);
         container.appendChild(button);
     });
-    updateProgressBar();
 }
 
 function selectAnswer(selectedOption) {
@@ -448,7 +468,6 @@ function submitQuiz() {
     clearInterval(timer);
     document.getElementById('score-display').classList.remove('hidden');
     document.getElementById('score-display').innerHTML = `✅ ${userName}, you scored ${score}/${questions.length}`;
-    document.getElementById('result-buttons').classList.remove('hidden');
 }
 
 function downloadBadge() {
