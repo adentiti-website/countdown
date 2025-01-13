@@ -1,3 +1,200 @@
+/*----------------------------------
+  Global Styles
+----------------------------------*/
+
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #0056b3;
+    --accent-color: #f5c518;
+    --dark-bg: #1a1a1a;
+    --light-bg: #f9f9f9;
+    --text-color: #333;
+    --text-light: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.4s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    padding: 0 20px;
+}
+
+/*----------------------------------
+  Section Titles
+----------------------------------*/
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards ease-in-out;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*----------------------------------
+  Customer Reviews Section
+----------------------------------*/
+.customer-reviews-section {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    padding: 80px 20px;
+    text-align: center;
+    transition: background-color var(--transition-speed);
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.review-card {
+    background-color: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px var(--shadow-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/*----------------------------------
+  Call-to-Action Button
+----------------------------------*/
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 14px 32px;
+    border-radius: 25px;
+    font-size: 1rem;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/*----------------------------------
+  Footer Styles
+----------------------------------*/
+.footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/*----------------------------------
+  Bottom Navigation
+----------------------------------*/
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.bottom-nav a {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.85rem;
+    transition: color var(--transition-speed);
+}
+
+/*----------------------------------
+  Scroll to Top Button
+----------------------------------*/
+.back-to-top {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+    opacity: 0;
+    transition: opacity var(--transition-speed), transform var(--transition-speed);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+}
+
+/*----------------------------------
+  Responsive Design
+----------------------------------*/
+@media (max-width: 768px) {
+    .reviews-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+    }
+
+    .footer {
+        padding: 30px 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .section-title {
+        font-size: 2.8rem;
+    }
+}
+
 /* Center Logo and Social Proof */
 .logo, .social-proof {
     text-align: center;
