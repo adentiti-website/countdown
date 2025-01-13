@@ -1,70 +1,81 @@
-<!-- JavaScript for Quiz Functionality -->
-function checkAnswer(questionNumber, selectedOption) {
-    const userAnswer = document.getElementById(`user-answer-${questionNumber}`);
-    const feedback = document.getElementById(`feedback-${questionNumber}`);
-    const correctAnswers = {
-        1: 'a',
-        2: 'b',
-        3: 'b',
-        4: 'b',
-        5: 'c'
-    };
-    const explanations = {
-        1: "Phishing emails trick users into sharing sensitive information.",
-        2: "Reporting and deleting suspicious emails helps prevent phishing attacks.",
-        3: "Strong passwords include letters, numbers, and special characters.",
-        4: "Encrypted cloud storage is the safest option for sensitive files.",
-        5: "2FA adds an extra layer of security beyond your password."
-    };
-    const optionsText = {
-        'a': 'Option A',
-        'b': 'Option B',
-        'c': 'Option C'
-    };
-    userAnswer.textContent = optionsText[selectedOption];
-    if (selectedOption === correctAnswers[questionNumber]) {
-        feedback.innerHTML = `<span style='color:green;'>Correct! ${explanations[questionNumber]}</span>`;
-    } else {
-        feedback.innerHTML = `<span style='color:red;'>Incorrect. ${explanations[questionNumber]}</span>`;
-    }
+let score = 0;
+let timer;
+let timeLeft = 60;
+let difficultyLevel = 'beginner';
+
+const questions = {
+    beginner: [
+        { q: "What is phishing?", options: ['A scam email', 'A type of malware', 'A firewall'], correct: 'A scam email', explanation: 'Phishing emails trick users into sharing sensitive information.' },
+        { q: "How to create a strong password?", options: ['Birthdate', '123456', 'Letters, numbers, symbols'], correct: 'Letters, numbers, symbols', explanation: 'Strong passwords include letters, numbers, and special characters.' }
+    ],
+    intermediate: [
+        { q: "What is a VPN used for?", options: ['Encrypts internet traffic', 'Increases internet speed', 'Blocks ads'], correct: 'Encrypts internet traffic', explanation: 'VPN encrypts your internet traffic for privacy and security.' }
+    ],
+    advanced: [
+        { q: "How does a Zero Trust Model work?", options: ['Trusts all devices', 'No trust, continuous verification', 'Blocks all access'], correct: 'No trust, continuous verification', explanation: 'Zero Trust requires verification for every access request.' }
+    ]
+};
+
+function startQuiz(level) {
+    difficultyLevel = level;
+    document.getElementById('quiz-container').classList.remove('hidden');
+    loadQuestions();
+    startTimer();
 }
-const backToTopButton = document.getElementById("back-to-top");
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        backToTopButton.classList.add("visible");
-        backToTopButton.classList.remove("hidden");
-    } else {
-        backToTopButton.classList.add("hidden");
-        backToTopButton.classList.remove("visible");
-    }
-});
-
-backToTopButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section.hidden");
-
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    entry.target.classList.remove("hidden");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.2 } // Adjust this to determine how much of the section must be visible
-    );
-
-    sections.forEach((section) => {
-        observer.observe(section);
+function loadQuestions() {
+    const table = document.querySelector('.quiz-table');
+    questions[difficultyLevel].forEach((item, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${item.q}</td>
+                         <td id="user-answer-${index + 1}"></td>
+                         <td>${item.correct}</td>
+                         <td id="feedback-${index + 1}"></td>`;
+        table.appendChild(row);
+        item.options.forEach(option => {
+            const button = document.createElement('button');
+            button.innerText = option;
+            button.onclick = () => checkAnswer(index + 1, option, item.correct, item.explanation);
+            row.appendChild(button);
+        });
     });
-});
+}
 
+function checkAnswer(qNumber, selectedOption, correctAnswer, explanation) {
+    const userAnswer = document.getElementById(`user-answer-${qNumber}`);
+    const feedback = document.getElementById(`feedback-${qNumber}`);
+    userAnswer.textContent = selectedOption;
+    if (selectedOption === correctAnswer) {
+        feedback.innerHTML = `<span style='color:green;'>Correct! ${explanation}</span>`;
+        score++;
+    } else {
+        feedback.innerHTML = `<span style='color:red;'>Incorrect. ${explanation}</span>`;
+    }
+    updateProgressBar(qNumber);
+}
+
+function startTimer() {
+    timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById('time-left').textContent = timeLeft;
+        if (timeLeft === 0) {
+            clearInterval(timer);
+            alert('Time's up!');
+        }
+    }, 1000);
+}
+
+function updateProgressBar(qNumber) {
+    const progress = document.getElementById('progress');
+    progress.style.width = `${(qNumber / questions[difficultyLevel].length) * 100}%`;
+}
+
+function downloadBadge() {
+    const link = document.createElement('a');
+    link.href = 'images/completion-badge.png';
+    link.download = 'Adentiti_Cybersecurity_Badge.png';
+    link.click();
+}
 document.addEventListener("DOMContentLoaded", () => {
     const images = document.querySelectorAll(".carousel-image");
     let currentIndex = 0;

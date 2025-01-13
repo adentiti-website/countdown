@@ -1,41 +1,42 @@
-<!-- CSS for Quiz Section -->
-.training-section {
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
     background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+.training-section {
+    background-color: #fff;
     padding: 60px 20px;
     text-align: center;
 }
-.quiz-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-.quiz-table th, .quiz-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-.quiz-table th {
+#difficulty-selection button, .cta-button {
+    margin: 10px;
+    padding: 10px 20px;
     background-color: #007BFF;
     color: white;
-}
-.quiz-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-.quiz-cta {
-    margin-top: 30px;
-}
-.quiz-cta .cta-button {
-    margin: 10px;
-    background-color: #28a745;
-    padding: 12px 24px;
-    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-.quiz-cta .cta-button:hover {
-    background-color: #218838;
+#timer {
+    font-weight: bold;
+    color: #dc3545;
+    margin-bottom: 15px;
 }
+#progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 25px;
+}
+#progress {
+    width: 0%;
+    height: 20px;
+    background-color: #28a745;
+    border-radius: 25px;
+    transition: width 0.5s;
+}
+
 /* Customer Reviews Section */
 .customer-reviews-section {
     background-color: #fff8f0; /* Softer background for warmth */
