@@ -1,3 +1,4 @@
+// Image Carousel
 document.addEventListener("DOMContentLoaded", () => {
     const images = document.querySelectorAll(".carousel-image");
     let currentIndex = 0;
@@ -9,6 +10,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setInterval(switchImage, 3000);
+});
+
+// Fade-in Sections on Scroll
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
+
+// Highlight Active Navigation Link
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.bottom-nav a');
+
+    sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            navLinks[index].classList.add('active');
+        }
+    });
 });
 
 // Service pricing map

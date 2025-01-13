@@ -4,6 +4,34 @@
     margin: 0 auto;
 }
 
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade-in Section Animations */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Highlight Active Section */
+.bottom-nav a.active {
+    color: #007BFF;
+    font-weight: bold;
+}
+/* Center Logo and Social Proof */
+.logo, .social-proof {
+    text-align: center;
+    margin: 0 auto;
+}
+
 /* Center Entire Content */
 body, html {
     display: flex;
