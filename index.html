@@ -13,7 +13,6 @@
     <meta property="og:type" content="website">
     <title>Welcome to ADENTITI</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/analytics.js" defer></script>
     <script src="js/cookie-consent.js" defer></script>
     <script src="js/language.js" defer></script>
     <script src="js/quiz.js" defer></script>
@@ -29,182 +28,132 @@
 </script>
 </head>
 <body>
-  <header>
-        <div class="logo">
-    <img src="images/logo.png" alt="ADENTITI Logo">
+<header class="main-header">
+    <div class="logo">
+        <a href="#home" aria-label="ADENTITI Home">
+            <img src="images/logo.png" alt="ADENTITI Logo">
+        </a>
     </div>
-</div>
-        <div class="social-proof">
-            <p>Trusted by businesses across Canada</p>
-        </div>
-    </header>
-   <main>
-
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="hero-carousel">
-        <img src="images/hero-image-1.jpg" alt="Cybersecurity Protection" class="hero-slide active">
-        <img src="images/hero-image-2.jpg" alt="Ransomware Protection" class="hero-slide">
-        <img src="images/hero-image-3.jpg" alt="Data Security" class="hero-slide">
+    <div class="social-proof">
+        <p>Trusted by <strong>hundreds of businesses</strong> across Canada</p>
     </div>
-    <div class="hero-text">
-        <h2>Your Cybersecurity Partner</h2>
-        <p>Protecting Your Digital Gate, For the Thief Now Wears No Face.</p>
-        <button class="cta-button" onclick="location.href='#services'">Explore Our Services</button>
+</header>
+
+<main>
+    <!-- Animated Cyber Background -->
+    <div class="cyber-bg">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
     </div>
-</section>
-<!-- Cybersecurity Training Section -->
-    <section id="cyber-training" class="training-section">
-        <h2 class="section-title">Comprehensive Cybersecurity Awareness Training</h2>
-        <p>
-            Cybersecurity is a shared responsibility across all departments. This training provides real-world scenarios
-            and best practices for protecting sensitive data, recognizing threats, and following secure workflows.
-            From phishing detection to secure file handling, these modules are designed for all employees to build a
-            culture of security.
-        </p>
-        <div id="user-info-form" class="dapper-card">
-            <h3>Before You Begin</h3>
-            <input type="text" id="user-name" placeholder="Enter Your Name" required>
-            <input type="email" id="user-email" placeholder="Enter Your Email" required>
-            <button class="cta-button" onclick="validateUserInfo()">Start Quiz</button>
-        </div>
 
-        <div id="difficulty-selection" class="dapper-buttons hidden">
-            <button onclick="startQuiz('beginner')">Beginner</button>
-            <button onclick="startQuiz('intermediate')">Intermediate</button>
-            <button onclick="startQuiz('advanced')">Advanced</button>
-        </div>
-
-        <div id="quiz-container" class="hidden dapper-card">
-            <div id="timer" class="dapper-timer">⏳ Time Remaining: <span id="time-left">60</span> seconds</div>
-            <div id="progress-bar" class="dapper-progress-bar">
-                <div id="progress"></div>
-            </div>
-            <div id="question-container"></div>
-            <button class="cta-button hidden" id="submit-button" onclick="submitQuiz()">Submit Answers</button>
-            <div id="score-display" class="dapper-score hidden"></div>
-            <div class="quiz-cta hidden" id="result-buttons">
-                <button class="cta-button" onclick="window.location.href='#contact'">📞 Book a Free Consultation</button>
-                <button class="cta-button" onclick="window.location.href='https://forms.gle/feedback'">📝 Give Feedback</button>
-                <button class="cta-button hidden" id="badge-button" onclick="downloadBadge()">🏅 Download Your Completion Badge</button>
-            </div>
+    <!-- Hero Section -->
+<section id="home" class="hero" data-transition>
+        <div class="animated-bg"></div>
+        <div class="hero-text">
+            <h2>Your Cybersecurity Partner</h2>
+            <p id="tagline">Protecting Your Digital Gate.</p>
+            <button class="cta-button" onclick="location.href='#services'">Explore Our Services</button>
         </div>
     </section>
+</main>
 
-<!-- How We Solve Problems -->
-<section id="solutions" class="problem-solving-section">
+</section>
+<section id="solutions" class="problem-solving-section" data-transition>
     <h2 class="section-title">How We Solve Problems</h2>
 
-    <!-- Ransomware Attack Card -->
-    <div class="problem-solving-card">
-        <div class="problem-image">
-            <img src="images/ransomware-attack.jpg" alt="Ransomware Attack Solution">
+    <div class="problem-solving-container">
+        <!-- Ransomware Attack Card -->
+        <div class="problem-solving-card">
+            <div class="problem-image">
+            </div>
+            <div class="problem-details">
+                <h3 class="problem-title">Retail Chain Faces Ransomware Attack</h3>
+                <p>
+                    When a ransomware attack cripples operations, ADENTITI steps in with rapid-response protocols to isolate infected systems. 
+                    We restore operations using secure backups and deploy advanced firewalls to prevent future incidents. 
+                </p>
+                <button class="cta-button" onclick="location.href='#ransomware-solution'">Learn More</button>
+            </div>
         </div>
-        <div class="problem-details">
-            <h3 class="problem-title">Retail Chain Faces Ransomware Attack</h3>
-            <p>
-                When a ransomware attack cripples operations, ADENTITI steps in with rapid-response protocols to isolate infected systems. 
-                We restore operations using secure backups and deploy advanced firewalls to prevent future incidents. 
-                Our team educates employees to recognize ransomware tactics and ensures recovery without paying ransoms. 
-                We enhance existing security frameworks with real-time monitoring to avert potential threats. 
-                This approach enables businesses to continue serving customers seamlessly.
-            </p>
-        </div>
-    </div>
 
-    <!-- Healthcare Compliance Card -->
-    <div class="problem-solving-card">
-        <div class="problem-image">
-            <img src="images/healthcare-compliance.jpg" alt="Healthcare Compliance">
+        <!-- Healthcare Compliance Card -->
+        <div class="problem-solving-card">
+            <div class="problem-image">
+            </div>
+            <div class="problem-details">
+                <h3 class="problem-title">Healthcare Compliance Failure</h3>
+                <p>
+                    Healthcare providers face stringent regulations, and compliance failures can result in severe penalties. 
+                    ADENTITI conducts comprehensive audits and implements secure systems tailored to meet HIPAA and GDPR requirements. 
+                </p>
+                <button class="cta-button" onclick="location.href='#healthcare-solution'">Discover How</button>
+            </div>
         </div>
-        <div class="problem-details">
-            <h3 class="problem-title">Healthcare Compliance Failure</h3>
-            <p>
-                Healthcare providers face stringent regulations, and compliance failures can result in severe penalties. 
-                ADENTITI would conduct a comprehensive compliance audits to identify vulnerabilities in workflows. 
-                We would implement secure systems tailored to meet HIPAA and GDPR requirements. 
-                Employee training ensures adherence to compliance best practices, while secure data management processes protect patient information. 
-                Our holistic approach would safeguards both patient trust and operational efficiency.
-            </p>
-        </div>
-    </div>
 
-    <!-- Phishing Scams Card -->
-    <div class="problem-solving-card">
-        <div class="problem-image">
-            <img src="images/phishing-scams.jpg" alt="Phishing Scams Solution">
-        </div>
-        <div class="problem-details">
-            <h3 class="problem-title">Small Business Suffers Phishing Scams</h3>
-            <p>
-                Phishing scams target small businesses with increasing frequency. 
-                ADENTITI empowers clients by introducing gamified training modules that reduce human error. 
-                Advanced email filtering systems intercept phishing attempts before they reach inboxes. 
-                We establish secure communication protocols and monitor networks in real-time to detect anomalies. 
-                Our solutions restore confidence in operations, ensuring businesses thrive despite evolving cyber threats.
-            </p>
+        <!-- Phishing Scams Card -->
+        <div class="problem-solving-card">
+            <div class="problem-image">
+            </div>
+            <div class="problem-details">
+                <h3 class="problem-title">Small Business Suffers Phishing Scams</h3>
+                <p>
+                    Phishing scams target small businesses with increasing frequency. ADENTITI empowers clients with gamified training modules and advanced email filtering systems to reduce risks.
+                </p>
+                <button class="cta-button" onclick="location.href='#phishing-solution'">Find Out More</button>
+            </div>
         </div>
     </div>
 </section>
-<!-- Services Section -->
-<section id="services" class="services-section hidden">
+
+<section id="services" class="services-section" data-transition>
     <h2 class="section-title">Our Services</h2>
 
     <!-- Services Overview Image -->
     <div class="services-image">
-        <img src="images/services-visual.jpg" alt="Our Services Overview">
     </div>
 
     <!-- Services Cards -->
     <div class="services-container">
+        <!-- Service Card 1 -->
         <div class="service-card">
             <div class="service-icon">
             </div>
-            <h3>Threat Detection and Prevention</h3>
-            <p>
-                ADENTITI stays ahead of cyber threats using cutting-edge detection tools and proactive strategies to safeguard your operations.
-                Our advanced solutions provide real-time insights and immediate action plans.
-                Constant updates to our tools keep your systems secure. Your protection is our mission.
+            <h3 class="service-title">Threat Detection and Prevention</h3>
+            <p class="service-description">
+                ADENTITI stays ahead of cyber threats using cutting-edge detection tools and proactive strategies to safeguard your operations. 
+                Our solutions provide real-time insights and immediate action plans.
             </p>
+            <button class="service-cta" onclick="location.href='#threat-detection'">Learn More</button>
         </div>
+
+        <!-- Service Card 2 -->
         <div class="service-card">
             <div class="service-icon">
             </div>
-            <h3>24/7 Network Monitoring</h3>
-            <p>
-                We offer round-the-clock network monitoring to deliver real-time alerts and immediate responses.
-                Our technical team ensures issues are addressed before they escalate, letting you sleep easy knowing we’re protecting your assets.
+            <h3 class="service-title">24/7 Network Monitoring</h3>
+            <p class="service-description">
+                We offer round-the-clock monitoring to deliver real-time alerts and immediate responses. 
+                Our team ensures issues are addressed before they escalate, so you can sleep easy.
             </p>
+            <button class="service-cta" onclick="location.href='#network-monitoring'">Discover How</button>
         </div>
+
+        <!-- Service Card 3 -->
         <div class="service-card">
             <div class="service-icon">
             </div>
-            <h3>Employee Cybersecurity Training</h3>
-            <p>
-                Our gamified training programs engage employees and reduce human error.
-                Tailored modules address emerging threats, empowering your workforce as the first line of defense.
+            <h3 class="service-title">Employee Cybersecurity Training</h3>
+            <p class="service-description">
+                Engage employees with gamified training programs that reduce human error. 
+                Tailored modules empower your workforce as the first line of defense.
             </p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon">
-            </div>
-            <h3>Custom Security Solutions</h3>
-            <p>
-                ADENTITI designs solutions tailored to your business goals. From startups to enterprises, we ensure long-term success with personalized cybersecurity strategies.
-            </p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon">
-            </div>
-            <h3>Compliance and Risk Management</h3>
-            <p>
-                Stay ahead of regulations like GDPR and HIPAA with ADENTITI. Our proactive approach protects your reputation while achieving operational excellence.
-            </p>
+            <button class="service-cta" onclick="location.href='#cybersecurity-training'">Get Started</button>
         </div>
     </div>
 </section>
 
-<section id="case-study" class="case-study-section hidden">
+<section id="case-study" class="case-study-section hidden" data-transition>
     <h2 class="section-title">Case Study: Securing a Healthcare Provider</h2>
     <div class="case-study-container">
         <!-- Challenge Section -->
@@ -223,39 +172,51 @@
             </div>
         </div>
 
-        <!-- Solution Section -->
-        <div class="case-study-card" onclick="toggleDetails('solution-details')">
+        <div class="case-study-container">
+    <!-- Solution Section -->
+    <div class="case-study-card" onclick="toggleDetails('solution-details')">
+        <div class="card-header">
             <div class="icon">
+                <img src="images/solution-icon.png" alt="Solution Icon">
             </div>
             <h3>Solution</h3>
-            <p>ADENTITI would conduct a comprehensive audit, deploying advanced firewalls and secure data management practices.</p>
-            <button class="explore-details-btn">Explore the Details</button>
-            <div id="solution-details" class="details hidden">
-                <p>
-                    A multi-layered security framework would be implemented, including 24/7 threat monitoring and advanced encryption protocols. 
-                    Employees would be trained to identify and avoid phishing attempts, reducing susceptibility to attacks. 
-                    Regular security audits would be done to ensure compliance with industry standards like GDPR and HIPAA.
-                </p>
-            </div>
         </div>
-
-        <!-- Outcome Section -->
-        <div class="case-study-card" onclick="toggleDetails('outcome-details')">
-            <div class="icon">
-            </div>
-            <h3>Outcome</h3>
-            <p>The healthcare provider would experience reduction in phishing incidents and zero data breaches.</p>
-            <button class="explore-details-btn">Explore the Details</button>
-            <div id="outcome-details" class="details hidden">
-                <p>
-                    The organization can now achieve full compliance with regulatory standards, avoiding potential fines and penalties. Also,
-                    gaining stakeholder trust would increase significantly, with improvement in confidence among patients and partners. 
-                    The healthcare provider can now be a model for effective cybersecurity in the industry.
-                </p>
-            </div>
+        <p>
+            ADENTITI conducted a comprehensive audit, deploying advanced firewalls and secure data management practices.
+        </p>
+        <button class="explore-details-btn">Explore the Details</button>
+        <div id="solution-details" class="details hidden">
+            <p>
+                A multi-layered security framework would be implemented, including 24/7 threat monitoring and advanced encryption protocols. 
+                Employees would be trained to identify and avoid phishing attempts, reducing susceptibility to attacks. 
+                Regular security audits would ensure compliance with industry standards like GDPR and HIPAA.
+            </p>
         </div>
     </div>
+
+    <!-- Outcome Section -->
+    <div class="case-study-card" onclick="toggleDetails('outcome-details')">
+        <div class="card-header">
+            <div class="icon">
+                <img src="images/outcome-icon.png" alt="Outcome Icon">
+            </div>
+            <h3>Outcome</h3>
+        </div>
+        <p>
+            The healthcare provider experienced a reduction in phishing incidents and zero data breaches.
+        </p>
+        <button class="explore-details-btn">Explore the Details</button>
+        <div id="outcome-details" class="details hidden">
+            <p>
+                The organization achieved full compliance with regulatory standards, avoiding fines and penalties. 
+                Stakeholder trust increased significantly, with improved confidence among patients and partners. 
+                The healthcare provider is now a model for effective cybersecurity in the industry.
+            </p>
+        </div>
+    </div>
+</div>
 <button class="cta-button" onclick="location.href='#contact'">Let Us Help Your Business</button>
+
 </section>
 <!-- Meet Our Experts -->
 <section id="experts" class="meet-our-experts hidden">
@@ -280,160 +241,169 @@
     </div>
 </section>
 
-<article class="blog-post" id="post-1">
-    <h3>"5G and Cybersecurity in Canada: Challenges and Opportunities"</h3>
-    <p>
-        The transition to 5G brings immense benefits like faster speeds and lower latency, but it also introduces vulnerabilities to cyber threats.
-        Businesses must adopt proactive measures, including advanced network security tools and employee training.
-        Understanding how attackers exploit 5G infrastructure can help mitigate risks.
-        ADENTITI’s innovative solutions ensure businesses can thrive securely in this new era of connectivity.
-    </p>
-
-    <!-- Like and Share -->
-    <div class="engagement">
-        <button class="like-btn" onclick="likePost('post-1')">Like (<span id="likes-post-1">0</span>)</button>
-        <div class="share-menu">
-            <p>Share:</p>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://adentiti.ca" target="_blank" aria-label="Share on Facebook">
-                <img src="images/icons/facebook-icon.png" alt="Facebook">
-            </a>
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://adentiti.ca" target="_blank" aria-label="Share on LinkedIn">
-                <img src="images/icons/linkedin-icon.png" alt="LinkedIn">
-            </a>
-            <a href="https://wa.me/?text=Check%20out%20this%20article:%20https://adentiti.ca" target="_blank" aria-label="Share on WhatsApp">
-                <img src="images/icons/whatsapp-icon.png" alt="WhatsApp">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Share on Instagram">
-                <img src="images/icons/instagram-icon.png" alt="Instagram">
-            </a>
-        </div>
-    </div>
-
-    <!-- Liked By -->
-    <ul id="liked-by-post-1" class="liked-by-list">
-        <!-- List of usernames who liked the post -->
-    </ul>
-
-    <!-- Comments Section -->
-    <div class="comment-section">
-        <h4>Comments</h4>
-        <textarea id="comment-input-1" placeholder="Add your comment..." class="comment-box"></textarea>
-        <button class="comment-btn" onclick="addComment('post-1', 'comment-input-1')">Submit</button>
-        <ul id="comment-list-post-1" class="comments-list">
-            <!-- Comments will appear here -->
-        </ul>
-    </div>
-</article>
 <section id="price-calculator" class="calculator-section">
     <h2 class="section-title">Service Price Calculator</h2>
+    <p class="calculator-description">
+        Get a customized quote for the services your business needs. Simply fill out the form below, and we’ll get back to you with the details.
+    </p>
     <form id="calculator-form" action="https://formspree.io/f/xqaagqpy" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+        <div class="form-group">
+            <label for="employees">Number of Employees:</label>
+            <input type="number" id="employees" name="employees" placeholder="Enter the number of employees" min="1" required>
+        </div>
 
-        <label for="employees">Number of Employees:</label>
-        <input type="number" id="employees" name="employees" placeholder="Enter the number of employees" min="1" required>
+        <div class="form-group">
+            <label for="services">Services Needed:</label>
+            <select id="services" name="services" required>
+                <option value="" disabled selected>Select a Service</option>
+                <option value="Cybersecurity Assessment">Cybersecurity Assessment</option>
+                <option value="Threat Monitoring">Threat Monitoring</option>
+                <option value="Employee Training">Employee Training</option>
+                <option value="Custom IT Solutions">Custom IT Solutions</option>
+            </select>
+        </div>
 
-        <label for="services">Services Needed:</label>
-        <select id="services" name="services" required>
-            <option value="" disabled selected>Select a Service</option>
-            <option value="Cybersecurity Assessment">Cybersecurity Assessment</option>
-            <option value="Threat Monitoring">Threat Monitoring</option>
-            <option value="Employee Training">Employee Training</option>
-            <option value="Custom IT Solutions">Custom IT Solutions</option>
-        </select>
+        <div class="form-group">
+            <label for="duration">Service Duration (in Months):</label>
+            <input type="number" id="duration" name="duration" placeholder="Enter duration in months" min="1" required>
+        </div>
 
-        <label for="duration">Service Duration (in Months):</label>
-        <input type="number" id="duration" name="duration" placeholder="Enter duration in months" min="1" required>
-
-        <label for="comments">Additional Comments:</label>
-        <textarea id="comments" name="comments" rows="4" placeholder="Add any additional details or comments here (optional)"></textarea>
+        <div class="form-group">
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Add any additional details or comments here (optional)"></textarea>
+        </div>
 
         <button type="submit" class="cta-button">Request Detailed Quote</button>
     </form>
 </section>
-<section id="contact" class="contact-section hidden">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you. Get in touch with us for any inquiries or support.</p>
-    <div class="contact-details">
-        <p><strong>Email:</strong> <a href="mailto:info@adentiti.ca">info@adentiti.ca</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+16479225776">+1 647-922-5776</a></p>
-        <p><strong>Address:</strong> 740 Dupont Street, Toronto, Ontario, Canada</p>
-    </div>
-</section>
 
-        <!-- Google Map -->
-        <div class="google-map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.8159738136555!2d-79.429806!3d43.6703961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34db4a4b2a8b%3A0x123456789abcde!2s740%20Dupont%20Street%2C%20Toronto%2C%20Ontario%2C%20Canada!5e0!3m2!1sen!2sca!4v1234567890"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<section id="contact" class="contact-section">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="contact-intro">
+        We’d love to hear from you! Whether you have inquiries, need support, or want to learn more about our services, feel free to reach out.
+    </p>
+    <div class="contact-container">
+        <!-- Email -->
+        <div class="contact-item">
+            <div class="contact-icon">
+                <img src="images/icons/email-icon.png" alt="Email Icon">
+            </div>
+            <p><strong>Email:</strong> <a href="mailto:makafui.bokor@adentiti.ca">makafui.bokor@adentiti.ca</a></p>
+        </div>
+
+        <!-- Phone -->
+        <div class="contact-item">
+            <div class="contact-icon">
+                <img src="images/icons/phone-icon.png" alt="Phone Icon">
+            </div>
+            <p><strong>Phone:</strong> <a href="tel:+16479225776">+1 647-922-5776</a></p>
+        </div>
+
+        <!-- Address -->
+        <div class="contact-item">
+            <div class="contact-icon">
+                <img src="images/icons/address-icon.png" alt="Address Icon">
+            </div>
+            <p><strong>Address:</strong> 740 Dupont Street, Toronto, Ontario, Canada</p>
         </div>
     </div>
+    <button class="cta-button" onclick="location.href='mailto:makafui.bokor@adentiti.ca'">Send Us an Email</button>
+</section>
+<section id="location" class="google-map-section">
+    <h2 class="section-title">Our Location</h2>
+    <p class="location-description">
+        Visit us at our office or find us easily with the interactive map below. We’re located in the heart of Toronto to serve you better.
+    </p>
+    <div class="google-map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.8159738136555!2d-79.429806!3d43.6703961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34db4a4b2a8b%3A0x123456789abcde!2s740%20Dupont%20Street%2C%20Toronto%2C%20Ontario%2C%20Canada!5e0!3m2!1sen!2sca!4v1234567890"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+    <button class="cta-button" onclick="location.href='https://www.google.com/maps/dir/?api=1&destination=740+Dupont+Street,+Toronto,+Ontario,+Canada'">
+        Get Directions
+    </button>
 </section>
 
-    </main>
-<!-- Customer Reviews Section -->
 <section id="customer-reviews" class="customer-reviews-section">
     <h2 class="section-title">What Our Clients Say</h2>
+    <p class="reviews-intro">Discover how ADENTITI has transformed businesses with cutting-edge cybersecurity solutions.</p>
     <div class="reviews-container">
+        <!-- Review Card 1 -->
         <div class="review-card">
-            <div class="star-rating">★★★★★</div>
+            <div class="review-header">
+                <div class="star-rating">★★★★★</div>
+                <p class="review-author">Aba Enyimayew</p>
+                <p class="review-title">CEO of Verity People</p>
+            </div>
             <p class="review-text">"ADENTITI transformed our cybersecurity infrastructure. We now feel more secure than ever!"</p>
-            <p class="review-author">- Aba Enyimayew, CEO of Verity People</p>
         </div>
+
+        <!-- Review Card 2 -->
         <div class="review-card">
-            <div class="star-rating">★★★★★</div>
+            <div class="review-header">
+                <div class="star-rating">★★★★★</div>
+                <p class="review-author">Ken Kanlisi</p>
+                <p class="review-title">Director at Earth First Junk Removal</p>
+            </div>
             <p class="review-text">"Professional, reliable, and innovative. ADENTITI is our go-to cybersecurity partner!"</p>
-            <p class="review-author">- Ken Kanlisi, Director at Earth First Junk Removal</p>
         </div>
     </div>
     <button class="cta-button" onclick="window.open('https://g.page/r/Cf38VRVWwQ_2EAI/review', '_blank')">Leave Us a Review</button>
 </section>
 
-<!-- Enhanced Footer -->
 <footer class="footer">
-    <div class="compliance">
-        <img src="images/ssl-badge.png" alt="SSL Secure" class="badge">
-        <img src="images/hipaa-badge.png" alt="HIPAA Compliance" class="badge">
+    <div class="footer-top">
+        <div class="compliance">
+            <img src="images/ssl-badge.png" alt="SSL Secure">
+            <img src="images/hipaa-badge.png" alt="HIPAA Compliance">
+        </div>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <img src="images/icons/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="images/icons/linkedin-icon.png" alt="LinkedIn">
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                <img src="images/icons/twitter-icon.png" alt="Twitter">
+            </a>
+        </div>
     </div>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/your-page" target="_blank" aria-label="Facebook">
-            <img src="images/icons/facebook-icon.png" alt="Facebook">
-        </a>
-        <a href="https://www.twitter.com/your-profile" target="_blank" aria-label="Twitter">
-            <img src="images/icons/twitter-icon.png" alt="Twitter">
-        </a>
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
-            <img src="images/icons/linkedin-icon.png" alt="LinkedIn">
-        </a>
-        <a href="https://www.instagram.com/your-profile" target="_blank" aria-label="Instagram">
-            <img src="images/icons/instagram-icon.png" alt="Instagram">
-        </a>
+    <div class="footer-bottom">
+        <p>&copy; 2025 <strong>ADENTITI Limited</strong>. All Rights Reserved.</p>
+        <p>Powered by <a href="https://adentiti.ca" target="_blank">ADENTITI</a></p>
     </div>
-    <p class="footer-text">&copy; 2024 ADENTITI Limited. All Rights Reserved.</p>
 </footer>
 
-<!-- Modern Bottom Navigation -->
 <div class="bottom-nav">
-    <a href="#home" aria-label="Home">
-        <img src="images/icons/home-icon.png" alt="Home">
+    <a href="#home" aria-label="Home" class="nav-item">
+        <img src="images/icons/home-icon.png" alt="Home Icon">
         <span>Home</span>
     </a>
-    <a href="#services" aria-label="Services">
-        <img src="images/icons/services-icon.png" alt="Services">
+    <a href="#services" aria-label="Services" class="nav-item">
+        <img src="images/icons/services-icon.png" alt="Services Icon">
         <span>Services</span>
     </a>
-    <a href="#case-study" aria-label="Case Study">
-        <img src="images/icons/case-icon.png" alt="Case Study">
+    <a href="#case-study" aria-label="Case Study" class="nav-item">
+        <img src="images/icons/case-icon.png" alt="Case Study Icon">
         <span>Case Study</span>
     </a>
-    <a href="#contact" aria-label="Contact">
-        <img src="images/icons/contact-icon.png" alt="Contact">
+    <a href="#contact" aria-label="Contact" class="nav-item">
+        <img src="images/icons/contact-icon.png" alt="Contact Icon">
         <span>Contact</span>
     </a>
-    <button id="back-to-top" class="back-to-top hidden">↑</button>
+    <button id="back-to-top" class="back-to-top hidden" aria-label="Back to Top">↑</button>
 </div>
 </body>
 </html>
