@@ -44,17 +44,109 @@
         <div class="particle"></div>
     </div>
 
-    <!-- Hero Section -->
+<!-- Hero Section with Cybersecurity Quiz -->
 <section id="home" class="hero" data-transition>
     <div class="animated-bg"></div>
-    <div class="hero-text">
+    <div class="hero-content">
         <h2>Your Cybersecurity Partner</h2>
         <p id="tagline">Protecting Your Digital Gate</p>
         <button class="cta-button" onclick="location.href='#services'">Explore Our Services</button>
     </div>
 </section>
 
+<!-- Cybersecurity Quiz Section -->
+<section id="cyber-quiz" class="quiz-section">
+    <h2 class="section-title">🔍 Test Your Cybersecurity Knowledge</h2>
+    <p class="quiz-intro">Think you know cybersecurity? Take this short quiz and see if you're cyber-ready!</p>
+
+    <form id="quiz-form">
+        <div class="quiz-question">
+            <p><strong>1. What is the most common type of cyber attack?</strong></p>
+            <label><input type="radio" name="q1" value="A"> A) DDoS Attack</label>
+            <label><input type="radio" name="q1" value="B"> B) Phishing</label>
+            <label><input type="radio" name="q1" value="C"> C) Ransomware</label>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>2. What does MFA stand for in cybersecurity?</strong></p>
+            <label><input type="radio" name="q2" value="A"> A) Multi-Factor Authentication</label>
+            <label><input type="radio" name="q2" value="B"> B) Malware Firewall Application</label>
+            <label><input type="radio" name="q2" value="C"> C) Managed File Access</label>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>3. Which of these is the strongest password?</strong></p>
+            <label><input type="radio" name="q3" value="A"> A) password123</label>
+            <label><input type="radio" name="q3" value="B"> B) !M3nD@Tor#2023</label>
+            <label><input type="radio" name="q3" value="C"> C) admin</label>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>4. What should you do if you receive a suspicious email?</strong></p>
+            <label><input type="radio" name="q4" value="A"> A) Open it and see what's inside</label>
+            <label><input type="radio" name="q4" value="B"> B) Delete it or report it</label>
+            <label><input type="radio" name="q4" value="C"> C) Reply to confirm its legitimacy</label>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>5. What is social engineering?</strong></p>
+            <label><input type="radio" name="q5" value="A"> A) Using AI for security automation</label>
+            <label><input type="radio" name="q5" value="B"> B) Manipulating people to give up confidential info</label>
+            <label><input type="radio" name="q5" value="C"> C) A firewall technique</label>
+        </div>
+
+        <button type="button" class="quiz-submit" onclick="checkQuiz()">Submit Answers</button>
+    </form>
+
+    <!-- Quiz Results -->
+    <div id="quiz-results" class="hidden">
+        <h3>Your Score: <span id="score"></span>/5</h3>
+        <table>
+            <tr>
+                <th>Question</th>
+                <th>Your Answer</th>
+                <th>Correct Answer</th>
+                <th>Explanation</th>
+            </tr>
+            <tbody id="results-body"></tbody>
+        </table>
+    </div>
+</section>
+
+
+    <!-- Smooth Transition Section -->
+    <div class="transition-overlay"></div>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop-section">
+        <h2 class="section-title">Explore Our Cybersecurity Merch </h2>
+        <p class="shop-intro">Show your passion for cybersecurity with ADENTITI-branded gear. Stay stylish while securing your world.</p>
+
+        <!-- Featured Product Showcase -->
+        <div class="shop-container">
+            <div class="product-card">
+                <img src="images/pet.jpg" alt="Pet Tank Top">
+                <div class="product-info">
+                    <h3>Security Never Sleeps Pet Tank Top</h3>
+                    <p>Let your pet rep cybersecurity in style. Limited stock available!</p>
+                    <button class="shop-cta" onclick="window.open('https://adentiti.shop/products/pet-tank-top', '_blank')">Shop Now</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/water-bottle.jpg" alt="Slim Water Bottle">
+                <div class="product-info">
+                    <h3>Cybersecurity Mug</h3>
+                    <p>Fuel your mornings with security awareness.</p>
+                    <button class="shop-cta" onclick="window.open('https://adentiti.shop/products/ceramic-mug-11oz-15oz', '_blank')">Shop Now</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="cta-button visit-shop" onclick="window.open('https://adentiti.shop', '_blank')">Visit Our Shop</button>
+    </section>
 </main>
+
 
 </section>
 <section id="solutions" class="problem-solving-section" data-transition>
@@ -395,6 +487,10 @@
         <img src="images/icons/services-icon.png" alt="Services Icon">
         <span>Services</span>
     </a>
+<a href="https://adentiti.shop/" target="_blank" aria-label="Shop" class="nav-item">
+    <img src="images/icons/shop-icon.png" alt="Shop Icon">
+    <span>Shop</span>
+</a>
     <a href="#case-study" aria-label="Case Study" class="nav-item">
         <img src="images/icons/case-icon.png" alt="Case Study Icon">
         <span>Case Study</span>

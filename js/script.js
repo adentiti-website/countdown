@@ -1,3 +1,48 @@
+function checkQuiz() {
+    let answers = {
+        q1: "B",
+        q2: "A",
+        q3: "B",
+        q4: "B",
+        q5: "B"
+    };
+
+    let score = 0;
+    let resultsHTML = "";
+    let userAnswers = {};
+
+    for (let q in answers) {
+        let selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected) {
+            userAnswers[q] = selected.value;
+            if (selected.value === answers[q]) score++;
+        } else {
+            userAnswers[q] = "No Answer";
+        }
+    }
+
+    let explanations = {
+        q1: "Phishing is the most common type of cyber attack, often tricking users into revealing personal information.",
+        q2: "MFA stands for Multi-Factor Authentication, which adds extra security by requiring multiple ways to verify identity.",
+        q3: "A strong password contains symbols, numbers, and is not easily guessed.",
+        q4: "Suspicious emails should be deleted or reported to prevent phishing attacks.",
+        q5: "Social engineering manipulates people into giving up sensitive data, rather than hacking systems directly."
+    };
+
+    for (let q in answers) {
+        resultsHTML += `<tr>
+            <td>${q}</td>
+            <td>${userAnswers[q]}</td>
+            <td>${answers[q]}</td>
+            <td>${explanations[q]}</td>
+        </tr>`;
+    }
+
+    document.getElementById("results-body").innerHTML = resultsHTML;
+    document.getElementById("score").innerText = score;
+    document.getElementById("quiz-results").style.display = "block";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const backToTopButton = document.getElementById("back-to-top");
 

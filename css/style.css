@@ -1,3 +1,294 @@
+/* Cyber Quiz Section */
+.quiz-section {
+    background: #ffffff; /* Pure white background */
+    color: #0a0f1f; /* Dark text for contrast */
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    position: relative; /* Ensures no layering issues */
+    z-index: 10;
+}
+
+/* Quiz Title & Description */
+.quiz-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #38bdf8;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.quiz-intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* Quiz Question Styling */
+.quiz-question {
+    background: #ffffff; /* White cards */
+    border: 2px solid #e5e7eb; /* Soft gray border */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    text-align: left;
+}
+
+.quiz-question:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.quiz-question p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #007BFF; /* Blue text to match theme */
+}
+
+.quiz-question label {
+    display: block;
+    padding: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.quiz-question input {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+/* Submit Button - Glowing Cyber Look */
+.quiz-submit {
+    background: #38bdf8;
+    color: black;
+    font-weight: bold;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.quiz-submit:hover {
+    background: #22c55e;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.7);
+}
+
+/* Results Section - Cyber Table */
+#quiz-results {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 15px;
+    display: none;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+#quiz-results h3 {
+    font-size: 2rem;
+    color: #22c55e;
+    margin-bottom: 15px;
+}
+
+#quiz-results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#quiz-results th, #quiz-results td {
+    padding: 12px;
+    border: 1px solid #38bdf8;
+    text-align: left;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#quiz-results th {
+    background: rgba(56, 189, 248, 0.3);
+    color: black;
+    font-weight: bold;
+}
+
+#quiz-results td {
+    color: white;
+}
+
+/* Correct and Incorrect Answers Highlight */
+.correct {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: #ef4444;
+    font-weight: bold;
+}
+/* Cyber Background */
+.cyber-bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #111, #222);
+    overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 120px 20px;
+    background: url('images/cyber-hero.jpg') no-repeat center center/cover;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+#tagline {
+    font-size: 1.4rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+/* Transition Effect */
+.transition-overlay {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(180deg, transparent, #222);
+}
+
+/* Shop Section */
+.shop-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #222, #111);
+    color: white;
+    position: relative;
+    margin-top: -80px;
+    z-index: 2;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.shop-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.shop-section .shop-intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* Shop Container */
+.shop-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Product Cards */
+.product-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+    overflow: hidden;
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-bottom: 3px solid #38bdf8;
+    background: #fff;
+    padding: 10px;
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+.shop-cta {
+    background: #38bdf8;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.shop-cta:hover {
+    background: #22c55e;
+    transform: scale(1.05);
+}
+
+/* Hover Effects */
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 255, 255, 0.3);
+}
+
+/* Visit Shop Button */
+.visit-shop {
+    margin-top: 30px;
+    padding: 14px 24px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    background: #22c55e;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.visit-shop:hover {
+    background: #38bdf8;
+    transform: scale(1.1);
+}
+
 /* Hero Section Styling */
 .hero {
     position: relative;
@@ -132,6 +423,113 @@
 .logo img:hover {
     transform: scale(1.2);
     filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Shop Section
+
+ Styling */
+.shop-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #111, #222);
+    color: #fff;
+}
+
+.shop-section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #38bdf8;
+    text-transform: uppercase;
+}
+
+.shop-section .shop-intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* Product Grid */
+.shop-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Product Cards */
+/* Fix Image Cropping */
+.product-card img {
+    width: 100%;
+    height: auto; /* Ensures the image resizes proportionally */
+    object-fit: contain; /* Prevents cropping */
+    border-bottom: 3px solid #38bdf8;
+    background: #fff; /* Adds a clean background for transparent images */
+    padding: 10px; /* Adds spacing to avoid tight cropping */
+    display: block;
+}
+.product-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+.shop-cta {
+    background: #38bdf8;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.shop-cta:hover {
+    background: #22c55e;
+    transform: scale(1.05);
+}
+
+/* Hover Effects */
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 255, 255, 0.3);
+}
+
+/* Visit Shop Button */
+.visit-shop {
+    margin-top: 30px;
+    padding: 14px 24px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    background: #22c55e;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.visit-shop:hover {
+    background: #38bdf8;
+    transform: scale(1.1);
 }
 
 /* Social Proof */
