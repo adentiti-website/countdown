@@ -38,6 +38,33 @@
   overflow: hidden;
 }
 
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full height on desktop */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .slide {
   position: absolute;
   top: 0;
