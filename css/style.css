@@ -1,137 +1,117 @@
-/* Cyber Quiz Section */
-.quiz-section {
-    background: #ffffff; /* Pure white background */
-    color: #0a0f1f; /* Dark text for contrast */
-    text-align: center;
-    padding: 80px 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    position: relative; /* Ensures no layering issues */
-    z-index: 10;
+.hero-slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Quiz Title & Description */
-.quiz-section .section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #38bdf8;
-    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  background-size: cover;
+  background-position: center;
 }
 
-.quiz-intro {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.8;
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
 }
 
-/* Quiz Question Styling */
-.quiz-question {
-    background: #ffffff; /* White cards */
-    border: 2px solid #e5e7eb; /* Soft gray border */
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    max-width: 600px;
-    text-align: left;
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 90%;
 }
 
-.quiz-question:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.2);
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-.quiz-question p {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #007BFF; /* Blue text to match theme */
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
-.quiz-question label {
-    display: block;
-    padding: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s;
+.btn-primary {
+  background-color: #0ff;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.quiz-question input {
-    margin-right: 8px;
-    transform: scale(1.2);
+.hero-slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Submit Button - Glowing Cyber Look */
-.quiz-submit {
-    background: #38bdf8;
-    color: black;
-    font-weight: bold;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  background-size: cover;
+  background-position: center;
 }
 
-.quiz-submit:hover {
-    background: #22c55e;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(34, 197, 94, 0.7);
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
 }
 
-/* Results Section - Cyber Table */
-#quiz-results {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 25px;
-    margin-top: 20px;
-    border-radius: 15px;
-    display: none;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+.hero-text {
+  max-width: 80%;
+  padding: 1rem;
 }
 
-#quiz-results h3 {
-    font-size: 2rem;
-    color: #22c55e;
-    margin-bottom: 15px;
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-#quiz-results table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    border-radius: 10px;
-    overflow: hidden;
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
-#quiz-results th, #quiz-results td {
-    padding: 12px;
-    border: 1px solid #38bdf8;
-    text-align: left;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-#quiz-results th {
-    background: rgba(56, 189, 248, 0.3);
-    color: black;
-    font-weight: bold;
-}
-
-#quiz-results td {
-    color: white;
-}
-
-/* Correct and Incorrect Answers Highlight */
-.correct {
-    color: #22c55e;
-    font-weight: bold;
-}
-
-.incorrect {
-    color: #ef4444;
-    font-weight: bold;
+.btn-primary {
+  background-color: #0ff;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
 }
 /* Cyber Background */
 .cyber-bg {
@@ -177,40 +157,6 @@
     width: 100%;
     height: 150px;
     background: linear-gradient(180deg, transparent, #222);
-}
-
-/* Shop Section */
-.shop-section {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #222, #111);
-    color: white;
-    position: relative;
-    margin-top: -80px;
-    z-index: 2;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-}
-
-.shop-section .section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #38bdf8;
-}
-
-.shop-section .shop-intro {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.8;
-}
-
-/* Shop Container */
-.shop-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 /* Product Cards */
@@ -1888,4 +1834,3 @@ footer {
     text-align: center;
     margin-bottom: 20px;
 }
-

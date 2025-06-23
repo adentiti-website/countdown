@@ -1,154 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ADENTITI Limited - Your trusted partner in cybersecurity solutions.">
-    <meta name="keywords" content="Cybersecurity, IT Solutions, Data Protection, Network Monitoring, Compliance">
-    <meta name="author" content="ADENTITI Limited">
-    <meta property="og:title" content="ADENTITI Limited - Your Cybersecurity Partner">
-    <meta property="og:description" content="Secure your business with cutting-edge cybersecurity solutions.">
-    <meta property="og:image" content="images/logo-512.png">
-    <meta property="og:url" content="https://adentiti.ca">
-    <meta property="og:type" content="website">
-    <title>Welcome to ADENTITI</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/cookie-consent.js" defer></script>
-    <script src="js/language.js" defer></script>
-    <script src="js/quiz.js" defer></script>
-    <script src="js/script.js" defer></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CJWRDCXDXT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta -->
+  <meta name="description" content="Protect your business with ADENTITI Limited – expert cybersecurity solutions for modern threats.">
+  <meta name="keywords" content="Cybersecurity, IT Security, Data Protection, Network Security, Compliance, Ransomware Protection, Small Business Security">
+  <meta name="author" content="ADENTITI Limited">
 
-  gtag('config', 'G-CJWRDCXDXT');
-</script>
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="ADENTITI Limited – Elite Cybersecurity for Business Growth">
+  <meta property="og:description" content="Cutting-edge cybersecurity services tailored for startups and SMBs. Stay secure, stay ahead.">
+  <meta property="og:image" content="https://adentiti.ca/images/logo-512.png">
+  <meta property="og:url" content="https://www.adentiti.ca">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ADENTITI – Cybersecurity Solutions That Work">
+  <meta name="twitter:description" content="Your trusted partner in proactive cybersecurity.">
+  <meta name="twitter:image" content="https://adentiti.ca/images/logo-512.png">
+  <meta name="twitter:site" content="@AdentitiSec">
+
+  <title>ADENTITI | Cybersecurity Solutions for Smart Businesses</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="images/logo-512.png">
+
+  <!-- Styles & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Scripts -->
+  <script src="js/cookie-consent.js" defer></script>
+  <script src="js/language.js" defer></script>
+  <script src="js/script.js" defer></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJWRDCXDXT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-CJWRDCXDXT');
+  </script>
 </head>
+
 <body>
-<header class="main-header">
-    <div class="logo">
-        <a href="#home" aria-label="ADENTITI Home">
-            <img src="images/logo.png" alt="ADENTITI Logo">
-        </a>
-    </div>
-</header>
-
-<main>
-    <!-- Animated Cyber Background -->
-    <div class="cyber-bg">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
-
-<!-- Hero Section with Cybersecurity Quiz -->
-<section id="home" class="hero" data-transition>
-    <div class="animated-bg"></div>
-    <div class="hero-content">
-        <h2>Your Cybersecurity Partner</h2>
-        <p id="tagline">Protecting Your Digital Gate</p>
-        <button class="cta-button" onclick="location.href='#services'">Explore Our Services</button>
-    </div>
+<section class="hero-slider">
+  <div class="slide active">
+    <img src="images/hero1.jpg" alt="Cybersecurity Banner 1" class="hero-image">
+  </div>
+  <div class="slide">
+    <img src="images/hero2.jpg" alt="Cybersecurity Banner 2" class="hero-image">
+  </div>
+  <div class="slide">
+    <img src="images/hero3.jpg" alt="Cybersecurity Banner 3" class="hero-image">
+  </div>
+  <div class="slide">
+    <img src="images/hero4.jpg" alt="Cybersecurity Banner 4" class="hero-image">
+  </div>
 </section>
-
-<!-- Cybersecurity Quiz Section -->
-<section id="cyber-quiz" class="quiz-section">
-    <h2 class="section-title">🔍 Test Your Cybersecurity Knowledge</h2>
-    <p class="quiz-intro">Think you know cybersecurity? Take this short quiz and see if you're cyber-ready!</p>
-
-    <form id="quiz-form">
-        <div class="quiz-question">
-            <p><strong>1. What is the most common type of cyber attack?</strong></p>
-            <label><input type="radio" name="q1" value="A"> A) DDoS Attack</label>
-            <label><input type="radio" name="q1" value="B"> B) Phishing</label>
-            <label><input type="radio" name="q1" value="C"> C) Ransomware</label>
-        </div>
-
-        <div class="quiz-question">
-            <p><strong>2. What does MFA stand for in cybersecurity?</strong></p>
-            <label><input type="radio" name="q2" value="A"> A) Multi-Factor Authentication</label>
-            <label><input type="radio" name="q2" value="B"> B) Malware Firewall Application</label>
-            <label><input type="radio" name="q2" value="C"> C) Managed File Access</label>
-        </div>
-
-        <div class="quiz-question">
-            <p><strong>3. Which of these is the strongest password?</strong></p>
-            <label><input type="radio" name="q3" value="A"> A) password123</label>
-            <label><input type="radio" name="q3" value="B"> B) !M3nD@Tor#2023</label>
-            <label><input type="radio" name="q3" value="C"> C) admin</label>
-        </div>
-
-        <div class="quiz-question">
-            <p><strong>4. What should you do if you receive a suspicious email?</strong></p>
-            <label><input type="radio" name="q4" value="A"> A) Open it and see what's inside</label>
-            <label><input type="radio" name="q4" value="B"> B) Delete it or report it</label>
-            <label><input type="radio" name="q4" value="C"> C) Reply to confirm its legitimacy</label>
-        </div>
-
-        <div class="quiz-question">
-            <p><strong>5. What is social engineering?</strong></p>
-            <label><input type="radio" name="q5" value="A"> A) Using AI for security automation</label>
-            <label><input type="radio" name="q5" value="B"> B) Manipulating people to give up confidential info</label>
-            <label><input type="radio" name="q5" value="C"> C) A firewall technique</label>
-        </div>
-
-        <button type="button" class="quiz-submit" onclick="checkQuiz()">Submit Answers</button>
-    </form>
-
-    <!-- Quiz Results -->
-    <div id="quiz-results" class="hidden">
-        <h3>Your Score: <span id="score"></span>/5</h3>
-        <table>
-            <tr>
-                <th>Question</th>
-                <th>Your Answer</th>
-                <th>Correct Answer</th>
-                <th>Explanation</th>
-            </tr>
-            <tbody id="results-body"></tbody>
-        </table>
-    </div>
-</section>
-
-
-    <!-- Smooth Transition Section -->
-    <div class="transition-overlay"></div>
-
-    <!-- Shop Section -->
-    <section id="shop" class="shop-section">
-        <h2 class="section-title">Explore Our Cybersecurity Merch </h2>
-        <p class="shop-intro">Show your passion for cybersecurity with ADENTITI-branded gear. Stay stylish while securing your world.</p>
-
-        <!-- Featured Product Showcase -->
-        <div class="shop-container">
-            <div class="product-card">
-                <img src="images/pet.jpg" alt="Pet Tank Top">
-                <div class="product-info">
-                    <h3>Security Never Sleeps Pet Tank Top</h3>
-                    <p>Let your pet rep cybersecurity in style. Limited stock available!</p>
-                    <button class="shop-cta" onclick="window.open('https://adentiti.shop/products/pet-tank-top', '_blank')">Shop Now</button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="images/water-bottle.jpg" alt="Slim Water Bottle">
-                <div class="product-info">
-                    <h3>Cybersecurity Mug</h3>
-                    <p>Fuel your mornings with security awareness.</p>
-                    <button class="shop-cta" onclick="window.open('https://adentiti.shop/products/ceramic-mug-11oz-15oz', '_blank')">Shop Now</button>
-                </div>
-            </div>
-        </div>
-
-        <button class="cta-button visit-shop" onclick="window.open('https://adentiti.shop', '_blank')">Visit Our Shop</button>
-    </section>
-</main>
-
-
-</section>
+  
 <section id="solutions" class="problem-solving-section" data-transition>
     <h2 class="section-title">How We Solve Problems</h2>
 
@@ -487,11 +404,7 @@
         <img src="images/icons/services-icon.png" alt="Services Icon">
         <span>Services</span>
     </a>
-<a href="https://adentiti.shop/" target="_blank" aria-label="Shop" class="nav-item">
-    <img src="images/icons/shop-icon.png" alt="Shop Icon">
-    <span>Shop</span>
-</a>
-    <a href="#case-study" aria-label="Case Study" class="nav-item">
+   <a href="#case-study" aria-label="Case Study" class="nav-item">
         <img src="images/icons/case-icon.png" alt="Case Study Icon">
         <span>Case Study</span>
     </a>
