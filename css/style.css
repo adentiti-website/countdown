@@ -1,3 +1,47 @@
+/* Quick Links Styling */
+.footer-links h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #00f260;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.footer-links h4::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #00f260, #38bdf8);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 0;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #38bdf8;
+  transform: translateX(5px);
+}
 .site-footer {
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #ffffff;
