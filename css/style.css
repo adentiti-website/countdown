@@ -1,3 +1,53 @@
+/* Connect Section Styling */
+.connect-section {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* deep cyber blue gradient */
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.connect-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+.connect-section p {
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+  color: #e0e0e0;
+}
+
+.connect-section .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.connect-section .social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.connect-section .social-icons img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.connect-section .social-icons a:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
 .intro-video {
   background: #0d0d0d;
   color: #fff;
