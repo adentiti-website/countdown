@@ -1,3 +1,102 @@
+.site-footer {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  padding: 60px 20px 30px;
+  text-align: center;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-links,
+.footer-social {
+  min-width: 250px;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  font-size: 1.25rem;
+  color: #00f260;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00f260;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-social .social-icons a img {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-social .social-icons a:hover img {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #00f260;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer-bottom a {
+  color: #00f260;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #38bdf8;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-links,
+  .footer-social {
+    text-align: center;
+  }
+}
+
 /* Connect Section Styling */
 .connect-section {
   background: linear-gradient(to right, #1e2a38, #0d1a26);
