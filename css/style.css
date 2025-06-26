@@ -1,3 +1,52 @@
+/* Corner Image Layout */
+.corner-images-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks to pass through */
+  z-index: -1; /* Keeps it in the background */
+}
+
+.corner-image {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  opacity: 0.15;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual Corners */
+.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Optional Hover Animation */
+.corner-image:hover {
+  transform: scale(1.05);
+  opacity: 0.25;
+}
+
 /* Meet Makafui Section */
 .founder-section {
   background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
