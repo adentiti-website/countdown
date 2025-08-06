@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>ADENTITI Product Launch</h1>
+        <h1>🚀 ADENTITI Product Launch</h1>
         <p>Countdown to something great.</p>
         <div id="countdown" class="countdown"></div>
     </header>
@@ -25,7 +25,9 @@
             <p>Phone: +1 (647) 922-5776</p>
         </section>
 
-        <a href="index.html" class="button">Back to Home</a>
+        <div style="text-align:center;">
+            <a href="index.html" class="button">⬅ Back to Home</a>
+        </div>
     </main>
 
     <footer>
@@ -33,7 +35,7 @@
     </footer>
 
     <script>
-        // Countdown script
+        // Countdown logic
         const countdown = document.getElementById('countdown');
         const launchDate = new Date("2025-10-16T00:00:00").getTime();
 
@@ -42,7 +44,7 @@
             const distance = launchDate - now;
 
             if (distance < 0) {
-                countdown.innerHTML = "Product Launched!";
+                countdown.innerHTML = "🎉 Product Launched!";
                 return;
             }
 
