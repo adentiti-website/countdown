@@ -1,3 +1,56 @@
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header, footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #111;
+        }
+        h1, h2 {
+            color: #00ffcc;
+        }
+        main {
+            flex: 1;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        section {
+            margin-bottom: 3rem;
+        }
+        .countdown {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            color: #ffffff;
+        }
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            background-color: #00ffcc;
+            color: #000;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #00ddaa;
+        }
 .hero-banner {
   position: relative;
   width: 100%;
