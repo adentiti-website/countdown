@@ -1,63 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADENTITI Product Launch</title>
-
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADENTITI Product Launch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+  </head>
 <body>
-    <header>
-        <h1>🚀 ADENTITI Product Launch</h1>
-        <p>Countdown to something great.</p>
-        <div id="countdown" class="countdown"></div>
-    </header>
+  <header>
+    <h1>ADENTITI Product Launch</h1>
+    <p>Countdown to something great</p>
+    <div id="countdown" class="countdown"></div>
+  </header>
 
-    <main>
-        <section>
-            <h2>Our Mission</h2>
-            <p>Empowering businesses by delivering cutting-edge cybersecurity solutions built for today's threats and tomorrow's challenges.</p>
-        </section>
+  <section class="hero">
+    <h2>The Future of Cybersecurity Starts Now</h2>
+    <p>
+      Experience a revolutionary new approach to business protection. Advanced. Scalable. Human-centered.
+    </p>
+    <button class="video-button" onclick="alert('Video coming soon!')">▶ Play Launch Video</button>
+  </section>
 
-        <section>
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:makafui.bokor@adentiti.ca">makafui.bokor@adentiti.ca</a></p>
-            <p>Phone: +1 (647) 922-5776</p>
-        </section>
+  <section class="feature-section">
+    <h2>Our Mission</h2>
+    <p>
+      Empowering businesses by delivering cutting-edge cybersecurity solutions built for today's threats and tomorrow's challenges.
+    </p>
+  </section>
 
-        <div style="text-align:center;">
-            <a href="index.html" class="button">⬅ Back to Home</a>
-        </div>
-    </main>
+  <section class="feature-section">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:makafui.bokor@adentiti.ca" style="color:#00ffcc">makafui.bokor@adentiti.ca</a></p>
+    <p>Phone: +1 (647) 922-5776</p>
+  </section>
 
-    <footer>
-        &copy; 2025 ADENTITI Limited — All rights reserved.
-    </footer>
+  <footer>
+    &copy; 2025 ADENTITI Limited — All rights reserved.
+  </footer>
 
-    <script>
-        // Countdown logic
-        const countdown = document.getElementById('countdown');
-        const launchDate = new Date("2025-10-16T00:00:00").getTime();
-
-        const updateCountdown = () => {
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-
-            if (distance < 0) {
-                countdown.innerHTML = "🎉 Product Launched!";
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        };
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
+  
 </body>
 </html>
