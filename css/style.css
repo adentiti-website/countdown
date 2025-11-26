@@ -2840,6 +2840,176 @@ footer {
   }
 }
 
+/* ============================
+   1. Global responsive helpers
+   ============================ */
+:root {
+  --page-max-width: 1200px;
+  --section-h-padding: clamp(1.25rem, 4vw, 3rem);
+  --section-v-padding: clamp(3rem, 6vh, 5rem);
+  --card-gap: clamp(1.25rem, 2.5vw, 2.25rem);
+  --h2-size: clamp(1.9rem, 3vw, 2.6rem);
+  --body-size: clamp(0.95rem, 1.1vw, 1.05rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--body-size);
+}
+
+/* Wrap main content so it doesn’t stretch too wide on desktop */
+main,
+section {
+  max-width: var(--page-max-width);
+  padding-inline: var(--section-h-padding);
+  margin-inline: auto;
+}
+
+/* ============================
+   2. Contact section – truly responsive
+   ============================ */
+
+.contact-section-dapper {
+  padding: var(--section-v-padding) var(--section-h-padding);
+  margin: clamp(2rem, 5vh, 4rem) auto;
+  border-radius: 20px;
+}
+
+.contact-header .section-title {
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+}
+
+.contact-intro {
+  font-size: clamp(1rem, 1.1vw, 1.15rem);
+}
+
+/* Contact cards grid behaves nicely on all widths */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--card-gap);
+}
+
+.contact-card {
+  width: 100%; /* grid now controls width */
+}
+
+/* ============================
+   3. Media cards – spacing & tap-friendly
+   ============================ */
+
+.media-section {
+  padding: var(--section-v-padding) var(--section-h-padding);
+}
+
+.media-cards {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--card-gap);
+}
+
+.media-card {
+  padding: 1.5rem;
+}
+
+/* ============================
+   4. Hero / full-height tweaks
+   ============================ */
+
+/* Avoid 100vh issues on mobile (Safari address bar, etc.) */
+.hero,
+.hero-banner,
+.hero-slider {
+  min-height: 100vh;
+  height: auto;
+}
+
+/* On small screens let hero breathe instead of locking it */
+@media (max-width: 768px) {
+  .hero,
+  .hero-banner,
+  .hero-slider {
+    min-height: 80vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-text,
+  .hero-banner-content {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* ============================
+   5. Tablet & mobile polish
+   ============================ */
+
+/* iPad & small laptops */
+@media (max-width: 1024px) {
+  .contact-section-dapper {
+    padding: 3.5rem 2rem;
+  }
+
+  .founder-container,
+  .shop-container,
+  .services-container,
+  .problem-solving-container,
+  .case-study-container,
+  .experts-container {
+    gap: 1.5rem;
+  }
+}
+
+/* Phones (iPhone, small Android) */
+@media (max-width: 768px) {
+  main,
+  section {
+    padding-inline: 1.25rem;
+  }
+
+  .contact-section-dapper {
+    padding: 2.5rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .contact-footer .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .media-card {
+    padding: 1.25rem;
+  }
+
+  .hero-text h1,
+  .hero-banner-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-text p,
+  .hero-banner-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+  .contact-section-dapper {
+    padding: 2rem 1rem;
+  }
+
+  .contact-header .section-title {
+    font-size: 1.6rem;
+  }
+
+  .bottom-nav {
+    padding-block: 0.45rem;
+  }
+}
+
 
 
 
