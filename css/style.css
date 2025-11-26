@@ -1,3 +1,33 @@
+.founder-media-links {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.founder-media-links .media-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.secondary-button {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 0.9rem;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  transition: all 0.2s ease;
+}
+
+.secondary-button:hover {
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
 {
       box-sizing: border-box;
       margin: 0;
@@ -2658,3 +2688,4 @@ footer {
     padding: 6px;
   }
 }
+
