@@ -1,3 +1,50 @@
+.media-section {
+  padding: 4rem 1.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.media-intro {
+  max-width: 640px;
+  margin: 0.75rem auto 2.5rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.media-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.media-card {
+  padding: 1.75rem;
+  border-radius: 1.25rem;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.08), rgba(0,0,0,0.85));
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.media-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.media-source {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.media-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
 .founder-media-links {
   margin-top: 1.5rem;
   display: flex;
@@ -2688,4 +2735,5 @@ footer {
     padding: 6px;
   }
 }
+
 
