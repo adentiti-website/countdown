@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Makafui Bokor | Cybersecurity Visionary, Author, Founder</title>
+  <meta name="description" content="Makafui Bokor — Toronto-based cybersecurity visionary, founder & CEO of ADENTITI Limited, author of 'Bridge', speaker, and creator of gamified security training." />
+  <meta name="keywords" content="Makafui Bokor, ADENTITI, cybersecurity, author, speaker, Bridge book, gamified training, VaultDrive" />
+  <meta name="author" content="Makafui Bokor" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Makafui Bokor | Cybersecurity Visionary, Author, Founder" />
+  <meta property="og:description" content="Founder & CEO of ADENTITI Limited. Author of 'Bridge'. Building gamified training and secure collaboration tools." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/makafui-og.jpg" />
+  <meta property="og:url" content="https://www.adentiti.ca/makafui" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Makafui Bokor | Cybersecurity Visionary, Author, Founder" />
+  <meta name="twitter:description" content="Founder & CEO of ADENTITI Limited. Author of 'Bridge'. Building gamified training and secure collaboration tools." />
+  <meta name="twitter:image" content="images/makafui-og.jpg" />
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+  --bg:#ffffff;        /* white background */
+  --panel:#ffffff;     /* white cards/panels */
+  --muted:#ffffff;     /* keep it white for uniformity */
+  --text:#000000;      /* black text everywhere */
+  --brand:#005BBB;     /* your blue */
+  --brand2:#005BBB;    /* same blue to avoid variations */
+  --line:#D9E4F5;      /* very light blue for borders */
+}
+
+:root[data-theme="dark"]{
+  --bg:#000000; --panel:#000000; --muted:#000000; --text:#ffffff;
+  --brand:#2FA8FF; --brand2:#2FA8FF; --line:#1f3a66; /* optional dark mode */
+}
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* Links = blue, hover underline */
+a{color:var(--brand); text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Header retains a blue gradient but still just blue+white */
+header.hero{
+  background:linear-gradient(120deg,var(--brand),var(--brand2));
+  color:#ffffff;
+}
+
+/* Nav is white with blue links */
+nav.sticky{
+  position:sticky; top:0; z-index:10;
+  background:#ffffff; border-bottom:1px solid var(--line);
+}
+.nav-inner a{ color:var(--brand2); }
+
+/* Section headings: black text, blue accent line */
+h2.section-title{
+  border-left:5px solid var(--brand2);
+  padding-left:10px;
+  font-size:clamp(1.3rem,2.2vw,1.9rem);
+  color:#000000;
+}
+
+/* Cards: white background, light blue border, subtle shadow */
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 6px 18px rgba(0,0,0,.05);
+}
+
+/* Buttons: filled and outline, only blue/white/black */
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--brand2); color:#ffffff;
+  border:0; border-radius:12px; padding:12px 18px; font-weight:700;
+}
+.btn:hover{ filter:brightness(1.05); }
+.btn.alt{
+  background:#ffffff; color:var(--brand2); border:2px solid var(--brand2);
+}
+
+/* Stats use white-only to keep palette strict */
+.stat{ background:#ffffff; border:1px solid var(--line); border-radius:16px; padding:20px; text-align:center }
+.stat h3{ margin:0; font-size:1.8rem }
+
+/* Footer: white with soft top border, black text */
+footer{ background:#ffffff; padding:24px; border-top:1px solid var(--line); text-align:center; color:#000000 }
+
+/* Layout helpers */
+.container{ max-width:1200px; margin:0 auto; padding:24px }
+.cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px }
+.hero-inner{ display:grid; grid-template-columns:120px 1fr; gap:20px; align-items:center; padding:48px 24px }
+.avatar{ width:120px; height:120px; border-radius:50%; border:4px solid #fff; object-fit:cover; box-shadow:0 8px 24px rgba(0,0,0,.2) }
+.title{ margin:0; font-size:clamp(1.8rem,2.8vw,2.6rem) }
+.subtitle{ margin:.3rem 0 0; color:#ffffff } /* subtitle lives in blue hero, so white */
+.cta-row{ display:flex; flex-wrap:wrap; gap:12px; margin-top:14px }
+section{ padding:28px 0; border-bottom:1px solid var(--line) }
+
+@media (max-width:700px){
+  .hero-inner{ grid-template-columns:1fr; text-align:center }
+  .avatar{ margin:0 auto }
+  .book{ grid-template-columns:1fr }
+}
+  </style>
+
+  <!-- JSON-LD Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Makafui Bokor",
+    "jobTitle": "Founder & CEO, ADENTITI Limited; Cybersecurity Author",
+    "url": "https://www.adentiti.ca",
+    "image": "https://www.adentiti.ca/images/makafui-bokor-profile.jpg",
+    "email": "mailto:makafui.bokor@adentiti.ca",
+    "telephone": "+1-647-922-5776",
+    "worksFor": {"@type":"Organization","name":"ADENTITI Limited","url":"https://www.adentiti.ca"},
+    "address": {"@type":"PostalAddress","addressLocality":"Toronto","addressRegion":"ON","addressCountry":"CA"},
+    "sameAs": [
+      "https://www.linkedin.com/in/makafui-bokor/",
+      "https://www.youtube.com/@ClickSecureOfficial",
+      "https://www.adentiti.ca"
+    ]
+  }
+  </script>
+<script type="application/ld+json">{
+  "@context": "https:\/\/schema.org",
+  "@type": "Book",
+  "name": "Bridge: Closing the Cybersecurity Gap for Small Businesses",
+  "author": {"@type": "Person", "name": "Makafui Bokor"},
+  "workExample": [{
+    "@type": "Book",
+    "bookEdition": "First",
+    "potentialAction": {"@type": "BuyAction", "target": "https:\/\/www.amazon.ca\/Bridge-Closing-Cybersecurity-Small-Businesses\/dp\/1069337307"}
+  }]
+}
+</script>
+<script type="application/ld+json">{
+  "@context": "https:\/\/schema.org",
+  "@type": "Book",
+  "name": "Beaten! How Cyberbullying Affects You—and How to Rise Stronger",
+  "author": {"@type": "Person", "name": "Makafui Bokor"},
+  "workExample": [{
+    "@type": "Book",
+    "bookEdition": "First",
+    "potentialAction": {"@type": "ReadAction", "target": "https:\/\/play.google.com\/store\/books\/details\/MAKAFUI_BOKOR_Beaten?id=P1yJEQAAQBAJ"}
+  }]
+}
+</script>
+<script type="application/ld+json">{
+  "@context": "https:\/\/schema.org",
+  "@type": "Organization",
+  "name": "ADENTITI Limited",
+  "url": "https:\/\/www.adentiti.ca",
+  "logo": "https:\/\/www.adentiti.ca\/images\/adentiti-logo.png",
+  "sameAs": [
+    "https:\/\/www.linkedin.com\/in\/makafui-bokor\/",
+    "https:\/\/www.youtube.com\/@ClickSecureOfficial"
+  ]
+}
+</script>
+<\/head>
+<body>
+  <header class="hero">
+    <div class="hero-inner container">
+      <img class="avatar" src="images/makafui-bokor-profile.jpg" alt="Portrait of Makafui Bokor" />
+      <div>
+        <h1 class="title">Makafui Bokor</h1>
+        <p class="subtitle">Cybersecurity Visionary • Founder & CEO, ADENTITI Limited • Author of <em>Bridge</em></p>
+        <div class="cta-row">
+          <a class="btn" href="https://outlook.office.com/bookwithme/user/84f741b3ad54472f8834c6b7d3d9f94a@adentiti.ca?anonymous&amp;ep=signature&amp;ismsaljsauthenabled=true" target="_blank" rel="noopener">Book a meeting</$1>
+          <a class="btn alt" href="https://www.linkedin.com/in/makafui-bokor/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn alt" href="mailto:makafui.bokor@adentiti.ca">Email</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sticky" aria-label="Primary">
+    <div class="nav-inner container">
+      <a href="#bio">Bio</a>
+      <a href="#books">Books</a>
+      <a href="#projects">Projects</a>
+      <a href="#talks">Speaking</a>
+      <a href="#skills">Skills</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Bio -->
+    <section id="bio">
+      <h2 class="section-title">Biography</h2>
+      <p>
+        I’m a Toronto-based cybersecurity founder and author with <span id="yearsExp">10+</span> years in IT, cloud, and human‑centred security. I lead
+        <strong>ADENTITI Limited</strong>, where we build proactive security solutions and gamified training that help Canadian businesses stay resilient.
+      </p>
+      <p>
+        My work blends strategy, product thinking, and education—from incident response playbooks and security culture programs to
+        hands‑on tools like <em>VaultDrive</em> (a secure, modular data collaboration concept) and <em>Bridge: The Cybersecurity Survival Game</em>.
+      </p>
+      <div class="stats" aria-label="Impact highlights">
+        <div class="stat"><h3>10K+</h3><div class="muted">Learners reached across talks & trainings</div></div>
+        <div class="stat"><h3>10+ yrs</h3><div class="muted">Professional experience since 2010</div></div>
+        <div class="stat"><h3>3–5 min</h3><div class="muted">Bite‑size onboarding demos I design</div></div>
+      </div>
+    </section>
+
+    <!-- Books -->
+    <section id="books">
+      <h2 class="section-title">Books</h2>
+      <div class="card book">
+        <img src="images/bridge-book-cover.jpg" alt="Cover of Bridge by Makafui Bokor" />
+        <div>
+          <h3><em>Bridge: Closing the Cybersecurity Gap for Small Businesses</em></h3>
+          <p>
+            <em>Bridge</em> translates complex threats into practical steps leaders and teams can apply immediately—covering culture,
+            modern attack paths, and everyday defenses for SMBs.
+          </p>
+          <button class="reveal" type="button" aria-expanded="false" aria-controls="bridge-more" onclick="toggleDetails('bridge-more', this)">Learn more</button>
+          <p style="margin-top:10px"><a class="reveal" href="https://www.amazon.ca/Bridge-Closing-Cybersecurity-Small-Businesses/dp/1069337307" target="_blank" rel="noopener">Buy on Amazon</$1></p>
+          <div id="bridge-more" hidden class="muted" style="margin-top:10px">
+            <ul>
+              <li>Plain‑language playbooks for phishing, account takeover, and data protection</li>
+              <li>Templates for quick wins: password policy, onboarding security, vendor checks</li>
+              <li>Built for non‑technical teams—action first, jargon last</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px">
+        <h3><em>Beaten! How Cyberbullying Affects You—and How to Rise Stronger</em></h3>
+        <p>Practical guidance for schools, workplaces, and parents: recognition, reporting, recovery, and resilience—built for real-life conversations and action.<\/p>
+        <p><a class="reveal" href="https://play.google.com/store/books/details/MAKAFUI_BOKOR_Beaten?id=P1yJEQAAQBAJ" target="_blank" rel="noopener">Read on Google Books</$1><\/p>
+      </$1>
+    </$1>
+
+    <!-- Projects / Products -->
+    <section id="projects">
+      <h2 class="section-title">Projects & Products</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="badge">Product Concept</span>
+          <h3>ADENTITI VaultDrive</h3>
+          <p>Modular, AI‑assisted, crypto‑secure storage & collaboration with zero‑trust sharing and immutable audit trails.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Learning</span>
+          <h3>Bridge: The Cybersecurity Survival Game</h3>
+          <p>A gamified workshop & digital card deck that turns attacks and defenses into quick, memorable decisions.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Training</span>
+          <h3>Click Secure with Makafui</h3>
+          <p>YouTube series & live sessions teaching practical cyber skills for teams and families.</p>
+        </div>
+        <div class="card">
+          <span class="badge">Platform</span>
+          <h3>ADENTITI Training Hub</h3>
+          <p>Short, interactive modules for onboarding, phishing drills, and role‑based basics for non‑technical staff.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Speaking -->
+    <section id="talks">
+      <h2 class="section-title">Speaking & Workshops</h2>
+      <p>I speak with cross-functional audiences—operations, finance, marketing, and engineering—using accessible language and live demos.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>AI & Cybersecurity</h3>
+          <p>Practical risks & controls for everyday teams—prompt safety, data leakage, governance basics.</p>
+        </div>
+        <div class="card">
+          <h3>Cyber Resilience for SMBs</h3>
+          <p>What to do in the first 24 hours of an incident; how to build a muscle for recovery.</p>
+        </div>
+        <div class="card">
+          <h3>Digital Safety for Families</h3>
+          <p>Hands-on tips for parents & schools—including modules from <em>Beaten!</em></p>
+        </div>
+        <div class="card" style="aspect-ratio:16/9">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/@ClickSecureOfficial" title="Click Secure with Makafui" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+      <p style="margin-top:10px">Invite me for a talk: <a href="#contact">contact below</a>.</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2 class="section-title">Technical & Communication Skills</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Cybersecurity</h3>
+          <p>Cloud security, endpoint hardening, threat detection, incident response, vendor risk.</p>
+        </div>
+        <div class="card">
+          <h3>Programming & Automation</h3>
+          <p>Python & PowerShell for automation, data handling, and security tooling.</p>
+        </div>
+        <div class="card">
+          <h3>Data & Platforms</h3>
+          <p>Oracle/SQL Server, Microsoft 365, Entra ID, Exchange Online, Docker basics.</p>
+        </div>
+        <div class="card">
+          <h3>Communication</h3>
+          <p>Plain‑language storytelling, workshop design, visuals, and leadership alignment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline">
+      <h2 class="section-title">Snapshot Timeline</h2>
+      <div class="timeline">
+        <div class="t-item"><span class="t-dot" aria-hidden="true"></span>
+          <strong>2010 → Present</strong> — Designing and shipping IT & security solutions for teams and SMEs.
+        </div>
+        <div class="t-item"><span class="t-dot" aria-hidden="true"></span>
+          <strong>2024–2025</strong> — Published <em>Bridge</em>; building the ADENTITI Training Hub and the <em>Bridge</em> game.
+        </div>
+        <div class="t-item"><span class="t-dot" aria-hidden="true"></span>
+          <strong>2025</strong> — Prototyping <em>VaultDrive</em> and expanding community talks across Ontario.
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Email</h3>
+          <p>
+            <a href="mailto:makafui.bokor@adentiti.ca">makafui.bokor@adentiti.ca</a>
+            <br/>
+            <a href="mailto:kafui.bokor@gmail.com">kafui.bokor@gmail.com</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Phone</h3>
+          <p><a href="tel:+16479225776">+1 (647) 922‑5776</a></p>
+        </div>
+        <div class="card">
+          <h3>Links</h3>
+          <p>
+            <a target="_blank" rel="noopener" href="https://www.adentiti.ca">ADENTITI.ca</a><br>
+            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/makafui-bokor/">LinkedIn</a><br>
+            <a target="_blank" rel="noopener" href="https://www.youtube.com/@ClickSecureOfficial">YouTube: Click Secure</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Makafui Bokor — Toronto, ON • <a href="mailto:hr@adentiti.ca">Press\/Media</a></p>
+  </footer>
+
+  <script>
+    // Compute years since 2010 dynamically
+    (function(){
+      const start = 2010;
+      const now = new Date().getFullYear();
+      const years = Math.max(0, now - start);
+      const el = document.getElementById('yearsExp');
+      if (el) el.textContent = years + "+";
+    })();
+    function toggleDetails(id, btn){
+      const el = document.getElementById(id);
+      if(!el) return;
+      const isHidden = el.hasAttribute('hidden');
+      if(isHidden){ el.removeAttribute('hidden'); btn.setAttribute('aria-expanded','true'); }
+      else { el.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); }
+    }
+  </script>
+<button id="themeToggle" aria-label="Toggle theme" class="btn" style="position:fixed;right:16px;bottom:16px;z-index:9999">🌞 / 🌙</button>
+<script>
+  (function(){
+    const key='theme';
+    const prefersDark=window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved=localStorage.getItem(key);
+    const theme=saved||'light';
+    if(theme==='dark') document.documentElement.setAttribute('data-theme','dark');
+    document.getElementById('themeToggle').addEventListener('click',()=>{
+      const isDark=document.documentElement.getAttribute('data-theme')==='dark';
+      const next=isDark?'light':'dark';
+      document.documentElement.setAttribute('data-theme',next==='dark'?'dark':'');
+      if(next==='dark') document.documentElement.setAttribute('data-theme','dark'); else document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem(key,next);
+      document.getElementById('themeToggle').textContent= next==='dark'?'🌙':'🌞';
+    });
+    document.getElementById('themeToggle').textContent= (document.documentElement.getAttribute('data-theme')==='dark')?'🌙':'🌞';
+  })();
+</script>
+</body>
+</html>
