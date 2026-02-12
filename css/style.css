@@ -1,3 +1,85 @@
+.site-footer {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  padding: 70px 20px 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-brand {
+  max-width: 300px;
+}
+
+.footer-brand h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.footer-cta {
+  color: #f0c330;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.footer-column a:hover {
+  opacity: 1;
+  color: #f0c330;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-social-icons img {
+  width: 28px;
+  transition: 0.3s ease;
+}
+
+.footer-social-icons img:hover {
+  transform: scale(1.15);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
 .hero-banner {
   position: relative;
   height: 85vh;
@@ -3138,6 +3220,7 @@ section {
     padding-block: 0.45rem;
   }
 }
+
 
 
 
