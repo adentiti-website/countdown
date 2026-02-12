@@ -1,3 +1,55 @@
+.membership-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #0f2027;
+  color: #ffffff;
+}
+
+.membership-subtitle {
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.membership-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.membership-card {
+  background: #132c38;
+  padding: 30px;
+  border-radius: 15px;
+  width: 320px;
+  transition: 0.3s ease;
+}
+
+.membership-card:hover {
+  transform: translateY(-6px);
+}
+
+.membership-plan-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.featured-plan {
+  border: 2px solid #f0c330;
+}
+
+.membership-list {
+  max-width: 800px;
+  margin: auto;
+  list-style: none;
+  padding: 0;
+}
+
+.membership-list li {
+  margin: 10px 0;
+}
 .contact-section-dapper {
   background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
   backdrop-filter: blur(10px);
@@ -3009,6 +3061,7 @@ section {
     padding-block: 0.45rem;
   }
 }
+
 
 
 
