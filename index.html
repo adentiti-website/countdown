@@ -286,116 +286,7 @@
     </div>
 </section>
 
-<section id="case-study" class="case-study-section hidden" data-transition>
-    <h2 class="section-title">Case Study: Securing a Healthcare Provider</h2>
-    <div class="case-study-container">
-        <!-- Challenge Section -->
-        <div class="case-study-card" onclick="toggleDetails('challenge-details')">
-            <div class="icon">
-            </div>
-            <h3>Challenge</h3>
-            <p>Frequent phishing attacks and data breaches threatened sensitive patient information and regulatory compliance.</p>
-            <button class="explore-details-btn">Explore the Details</button>
-            <div id="challenge-details" class="details hidden">
-                <p>
-                    Phishing emails targeted employees, tricking them into revealing sensitive credentials. 
-                    This led to unauthorized access to critical systems, compromising patient data. 
-                    Regulatory audits uncovered these vulnerabilities, exposing the organization to potential penalties and loss of trust.
-                </p>
-            </div>
-        </div>
 
-        <div class="case-study-container">
-    <!-- Solution Section -->
-    <div class="case-study-card" onclick="toggleDetails('solution-details')">
-        <div class="card-header">
-            <div class="icon">
-                <img src="images/solution-icon.png" alt="Solution Icon">
-            </div>
-            <h3>Solution</h3>
-        </div>
-        <p>
-            ADENTITI conducted a comprehensive audit, deploying advanced firewalls and secure data management practices.
-        </p>
-        <button class="explore-details-btn">Explore the Details</button>
-        <div id="solution-details" class="details hidden">
-            <p>
-                A multi-layered security framework would be implemented, including 24/7 threat monitoring and advanced encryption protocols. 
-                Employees would be trained to identify and avoid phishing attempts, reducing susceptibility to attacks. 
-                Regular security audits would ensure compliance with industry standards like GDPR and HIPAA.
-            </p>
-        </div>
-    </div>
-
-    <!-- Outcome Section -->
-    <div class="case-study-card" onclick="toggleDetails('outcome-details')">
-        <div class="card-header">
-            <div class="icon">
-                <img src="images/outcome-icon.png" alt="Outcome Icon">
-            </div>
-            <h3>Outcome</h3>
-        </div>
-        <p>
-            The healthcare provider experienced a reduction in phishing incidents and zero data breaches.
-        </p>
-        <button class="explore-details-btn">Explore the Details</button>
-        <div id="outcome-details" class="details hidden">
-            <p>
-                The organization achieved full compliance with regulatory standards, avoiding fines and penalties. 
-                Stakeholder trust increased significantly, with improved confidence among patients and partners. 
-                The healthcare provider is now a model for effective cybersecurity in the industry.
-            </p>
-        </div>
-    </div>
-</div>
-<button class="cta-button" onclick="location.href='#contact'">Let Us Help Your Business</button>
-
-</section>
-
-<section id="price-calculator" class="calculator-section">
-    <h2 class="section-title">Service Enquiries</h2>
-    <p class="calculator-description">
-        Get a customized quote for the services your business needs. Simply fill out the form below, and we’ll get back to you with the details.
-    </p>
-    <form id="calculator-form" action="https://formspree.io/f/xqaagqpy" method="POST">
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-        </div>
-
-        <div class="form-group">
-            <label for="employees">Number of Employees:</label>
-            <input type="number" id="employees" name="employees" placeholder="Enter the number of employees" min="1" required>
-        </div>
-
-        <div class="form-group">
-            <label for="services">Services Needed:</label>
-            <select id="services" name="services" required>
-                <option value="" disabled selected>Select a Service</option>
-                <option value="Cybersecurity Assessment">Cybersecurity Assessment</option>
-                <option value="Threat Monitoring">Threat Monitoring</option>
-                <option value="Employee Training">Employee Training</option>
-                <option value="Custom IT Solutions">Custom IT Solutions</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="duration">Service Duration (in Months):</label>
-            <input type="number" id="duration" name="duration" placeholder="Enter duration in months" min="1" required>
-        </div>
-
-        <div class="form-group">
-            <label for="comments">Additional Comments:</label>
-            <textarea id="comments" name="comments" rows="4" placeholder="Add any additional details or comments here (optional)"></textarea>
-        </div>
-
-        <button type="submit" class="cta-button">Request Detailed Quote</button>
-    </form>
 </section>
 <section id="contact" class="contact-section-dapper">
   <div class="contact-header">
@@ -537,62 +428,78 @@
 </section>
 
 <footer class="site-footer">
-  <div class="footer-top">
-    <div class="footer-links">
+
+  <div class="footer-container">
+
+    <!-- Brand Column -->
+    <div class="footer-brand">
+      <h3>ADENTITI</h3>
+      <p>
+        Human-centred cybersecurity empowering businesses, families, 
+        and professionals worldwide.
+      </p>
+
+      <a href="#membership" class="footer-cta">
+        Join Click Secure Network →
+      </a>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-column">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#services">Business Services</a></li>
+        <li><a href="#membership">Membership</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#connect">Follow Us</a></li>
-        <li><a href="https://www.amazon.ca/dp/1069337307" target="_blank">Get the Book</a></li>
+        <li>
+          <a href="https://www.amazon.ca/dp/1069337307" 
+             target="_blank" 
+             rel="noopener">
+            Get the Book
+          </a>
+        </li>
       </ul>
     </div>
 
-    <div class="footer-social">
+    <!-- Connect Column -->
+    <div class="footer-column">
       <h4>Stay Connected</h4>
-      <div class="social-icons">
+
+      <div class="footer-social-icons">
         <a href="https://www.youtube.com/@ClickSecureOfficial" target="_blank" aria-label="YouTube">
-          <img src="images/icons/youtube-icon.png" alt="YouTube" />
+          <img src="images/icons/youtube-icon.png" alt="YouTube">
         </a>
+
         <a href="https://www.linkedin.com/in/makafui-b-21ab6b50/" target="_blank" aria-label="LinkedIn">
-          <img src="images/icons/linkedin-icon.png" alt="LinkedIn" />
+          <img src="images/icons/linkedin-icon.png" alt="LinkedIn">
         </a>
+
         <a href="https://www.amazon.ca/dp/1069337307" target="_blank" aria-label="Amazon">
-          <img src="images/icons/amazon-icon.png" alt="Amazon" />
+          <img src="images/icons/amazon-icon.png" alt="Amazon">
         </a>
       </div>
+
+      <p class="footer-contact">
+        <a href="mailto:makafui.bokor@adentiti.ca">
+          makafui.bokor@adentiti.ca
+        </a>
+      </p>
     </div>
+
   </div>
 
   <div class="footer-bottom">
-    <p>&copy; 2025 <strong>ADENTITI Limited</strong>. All rights reserved.</p>
-    <p>Made with in Toronto | <a href="mailto:makafui.bokor@adentiti.ca">Contact Us</a></p>
+    <p>© 2025 <strong>ADENTITI Limited</strong>. All rights reserved.</p>
+    <p>Built in Toronto. Serving globally.</p>
   </div>
+
 </footer>
 
-<!-- Bottom Navigation -->
-<div class="bottom-nav">
-  <a href="#home" aria-label="Home" class="nav-item">
-    <img src="images/icons/home-icon.png" alt="Home Icon">
-    <span>Home</span>
-  </a>
-  <a href="#services" aria-label="Services" class="nav-item">
-    <img src="images/icons/services-icon.png" alt="Services Icon">
-    <span>Services</span>
-  </a>
-  <a href="#case-study" aria-label="Case Study" class="nav-item">
-    <img src="images/icons/case-icon.png" alt="Case Study Icon">
-    <span>Case Study</span>
-  </a>
-  <a href="#contact" aria-label="Contact" class="nav-item">
-    <img src="images/icons/contact-icon.png" alt="Contact Icon">
-    <span>Contact</span>
-  </a>
-  <button id="back-to-top" class="back-to-top hidden" aria-label="Back to Top">↑</button>
-</div>
+
 </body>
 
 </html>
+
 
 
 
