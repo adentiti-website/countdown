@@ -1,3 +1,10 @@
+.brand-logo {
+  height: 38px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+}
 :root {
   --bg: #ffffff;
   --text: #202124;
