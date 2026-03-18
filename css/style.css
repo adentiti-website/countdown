@@ -1,3 +1,20 @@
+.footer-social a {
+  display: inline-block;
+  margin: 6px 8px 6px 0;
+  padding: 6px 12px;
+  border: 1px solid #2a2f45;
+  border-radius: 5px;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #fff;
+  border-color: #4cc9f0;
+  background: rgba(76, 201, 240, 0.1);
+} 
 .brand {
   display: flex;
   align-items: center;
