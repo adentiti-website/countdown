@@ -1,3 +1,104 @@
+/* ARTICLE FLOW IMPROVEMENTS */
+.article-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* INTRO BLOCK */
+.article-intro {
+  margin-bottom: 30px;
+}
+
+.article-lead {
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.article-lead-strong {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* PARAGRAPH SPACING */
+.article-content p {
+  margin-bottom: 18px;
+  line-height: 1.75;
+}
+
+/* HEADINGS */
+.article-content h2 {
+  margin-top: 48px;
+  margin-bottom: 14px;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  letter-spacing: -0.3px;
+}
+
+.article-content h3 {
+  margin-top: 28px;
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+}
+
+/* LIST */
+.article-content ul {
+  margin: 20px 0 24px 20px;
+}
+
+.article-content li {
+  margin-bottom: 10px;
+}
+
+/* CINEMATIC BREAK */
+.article-break {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* QUOTE BLOCK */
+.article-quote {
+  margin: 40px 0;
+  padding: 26px;
+  border-left: 4px solid var(--primary);
+  background: #f8fbff;
+  border-radius: 14px;
+}
+
+.article-quote p {
+  margin-bottom: 10px;
+}
+
+.article-quote strong {
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+/* FINAL QUOTE (STRONGER) */
+.final-quote {
+  text-align: center;
+  border-left: none;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+/* SHARE SECTION POLISH */
+.resource-share {
+  margin-top: 60px;
+}
+
+.share-insight {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* CTA UPGRADE */
+.article-cta {
+  margin-top: 70px;
+}
 /* ARTICLE HERO TWEAKS */
 .article-hero {
   padding: 100px 0 70px;
