@@ -1,3 +1,120 @@
+.mission-light {
+  background: #ffffff;
+  color: #0b1220;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mission-light h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #0b1220;
+  position: relative;
+}
+
+.mission-light h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #00c8f0;
+  margin: 10px auto 20px;
+  border-radius: 2px;
+}
+
+.mission-light p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.founder-light {
+  background: linear-gradient(to bottom, #ffffff, #f9fafb);
+  color: #0b1220;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.founder-header h2 {
+  font-size: 2.6rem;
+  margin-bottom: 8px;
+  color: #0b1220;
+}
+
+.founder-tagline {
+  color: #00c8f0;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Content */
+.founder-content {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+}
+
+.founder-content .lead {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Highlights */
+.founder-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.founder-light .highlight {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.founder-light .highlight:hover {
+  transform: translateY(-5px);
+  border-color: #00c8f0;
+  box-shadow: 0 10px 25px rgba(0, 200, 240, 0.1);
+}
+
+.founder-light .highlight h4 {
+  color: #0b1220;
+  margin-bottom: 8px;
+}
+
+/* Links */
+.founder-links h3 {
+  margin-bottom: 20px;
+}
+
+.founder-light .links-list {
+  list-style: none;
+  padding: 0;
+}
+
+.founder-light .links-list li {
+  margin: 10px 0;
+}
+
+.founder-light .links-list a {
+  color: #0b1220;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.founder-light .links-list a:hover {
+  color: #00c8f0;
+  border-bottom: 1px solid #00c8f0;
+}
 /* =========================
    ABOUT PAGE — CLEAN PREMIUM SYSTEM
    ========================= */
