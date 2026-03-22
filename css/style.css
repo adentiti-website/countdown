@@ -1,4 +1,85 @@
-.mission-light {
+.services-light {
+  background: linear-gradient(to bottom, #ffffff, #f9fafb);
+  color: #0b1220;
+  text-align: center;
+  padding: 100px 20px;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Title */
+.services-light h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #0b1220;
+  position: relative;
+}
+
+.services-light h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00c8f0;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid */
+.services-light .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Cards */
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 28px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: #00c8f0;
+  box-shadow: 0 12px 30px rgba(0, 200, 240, 0.1);
+}
+
+/* Card Titles */
+.service-card h3 {
+  margin-bottom: 12px;
+  color: #0b1220;
+  font-size: 1.2rem;
+}
+
+/* List */
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-card li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 10px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.service-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: #00c8f0;
+  border-radius: 50%;
+}.mission-light {
   background: #ffffff;
   color: #0b1220;
   text-align: center;
