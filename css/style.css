@@ -1,4 +1,85 @@
-.section-head {
+.about-section {
+  padding: 80px 20px;
+  background: #0b0f1a;
+  color: #ffffff;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-header h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+
+.about-tagline {
+  color: #00d4ff;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.about-content .lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.highlight {
+  background: #111827;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+  transform: translateY(-5px);
+}
+
+.highlight h4 {
+  margin-bottom: 10px;
+  color: #00d4ff;
+}
+
+.about-links {
+  text-align: center;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+}
+
+.links-list li {
+  margin: 10px 0;
+}
+
+.links-list a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.links-list a:hover {
+  border-bottom: 1px solid #00d4ff;
+  color: #00d4ff;
+}.section-head {
   max-width: 760px;
   margin-bottom: 32px;
 }
