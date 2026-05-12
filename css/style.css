@@ -1,5 +1,11 @@
 /* COMMUNITY IMPACT RESULTS */
-
+.impact-update-note {
+  text-align: center;
+  margin-top: 28px;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 .impact-results {
   padding: 70px 0;
   background: linear-gradient(135deg, #0b1220 0%, #102a52 100%);
