@@ -1,4 +1,31 @@
+/* CYBERSECURITY THROUGH ART IMAGE */
 
+.art-featured-image {
+  width: 100%;
+  max-width: 1050px;
+  margin: 45px auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.art-featured-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.6s ease;
+}
+
+.art-featured-image:hover img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .art-featured-image {
+    margin: 25px auto;
+    border-radius: 8px;
+  }
+}
 /* Cybersecurity Through Art — scoped campaign styling */
 .art-campaign{background:#fbfaf7;color:#172129;padding:clamp(64px,9vw,128px) 0;overflow:hidden}
 .art-campaign .container{max-width:1120px;margin:auto;padding:0 24px}
