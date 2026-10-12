@@ -1,29 +1,58 @@
-/* CYBERSECURITY THROUGH ART IMAGE */
+/* CYBERSECURITY THROUGH ART — EVENTBRITE */
 
-.art-featured-image {
-  width: 100%;
-  max-width: 1050px;
-  margin: 45px auto;
-  overflow: hidden;
-  border-radius: 12px;
+.art-eventbrite {
+  text-align: center;
+  margin: 40px auto;
+  padding: 35px 25px;
+  max-width: 750px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
 }
 
-.art-featured-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.6s ease;
+.art-eventbrite p {
+  color: #334155;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 22px;
 }
 
-.art-featured-image:hover img {
-  transform: scale(1.02);
+.art-eventbrite .btn {
+  display: inline-block;
+  padding: 16px 30px;
+  background: #0f2027;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .art-featured-image {
-    margin: 25px auto;
-    border-radius: 8px;
+.art-eventbrite .btn:hover {
+  background: #176b78;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.art-eventbrite .eventbrite-note {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+  .art-eventbrite {
+    padding: 25px 18px;
+    margin: 30px 0;
+  }
+
+  .art-eventbrite .btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 18px;
   }
 }
 /* Cybersecurity Through Art — scoped campaign styling */
