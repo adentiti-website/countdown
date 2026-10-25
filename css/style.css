@@ -1,3 +1,427 @@
+
+/* ============================================
+   ADENTITI HERO ENHANCEMENT
+============================================ */
+
+.home-hero-copy h1 span {
+  color: #1749c5;
+}
+
+
+/* ============================================
+   MAKORE PRE-ORDER SECTION
+============================================ */
+
+.makore-showcase {
+  padding: 100px 0;
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(215, 224, 255, 0.45),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f7f9ff 100%
+    );
+  overflow: hidden;
+}
+
+.makore-showcase *,
+.makore-showcase *::before,
+.makore-showcase *::after {
+  box-sizing: border-box;
+}
+
+.makore-showcase .container {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+/* HEADING */
+
+.makore-section-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 55px;
+}
+
+.makore-eyebrow {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 100px;
+  background: #eef1ff;
+  color: #1749c5;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.makore-section-heading h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.15;
+  margin: 20px 0;
+  color: #101b3b;
+  letter-spacing: -1.5px;
+}
+
+.makore-section-heading h2 span {
+  color: #1749c5;
+}
+
+.makore-section-heading p {
+  color: #5e6980;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* FEATURE LAYOUT */
+
+.makore-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+/* IMAGE GALLERY */
+
+.makore-gallery {
+  position: relative;
+  min-width: 0;
+}
+
+.makore-main-image {
+  background: #fff;
+  border-radius: 24px;
+  padding: 16px;
+  box-shadow: 0 20px 55px rgba(18, 34, 74, 0.11);
+}
+
+.makore-main-image img {
+  width: 100%;
+  height: 430px;
+  object-fit: contain;
+  display: block;
+  border-radius: 15px;
+}
+
+.makore-gallery-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.makore-gallery-image {
+  background: #fff;
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow: 0 12px 30px rgba(18, 34, 74, 0.08);
+}
+
+.makore-gallery-image img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+
+.makore-ribbon {
+  position: absolute;
+  z-index: 2;
+  top: 22px;
+  left: -12px;
+  background: #b81d32;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 0 8px 8px 0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 20px rgba(184, 29, 50, 0.22);
+}
+
+.makore-image-note {
+  margin-top: 15px;
+  color: #768094;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* PRODUCT DETAILS */
+
+.makore-details {
+  min-width: 0;
+}
+
+.makore-brand {
+  color: #1749c5;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.makore-details h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 5vw, 74px);
+  line-height: 1;
+  font-weight: 700;
+  color: #681c30;
+  margin: 0 0 12px;
+}
+
+.makore-tagline {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  color: #222d46;
+  margin-bottom: 25px;
+}
+
+.makore-description {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #5d6678;
+  margin-bottom: 30px;
+  white-space: pre-line;
+}
+
+/* GAME STATS */
+
+.makore-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.makore-stats > div {
+  background: #fff;
+  border: 1px solid #e6eaf4;
+  border-radius: 14px;
+  padding: 18px 8px;
+  text-align: center;
+}
+
+.makore-stats strong {
+  display: block;
+  font-size: 24px;
+  color: #1749c5;
+  font-weight: 800;
+}
+
+.makore-stats span {
+  display: block;
+  margin-top: 4px;
+  color: #647084;
+  font-size: 12px;
+}
+
+/* HIGHLIGHTS */
+
+.makore-highlights {
+  margin-bottom: 28px;
+}
+
+.makore-highlights p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #303c54;
+  line-height: 1.6;
+}
+
+/* PURCHASE AREA */
+
+.makore-purchase {
+  background: #fff;
+  border: 1px solid #e7eaf4;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 14px 40px rgba(20, 40, 90, 0.06);
+}
+
+.makore-price {
+  margin-bottom: 20px;
+}
+
+.makore-price > span {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #6c7890;
+}
+
+.makore-price strong {
+  display: block;
+  font-size: 44px;
+  line-height: 1.2;
+  color: #101b3b;
+  margin-top: 6px;
+}
+
+.makore-price small {
+  font-size: 17px;
+  color: #778399;
+}
+
+.makore-preorder-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 19px 20px;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    #1749c5,
+    #0b2f91
+  );
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.makore-preorder-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(23, 73, 197, 0.25);
+  color: #fff;
+}
+
+.makore-preorder-btn:focus-visible {
+  outline: 3px solid #f5b335;
+  outline-offset: 4px;
+}
+
+.makore-preorder-btn span {
+  font-size: 22px;
+}
+
+.makore-shipping {
+  margin: 18px 0 10px;
+  text-align: center;
+  color: #263b67;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.makore-purchase-note {
+  margin: 0;
+  color: #768094;
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* BOTTOM BANNER */
+
+.makore-bottom-banner {
+  margin-top: 70px;
+  padding: 35px 25px;
+  background: #101b3b;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.makore-bottom-banner > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.makore-bottom-banner span {
+  color: #fff;
+  font-size: clamp(16px, 2vw, 25px);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.makore-bottom-banner p {
+  margin: 15px 0 0;
+  color: #aab8dc;
+  font-size: 14px;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+@media (max-width: 900px) {
+  .makore-feature {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .makore-gallery,
+  .makore-details {
+    max-width: 650px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .makore-showcase {
+    padding: 65px 0;
+  }
+
+  .makore-section-heading {
+    margin-bottom: 35px;
+  }
+
+  .makore-main-image img {
+    height: 330px;
+  }
+
+  .makore-gallery-image img {
+    height: 140px;
+  }
+
+  .makore-details h3 {
+    font-size: 48px;
+  }
+
+  .makore-purchase {
+    padding: 22px 18px;
+  }
+
+  .makore-stats {
+    gap: 8px;
+  }
+
+  .makore-stats strong {
+    font-size: 20px;
+  }
+
+  .makore-bottom-banner {
+    margin-top: 45px;
+  }
+
+  .makore-bottom-banner > div {
+    gap: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .makore-preorder-btn {
+    transition: none;
+  }
+
+  .makore-preorder-btn:hover {
+    transform: none;
+  }
+}
 /* CYBERSECURITY THROUGH ART — EVENTBRITE */
 
 .art-eventbrite {
